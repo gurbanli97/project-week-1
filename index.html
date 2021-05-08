@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,53 +9,77 @@
     <script src="https://kit.fontawesome.com/b673856b82.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
     <header>
         <div class="container">
             <div class="header-inner">
-                <div class = "header-logo">
-                    <img src = "./assets/images/logo.svg">
+                <div class="header-logo">
+                    <img src="./assets/images/logo.svg">
                 </div>
-        
-                <div class = "header-menu">
+
+                <div class="header-menu">
                     <nav>
-                        <ul class = "links">
-                            <li class="burger-logo"><a href=""><img src = "./assets/images/logo.svg"></a></li>
+                        <ul class="links">
+                            <li class="nav-logo">
+                                <a href=""><img src="./assets/images/logo.svg"></a>
+                            </li>
                             <li><a href="">Main</a></li>
                             <li><a href="">Products</a></li>
                             <li><a href="">For wholesalers</a></li>
                             <li><a href="">About Company</a></li>
                             <li><a href="">Contact</a></li>
                         </ul>
-                        <div class="hamburger">
-                            <span class="burger-icon"><i class="fas fa-bars"></i></span>   
-                            <span class="close-icon"><i class="fas fa-times"></i></span>               
-                        </div>
+                       
                     </nav>
-                    
-                    
-                    <div class = "header-phone">
+                   
+                </div>
+                  
+                    <div class="header-phone">
                         <i class="fas fa-phone-alt"></i>
                         <a><span>+7 (499) 396-77-77</span></a>
                     </div>
-    
-                    <div class = "header-pocket">
+
+                    <div class="header-pocket">
                         <a>
                             <i class="fas fa-recycle"></i>
                             <span>0 - </span>
                             <span>$0.00</span>
                         </a>
                     </div>
-                   
-                </div>
+                    <div class="header-burger" data-toggle="nav">
+                        <span></span>
+                      </div>
+
             </div>
-        </div>  
+        </div>
     </header>
 
 
     <footer></footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script>
+
+        $('.header-burger').on('click',function(){
+            $('.header-burger').toggleClass('active')
+            $('.header-menu nav').toggleClass('active')
+        })
+
+        $( window ).resize(function() {
+  
+            if($(this).width() >= 1185){
+            $('.header-burger').removeClass('active')
+            $('.header-menu nav').removeClass('active')
+               
+            }
+
+        });
+    </script>
 </body>
+
 </html>
