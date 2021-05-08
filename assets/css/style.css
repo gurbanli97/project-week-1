@@ -147,7 +147,19 @@ header{
         -ms-transform: translateX(0%);
         transform: translateX(0%)
     }
-
-
-
 }
+
+/* Let's compare */
+.container div img{
+    width: 200px;
+}
+
+.compare{
+    text-align: center;
+    font-weight: 900;
+    font-size: 40px;
+}
+
+
+
+
