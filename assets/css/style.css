@@ -1,19 +1,29 @@
+
 body{
     font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
 }
-
+header{
+    background-color:#c19a42;
+    font-weight: 700;
+    color: #fff;
+    border-bottom:1px solid rgba(255,255,255,0.20);
+    
+}
 .container{
     width: 100%;
     padding: 0 30px;
     margin:auto;
+    
+
 }
 
 .header-inner{
     display: flex;
     justify-content: space-between;
-    background-color: grey;
     padding: 10px 0;
     align-items: center;
+    padding:40px 70px;
 }
 
 .header-inner nav ul{
@@ -25,19 +35,35 @@ body{
 }
 
 .links li a{
-    text-decoration: none;
-    color: whitesmoke;
+    text-decoration: none; 
+    color: #fff; 
 }
 
 .links li:not(:last-child){
-    margin-right: 8px;
+    margin-right: 14px;
 }
 
 .header-phone{
-    margin: 0 15px 0 8px;
+    margin: 0 15px 0 24px;
 }
 
 .header-pocket a{
     width: 100px;
-    border: 1px solid #fff;
+    border: 1px solid rgba(255,255,255,0.20) ;
+    padding: 15px 30px;
+    border-radius: 30px;
+}
+
+/* hamburger menu */
+
+.hamburger , .burger-logo {
+    display: none;
+}
+
+@media screen and (max-width:991.9px){
+    .hamburger , .burger-logo {
+        display: block;
+    }
+    
+
 }
