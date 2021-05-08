@@ -8,22 +8,18 @@ header{
     font-weight: 700;
     color: #fff;
     border-bottom:1px solid rgba(255,255,255,0.20);
-    
 }
 .container{
     width: 100%;
     padding: 0 30px;
     margin:auto;
-    
-
 }
 
 .header-inner{
     display: flex;
     justify-content: space-between;
-    padding: 10px 0;
     align-items: center;
-    padding:40px 70px;
+    padding: 40px 0;
 }
 
 .header-inner nav ul{
@@ -32,6 +28,9 @@ header{
 
 .header-menu{
     display: flex;
+}
+.header-logo {
+    z-index: 99999;
 }
 
 .links li a{
@@ -54,16 +53,101 @@ header{
     border-radius: 30px;
 }
 
-/* hamburger menu */
-
-.hamburger , .burger-logo {
+.header-menu .nav-logo {
     display: none;
 }
-
-@media screen and (max-width:991.9px){
-    .hamburger , .burger-logo {
+@media screen and (max-width:1185px){
+    .header-burger span, 
+    .header-burger span:after, 
+    .header-burger span:before {
         display: block;
+        position: absolute;
+        width: 18px;
+        height: 2px;
+        border-radius: 1px;
+        background-color: #fff;
     }
-    
+    .header-burger {
+        display: flex;
+        z-index: 11;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        width: 38px;
+        height: 32px;
+        background-color: transparent;
+        cursor: pointer
+    }
+
+    .header-burger span {
+        top: 50%;
+        margin-top: -1px
+    }
+
+    .header-burger span,
+    .header-burger span:after,
+    .header-burger span:before {
+        display: block;
+        position: absolute;
+        width: 18px;
+        height: 2px;
+        border-radius: 1px;
+        background-color: #fff
+    }
+
+    .header-burger span:before {
+        top: -6px;
+        content: ""
+    }
+
+    .header-burger span:after {
+        bottom: -6px;
+        content: ""
+    }
+
+   
+
+    .header-burger.active span {
+      
+        transform: rotate(45deg)
+    }
+
+    .header-burger.active span:before {
+        top: 0;
+        opacity: 0
+    }
+
+    .header-burger.active span:after {
+       
+        bottom: 0;
+        transform: rotate(-90deg)
+    }
+
+    .header-menu  nav ul {
+        visibility: hidden;
+        z-index: 9;
+        position: fixed;
+        top: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 100%;
+        height: 100%;
+        padding-left: 0;
+        overflow: auto;
+        transform: translateX(100%);
+         transition: all .6s ease-out;
+        background: #0a0b0b
+    }
+
+    .header-menu nav.active ul {
+        visibility: visible;
+        -webkit-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+        transform: translateX(0%)
+    }
+
+
 
 }
