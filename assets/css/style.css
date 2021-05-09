@@ -141,6 +141,9 @@ header{
 
 
 /* Our values */
+.compare-section {
+    padding: 20px 0;
+}
 .comparison-head{
     font-size: 40px;
     font-weight: 800;
@@ -182,6 +185,9 @@ footer {
     font-weight: bold;
     display: flex;
     align-items: center;
+}
+footer .row {
+    margin: 0;
 }
 .footer-col {
     align-items: initial !important;
@@ -395,9 +401,7 @@ margin-right: 5px;
         text-align: center;
     }
 
-    footer .row {
-        margin: 0;
-    }
+    
     .footer-row {
         padding: 40px 30px;
     }
