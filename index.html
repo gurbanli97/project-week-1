@@ -11,7 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -121,11 +122,13 @@
                 </div>
                 <div class="col-3 values-text">
                     <img src="https://despina.sk-web-solutions.com/wp-content/uploads/2017/05/icon3.png">
-                    <p>Attached to the bottom is a suture with a sweet mixture. Convenient to hold, convenient to take with you. Presentable appearance.</p>
+                    <p>Attached to the bottom is a suture with a sweet mixture. Convenient to hold, convenient to take
+                        with you. Presentable appearance.</p>
                 </div>
                 <div class="col-3 values-text">
                     <img src="https://despina.sk-web-solutions.com/wp-content/uploads/2017/05/icon1.png">
-                    <p>Environmentally friendly , contributes its contribution to the preservation of the environment. Wednesday, decomposition time - up to 3 months.</p>
+                    <p>Environmentally friendly , contributes its contribution to the preservation of the environment.
+                        Wednesday, decomposition time - up to 3 months.</p>
                 </div>
             </div>
         </div>
@@ -134,41 +137,48 @@
 
 
     <footer>
-            <div class="footer-inner">
-                <div class="row footer-row">
-                    <div class="col-3 d-flex flex-column">
+        <div class="footer-inner">
+            <div class="row footer-row">
+                <div class="col-3  footer-col d-flex align-items-center">
+                    <div class="footer-layer">
+                        <img src="./assets/images/logo.png">
+                        <p>We have a hankering for some really in good melt in a mouth variety. Floury is the best
+                            choice to taste food and dessert.</p>
                         <div>
-                            <img src="./assets/images/logo.png">
-                            <p>We have a hankering for some really in good melt in a mouth variety. Floury is the best choice to taste food and dessert.</p>
-                            <div>
-                                <i class="fab fa-facebook-f"></i>
-                                <i class="fab fa-instagram"></i>
-                            </div>
+                            <i class="fab fa-facebook-f"></i>
+                            <i class="fab fa-instagram"></i>
                         </div>
                     </div>
-                    <div class="col-3 d-flex flex-column">
-                        <h4>Contact</h4>
-                        <p>142184, Moscow region,Podolsky district, Bolshaya Akademicheskaya st., Building 6, building 1 pom. 2</p>
-                        <a href="#">Diriving Direction</a>
-                        <a href="mailto:someone@yoursite.com">Email Us</a>
+                </div>
+                <div class="col-3 footer-col d-flex align-items-center">
+                    <div class="footer-layer d-flex flex-column">
+                        <h4 class="footer-heading">Contact</h4>
+                        <p>142184, Moscow region,Podolsky district, Bolshaya Akademicheskaya st., Building 6, building 1
+                            pom. 2</p>
+                        <a class="contact-a" href="#">Diriving Direction</a>
+                        <a class="contact-a" href="mailto:someone@yoursite.com">Email Us</a>
                     </div>
-                    <div class="col-3">
-                        <h4>Opening hours</h4>
+                </div>
+                <div class="col-3 footer-col d-flex align-items-center">
+                    <div class="footer-layer">
+                        <h4 class="footer-heading">Opening hours</h4>
                         <p>Mon. - Fri. from 9.00 to 18.00 (Temporarily)</p>
-                        <p>Sunday: closed</p> 
+                        <p>Sunday: closed</p>
                     </div>
-                    <div class="col-3">
-                        <h4>Чудо стакан видео</h4>
+                </div>
+                <div class="col-3 footer-col  d-flex align-items-center">
+                    <div class="footer-layer">
+                        <h4 class="footer-heading">Чудо стакан видео</h4>
                         <div class="video">
-                           
-                                <img  class="video-backgrnd" src="./assets/images/play.svg" alt="playsvg">
+
+                            <img class="video-backgrnd" src="./assets/images/play.svg" alt="playsvg">
                         </div>
-                        
                     </div>
                 </div>
-                <div class="footer-bottom">
-                    <p>Copyright © 2021 Русский стакан Россия, ООО "Русский стакан", ОГРН 1197746738530</p>
-                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Copyright © 2021 Русский стакан Россия, ООО "Русский стакан", ОГРН 1197746738530</p>
+            </div>
         </div>
     </footer>
 
@@ -176,7 +186,10 @@
     <div class="video-popup">
         <div class="video-backdrop">
             <div class="video-content">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/GjA2d5R6Ses" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/GjA2d5R6Ses"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
             </div>
         </div>
     </div>
@@ -200,16 +213,16 @@
         $('.video').on('click', function () {
             $('.video-popup').show(300)
             $('.video-popup').addClass('active')
-            
+
 
         })
 
-        $(document).mouseup(function(e) {
+        $(document).mouseup(function (e) {
             if ($('.video-popup').hasClass('active') && !$('.video-content').is(e.target) && $('.video-content').has(e.target).length === 0) {
                 $('.video-popup').removeClass('active');
-                 $('.video-popup').hide(300)
+                $('.video-popup').hide(300)
 
-            } 
+            }
         });
 
     </script>
@@ -217,7 +230,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous">
-    </script>
+        </script>
 
 </body>
 
