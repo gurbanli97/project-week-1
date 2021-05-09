@@ -2,7 +2,7 @@
 body{
     font-family: 'Quicksand', sans-serif;
     font-size: 16px;
-    background: #c19a42;
+    /* background: #c19a42; */
 }
 
 
@@ -139,21 +139,39 @@ header{
 }
 
 
-/* Let's compare */
-
-/* .container div img{
-    width: 200px;
-}
-
-.compare{
-    text-align: center;
-    font-weight: 900;
+/* Our values */
+.comparison-head{
     font-size: 40px;
+    font-weight: 800;
+    color: #932a26;
 }
- */
 
+.values-text{
+    text-align: center;
+    color: #959393;
+}
 
+/* .values-text p{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: fit-content;
+} */
 
+.values-text p a{
+    color: #932a26;
+}
+
+.values-text img{
+    margin-bottom: 25px;
+}
+
+.comparison{
+    margin-bottom: 35px;
+}
+
+.second-values{
+    justify-content: center;
+}
 @media screen and (max-width:1060px){
     .header-inner {
         padding: 40px 80px;
@@ -257,6 +275,7 @@ header{
        margin-bottom: 30px;
     }
 }
+
 
 
 @media only screen and (max-width:800px) {
