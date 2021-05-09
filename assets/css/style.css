@@ -176,6 +176,36 @@ header{
 .second-values{
     justify-content: center;
 }
+
+/* Miracle Glass Hashtag */
+
+.hashtag {
+    text-align: center;
+}
+
+.hashtag h2 {
+    color: #932a26;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.hashtag p {
+    color: #959393;
+}
+
+.hastag-gallery-imgs {
+    width: 170px;
+    height: 130px;
+    border-radius: 15px;
+    background-image: url(https://cdn-image.foodandwine.com/sites/default/files/1568907144/Coffee-National-Coffee-Day-FT-Blog0919.jpg);
+    background-size: cover;
+}
+
+.swiper-container {
+    width: 600px;
+    height: 300px;
+}
+
 /* footer */
 
 footer {
