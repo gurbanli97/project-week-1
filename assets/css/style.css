@@ -149,15 +149,68 @@ header{
     }
 }
 
-/* Let's compare */
+/* LET'SCOMPARE */
 .container div img{
-    width: 200px;
+    width: 150px;
 }
 
 .compare{
     text-align: center;
     font-weight: 900;
     font-size: 40px;
+}
+.container-compare-text{
+    margin-top:50px;
+}
+
+
+/* green side */
+.compare-text>div>p {
+    /* p-lerin uzunlugu eyni olsun deye width verdim */
+    width: 90%;
+    height: 60px;
+    /* border-radius: 5px; */
+    padding:8px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #7a3105;
+    font-weight: 700;
+    /* color: white; */
+}
+.green>div , .red >div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.green>div>p {
+    /* border: .5px solid green; */
+    /* background-color:lightgreen; */
+}
+.green>div>.fa-check-circle{
+    margin-left: 10px;
+    font-size: 50px;
+    color: green;
+}
+
+/* red side */
+.red>div>p{
+    /* border: .5px solid red; */
+    /* background-color:rgb(240, 116, 116); */
+}
+
+.red>div> .fa-times-circle ,.green>div>.fa-check-circle {
+    height: 65px;   
+}
+
+.red>div> .fa-times-circle{
+    font-size: 50px;
+    color: red;
+    margin-right: 10px;
+}
+@media screen and (max-width:1234px){
+    .compare-text>div>p {
+       height: auto;
+    }
 }
 
 
