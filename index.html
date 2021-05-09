@@ -63,7 +63,7 @@
             <div class="header-cart">
                 <div class="cart-inner">
                     <a>
-                        <i class="fas fa-recycle"></i>
+                        <i class="fas fa-shopping-cart"></i>
                         <span>0 - </span>
                         <span>$0.00</span>
 
@@ -132,7 +132,55 @@
     </section>
 
 
-    <footer></footer>
+
+    <footer>
+            <div class="footer-inner">
+                <div class="row footer-row">
+                    <div class="col-3 d-flex flex-column">
+                        <div>
+                            <img src="./assets/images/logo.png">
+                            <p>We have a hankering for some really in good melt in a mouth variety. Floury is the best choice to taste food and dessert.</p>
+                            <div>
+                                <i class="fab fa-facebook-f"></i>
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3 d-flex flex-column">
+                        <h4>Contact</h4>
+                        <p>142184, Moscow region,Podolsky district, Bolshaya Akademicheskaya st., Building 6, building 1 pom. 2</p>
+                        <a href="#">Diriving Direction</a>
+                        <a href="mailto:someone@yoursite.com">Email Us</a>
+                    </div>
+                    <div class="col-3">
+                        <h4>Opening hours</h4>
+                        <p>Mon. - Fri. from 9.00 to 18.00 (Temporarily)</p>
+                        <p>Sunday: closed</p> 
+                    </div>
+                    <div class="col-3">
+                        <h4>Чудо стакан видео</h4>
+                        <div class="video">
+                           
+                                <img  class="video-backgrnd" src="./assets/images/play.svg" alt="playsvg">
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>Copyright © 2021 Русский стакан Россия, ООО "Русский стакан", ОГРН 1197746738530</p>
+                </div>
+        </div>
+    </footer>
+
+
+    <div class="video-popup">
+        <div class="video-backdrop">
+            <div class="video-content">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/GjA2d5R6Ses" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
@@ -148,6 +196,22 @@
                 $('.header-menu nav').removeClass('active')
             }
         });
+
+        $('.video').on('click', function () {
+            $('.video-popup').show(300)
+            $('.video-popup').addClass('active')
+            
+
+        })
+
+        $(document).mouseup(function(e) {
+            if ($('.video-popup').hasClass('active') && !$('.video-content').is(e.target) && $('.video-content').has(e.target).length === 0) {
+                $('.video-popup').removeClass('active');
+                 $('.video-popup').hide(300)
+
+            } 
+        });
+
     </script>
 
 
