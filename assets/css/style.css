@@ -2,6 +2,16 @@
 body{
     font-family: 'Quicksand', sans-serif;
     font-size: 16px;
+    /* background: #c19a42; */
+}
+
+
+.container {
+    margin: auto;
+    width: 100%;
+    max-width: 1180px;
+    padding: 0 20px;
+
 }
 header{
     background-color:#c19a42;
@@ -9,44 +19,80 @@ header{
     color: #fff;
     border-bottom:1px solid rgba(255,255,255,0.20);
 }
-.container{
-    width: 100%;
-    padding: 0 30px;
-    margin:auto;
-}
+
 
 .header-inner{
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 40px 0;
 }
 
 .header-inner nav ul{
     display: flex;
+    margin: 0;
+    padding: 0;
 }
 
 .header-menu{
     display: flex;
+    margin-left: auto;
 }
 .header-logo {
     z-index: 99999;
 }
-
+.header-inner nav ul li {
+    position: relative;
+}
 .links li a{
     text-decoration: none; 
     color: #fff; 
 }
 
-.links li:not(:last-child){
+.links li{
     margin-right: 14px;
 }
 
-.header-phone{
-    margin: 0 15px 0 24px;
+.links li:hover::after,
+.links li:hover::before{
+    width: 100%;
 }
 
-.header-pocket a{
+
+.links li::after,
+.links li::before{
+    left: 50%;
+    bottom: 0;
+    content: '';
+    width: 0;
+    height:2px;
+    position: absolute;
+    transform: translateX(-50%);
+    background: #fff;
+    transition: width .3s ease-in-out;
+}
+
+
+.header-phone{
+    margin: 0 15px 0 16px;
+   
+}
+.header-phone a{
+  color:#fff;
+   
+}
+
+.header-cart {
+    position: relative;
+    cursor: pointer;
+}
+
+.cart-inner a{
+    position: relative;
+}
+
+.header-cart a,
+.mob-cart a{
+    color: #fff;
     width: 100px;
     border: 1px solid rgba(255,255,255,0.20) ;
     padding: 15px 30px;
@@ -56,18 +102,92 @@ header{
 .header-menu .nav-logo {
     display: none;
 }
-@media screen and (max-width:1185px){
+.mob-phone,
+.mob-cart {
+    display: none;
+}
+
+.cart-wrap {
+    display: none;
+    position: absolute;
+    right: -20px;
+    padding-top: 25px;
+    top: 100%;
+    width: auto;
+    z-index: 99999;
+}
+.header-cart:hover .cart-wrap {
+    display: block;
+}
+.cart-empty {
+    position: relative;
+    background: #fff;
+    min-width: 380px;
+    padding: 40px 25px;
+    color: #20202f;
+    border-radius: 18px;
+}
+.cart-empty::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    right: 80px;
+    display: inline-block;
+    border-bottom: 8px solid #fff;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+}
+
+
+/* Our values */
+.comparison-head{
+    font-size: 40px;
+    font-weight: 800;
+    color: #932a26;
+}
+
+.values-text{
+    text-align: center;
+    color: #959393;
+}
+
+/* .values-text p{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: fit-content;
+} */
+
+.values-text p a{
+    color: #932a26;
+}
+
+.values-text img{
+    margin-bottom: 25px;
+}
+
+.comparison{
+    margin-bottom: 35px;
+}
+
+.second-values{
+    justify-content: center;
+}
+@media screen and (max-width:1060px){
+    .header-inner {
+        padding: 40px 80px;
+    }
     .header-burger span, 
     .header-burger span:after, 
     .header-burger span:before {
         display: block;
         position: absolute;
-        width: 18px;
-        height: 2px;
+        width: 30px;
+        height: 5px;
         border-radius: 1px;
         background-color: #fff;
     }
     .header-burger {
+        margin-left: 20px;
         display: flex;
         z-index: 11;
         position: relative;
@@ -79,37 +199,32 @@ header{
         cursor: pointer
     }
 
-    .header-burger span {
-        top: 50%;
-        margin-top: -1px
-    }
+   
 
     .header-burger span,
     .header-burger span:after,
     .header-burger span:before {
         display: block;
         position: absolute;
-        width: 18px;
-        height: 2px;
+        width: 30px;
+        height: 5px;
         border-radius: 1px;
-        background-color: #fff
+        background-color: #fff;
+        transition: all .2s linear;
     }
 
     .header-burger span:before {
-        top: -6px;
+        top: -10px;
         content: ""
     }
 
     .header-burger span:after {
-        bottom: -6px;
+        bottom: -10px;
         content: ""
     }
 
-   
-
     .header-burger.active span {
-      
-        transform: rotate(45deg)
+        transform: rotate(-45deg)
     }
 
     .header-burger.active span:before {
@@ -124,6 +239,9 @@ header{
     }
 
     .header-menu  nav ul {
+        opacity: 0;
+        padding-top: 160px;
+        padding-left: 20px;
         visibility: hidden;
         z-index: 9;
         position: fixed;
@@ -132,9 +250,8 @@ header{
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
-        width: 100%;
+        width: 0;
         height: 100%;
-        padding-left: 0;
         overflow: auto;
         transform: translateX(100%);
          transition: all .6s ease-out;
@@ -142,22 +259,45 @@ header{
     }
 
     .header-menu nav.active ul {
+        width: 100%;
+        opacity: 1;
         visibility: visible;
         -webkit-transform: translateX(0%);
         -ms-transform: translateX(0%);
-        transform: translateX(0%)
+        transform: translateX(0%);
+    }
+    
+    .header-menu  .links li {
+        font-size: 20px;
+    }
+    .header-menu  .links li:not(:last-child) {
+       margin-right: 0;
+       margin-bottom: 30px;
     }
 }
 
-/* LET'SCOMPARE */
-.container div img{
-    width: 150px;
-}
-
-.compare{
-    text-align: center;
-    font-weight: 900;
-    font-size: 40px;
+@media only screen and (max-width:800px) {
+     .header-phone,
+     .header-cart {
+        display: none;
+    }
+   
+    .mob-phone,
+    .mob-cart {
+        cursor: pointer;
+    display: block;
+    }
+    .mob-phone {
+        border: 1px solid rgba(255,255,255,0.20) ;
+        padding: 10px;
+        border-radius: 12px;
+        margin-bottom: 40px;
+    }
+    .mob-phone a{
+       color: #fff;
+       text-decoration: none;
+    }
+    
 }
 .container-compare-text{
     margin-top:50px;
@@ -213,6 +353,12 @@ header{
     }
 }
 
+
+@media only screen and (max-width:600px){
+    .header-inner {
+        padding: 40px 0;
+    }
+}
 
 
 
