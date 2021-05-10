@@ -19,13 +19,27 @@ header{
     font-weight: 700;
     color: #fff;
     border-bottom:1px solid rgba(255,255,255,0.20);
+    padding: 40px 0;
+    transition: all .4s ease-in-out;
+}
+
+header.sticky {
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    background-color: #2D2118;
+    opacity: .9;
+    padding: 20px 0;
+    transition: all .4s ease-in-out;
+
 }
 
 
 .header-inner{
     display: flex;
     align-items: center;
-    padding: 40px 0;
+   
 }
 
 .header-inner nav ul{
@@ -205,15 +219,17 @@ header{
     display: none;
 }
 .row.second-values{
-    opacity: 0;
     height: 0;
+    opacity: 0;
     transform: scale(0);
-    transition: all .4s linear;
+    transition: all .4s ease-in-out;
 }
+
 .row.second-values.active {
     transform: scale(1);
+    height: 370px;
     opacity: 1;
-    height: 100%;
+
 }
 
 /* Miracle Glass Hashtag */
