@@ -1,5 +1,5 @@
 var $grid = $('.grid').isotope({
-    filter: ".tea"
+    filter: ".tea" 
 })
 
 $('.filter-button-group').on( 'click', 'a', function() {
@@ -7,8 +7,7 @@ $('.filter-button-group').on( 'click', 'a', function() {
     $grid.isotope({ 
         filter: filterValue,
         // stagger: 60,
-
-     });
+    });
     
     if($("#starter").hasClass("isActive")){
         $("#starter").removeClass("isActive");
@@ -20,3 +19,49 @@ $('.filter-button-group').on( 'click', 'a', function() {
         $(this).addClass("isActive");
     }
 });
+
+var firebaseConfig = {
+    apiKey: "AIzaSyCGVaa529xszf5ed8Kcto9l7lZen22XiyI",
+    authDomain: "project-1-b2088.firebaseapp.com",
+    databaseURL: "https://project-1-b2088-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "project-1-b2088",
+    storageBucket: "project-1-b2088.appspot.com",
+    messagingSenderId: "239478406556",
+    appId: "1:239478406556:web:c5b5dad00ee7115b535c59"
+};
+
+firebase.initializeApp(firebaseConfig);
+
+var db = firebase.database();
+
+var prDetails = {}
+
+var user = localStorage.getItem("userId")
+
+// db.ref("/users/").once('value', (snapshot) => {
+//     data = snapshot.val();
+// });
+
+$(".shop").on("click", function(e){
+    e.preventDefault()
+    var prName = this.parentNode.parentNode.parentNode.parentNode.children[1].children[0].innerText
+    var prPrice = this.parentNode.parentNode.parentNode.parentNode.children[1].children[1].innerText
+    console.log(prName, prPrice)
+
+    prDetails = {
+        ProductName: prName,
+        ProductPrice: prPrice
+    }
+    if(user === null){
+    user = db.ref().push().key;
+    }
+
+    localStorage.setItem("userId", user)
+
+    console.log(user)
+
+    db.ref("/users/" + user).push(
+        prDetails
+    )
+    
+})
