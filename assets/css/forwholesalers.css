@@ -1,0 +1,62 @@
+/* benefit section */
+.Benefit-header {
+    padding: 10px 0;
+    text-align: center;
+    justify-content: center;
+    justify-self: center;
+}
+.Benefit-header > h1 , .container-ul> ul >li >h2 {
+font-weight: bold;
+}
+.container-ul> ul >li >p {
+    font-size: 17px;
+}
+
+/* style -a icon elave etmek istedim alinmadi */
+/* .container-ul > ul >li::before {
+    content: "\f00c";
+} */
+.container-ul {
+    padding: 5px 30px;
+}
+
+.container-ul>ul {
+    list-style: square;
+}
+
+.benefit-container {
+    padding: 15px;
+}
+
+.second-container-benefit,
+.benefit-container {
+    border: 3px solid #B89777;
+}
+
+/* button */
+.button-wholesalers {
+    width: 400px;
+    padding: 2px 0;
+    border-radius: 5px;
+    border: 3px solid #B89777;
+    color: #932a26;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: transparent;
+   
+}
+
+.button-wholesalers:hover {
+    transition: ease 1s;
+    background-color: #B89777;
+    /* border-bottom: 1px solid #932a26; */
+    font-weight: 800;
+     /* box-shadow */
+    -webkit-box-shadow: 0px 6px 11px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow: 0px 6px 11px 0px rgba(50, 50, 50, 0.75);
+    box-shadow: 0px 6px 11px 0px rgba(50, 50, 50, 0.75);
+}
+
+/* Scope of the "Miracle Cup" */
+
+
