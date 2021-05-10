@@ -115,6 +115,12 @@
                     <img src="https://despina.sk-web-solutions.com/wp-content/uploads/2017/05/icon3.png">
                     <p>The delicious ingredients are already inside , there is no need to buy them separately.</p>
                 </div>
+                
+                <div class="row">
+                    <div class="col d-flex justify-content-center">
+                        <button type="button" id="more-button">Show More</button>
+                    </div>
+                </div>
             </div>
 
             <div class="row second-values">
@@ -131,6 +137,12 @@
                     <img src="https://despina.sk-web-solutions.com/wp-content/uploads/2017/05/icon1.png">
                     <p>Environmentally friendly , contributes its contribution to the preservation of the environment.
                         Wednesday, decomposition time - up to 3 months.</p>
+                </div>
+
+                <div class="row">
+                    <div class="col d-flex justify-content-center">
+                        <button type="button" id="less-button">Show Less</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -289,6 +301,18 @@
     })
 	
 });
+
+        $("#more-button").on('click', function(){
+            $('.second-values').addClass('active');
+            $("#more-button").hide();
+            $("#less-button").show()
+        })
+        
+        $("#less-button").on('click', function(){
+            $("#less-button").hide();
+            $('.second-values').removeClass('active');
+            $("#more-button").show();
+        })
     </script>
 
 </body>
