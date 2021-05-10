@@ -193,18 +193,46 @@ header{
     color: #959393;
 }
 
-.hastag-gallery-imgs {
-    width: 170px;
-    height: 130px;
+.hashtags-inner {
+    padding: 30px 30px;
+    display: flex;
+    align-items: center;
+}
+.hashtag-card{
+    width: 230px;
+    height: 184px;
     border-radius: 15px;
     background-image: url(https://cdn-image.foodandwine.com/sites/default/files/1568907144/Coffee-National-Coffee-Day-FT-Blog0919.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
-.swiper-container {
-    width: 600px;
-    height: 300px;
+
+.hashtags-inner .next {
+    transform: rotate(180deg);
 }
+
+.hashtags-inner .prev img,
+.hashtags-inner .next img {
+    width: 50px;
+    cursor: pointer;
+}
+
+/* .swiper-container {
+    overflow: initial;
+} */
+
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper-container{
+    margin: 0 20px;
+}
+
+
 
 /* footer */
 
