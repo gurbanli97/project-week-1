@@ -155,6 +155,12 @@ header{
     color: #959393;
 }
 
+.values-text h4{
+    color:#932a26;
+    font-weight: 700;
+    font-size: 22px;
+}
+
 /* .values-text p{
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -167,10 +173,17 @@ header{
 
 .values-text img{
     margin-bottom: 25px;
+    width: 80px;
 }
 
 .comparison{
     margin-bottom: 35px;
+}
+
+.comparison-quote{
+    font-weight: 500;
+    font-size: 20px;
+    color: #816e6e;
 }
 
 .second-values{
@@ -182,7 +195,7 @@ header{
     background: #912A27;
     border: 1px solid transparent;
     color: #fff;
-    padding: 15px 30px;
+    padding: 12px 20px;
     border-radius: 12px;
     margin-top: 15px;
     margin-bottom: 30px;
@@ -204,6 +217,20 @@ header{
 }
 
 /* Miracle Glass Hashtag */
+.hashtag-text{
+    text-align: center;
+} 
+
+.hashtag-text h3{
+    color: #932a26;
+    font-weight: 800;
+    font-size: 30px;
+}
+
+.hashtag-text{
+    color: #816e6e;
+    font-weight: 500;
+}
 
 .hashtag {
     text-align: center;
