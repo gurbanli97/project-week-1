@@ -167,7 +167,17 @@ header.sticky {
 .values-text{
     text-align: center;
     color: #959393;
+    min-height: 150px;
+    height: 100%;
+    
+    transition: all .4s ease;
 }
+.values-text:hover{
+    transform: translateY(-6px);
+    box-shadow: 13px 14px 50px -12px rgb(171 171 171 / 90%);
+}
+
+
 
 .values-text h4{
     color:#932a26;
