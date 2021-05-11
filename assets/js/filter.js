@@ -45,8 +45,9 @@ var user = localStorage.getItem("userId")
 
 $(".shop").on("click", function(e){
     e.preventDefault()
-    var prName = this.parentNode.parentNode.parentNode.parentNode.children[1].children[0].innerText
-    var prPrice = this.parentNode.parentNode.parentNode.parentNode.children[1].children[1].innerText
+    var prName = $(this).closest('.product-grid').children('.product-content').find('.title').text()
+    var prPrice = $(this).closest('.product-grid').children('.product-content').find('.price').text()
+
     console.log(prName, prPrice)
 
     prDetails = {
@@ -61,23 +62,35 @@ $(".shop").on("click", function(e){
     }
 
 
-    db.ref("/users/" + user).push(
-        prDetails
-    )
+    db.ref("/users/" + user).push(prDetails)
 })
+
 var sebet = []
-db.ref("/users/" + user).on("value", (snapshot) => {
+
+// db.ref("/users/" + user).on("value", (snapshot) => {
+//     productD = snapshot.val()
+
+//     for(let prd of Object.values(productD)){
+//         var d = prd.ProductPrice.slice(1)
+//         sebet.push(parseFloat(d))    
+//     }
+
+//     console.log(sebet)
+
+//     var totalSum = sebet.reduce((a, b) => a + b).toFixed(2)
+
+//     console.log(totalSum)
+// })
+
+db.ref("/users/" + user).on("child_added", (snapshot) => {
     productD = snapshot.val()
-
-    if(user != null){
-    for(let prd of Object.values(productD)){
-        var d = prd.ProductPrice.slice(1)
-        sebet.push(parseFloat(d))    
-    }
-
-    console.log(sebet.reduce((a, b) => a + b).toFixed(2))
-    console.log(Math.floor(sebet.reduce((a, b) => a + b)).toFixed(2))
-    console.log(sebet.reduce((a, b) => a + b))
-    }
-
+    d = productD.ProductPrice.slice(1)
+    sebet.push(parseFloat(d))
+    console.log(sebet)
+    var totalSum = sebet.reduce((a, b) => a + b).toFixed(2)
+    console.log(totalSum)
 })
+$("#deletef").on("click", function(){
+    db.ref().delete()
+})
+// db.ref("/users/" + user).onDisconnect().set(false);
