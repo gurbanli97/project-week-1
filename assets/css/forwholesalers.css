@@ -59,4 +59,24 @@ font-weight: bold;
 
 /* Scope of the "Miracle Cup" */
 
+.wholesalers-img1 , .wholesalers-img2, .wholesalers-img3,.wholesalers-img4 {
+    height: auto;
+    width:150px;
+    min-width:100px;
+}
+
+.wholesalers-img1 {
+    transform: rotate(-35deg);
+}
+.wholesalers-img2 {
+    transform: translateY(-50px)rotate(-10deg);
+    /* transform: rotate(-10deg); */
+}
+.wholesalers-img3 {
+    transform: translateY(-50px)rotate(10deg);
+    /* transform: rotate(10deg); */
+}
+.wholesalers-img4{
+    transform: rotate(35deg);
+}
 
