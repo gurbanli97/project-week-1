@@ -252,6 +252,60 @@ header.sticky {
     font-size: 17px;
     text-align: justify;
 }
+/* .awimg , .awimg2{
+    width:350px;
+    min-height:400px;
+    background-size: contain;
+    background-repeat: no-repeat;   
+}
+.awimg {
+    background-image: url(../images/awards1.jpg);
+    animation-name: slide1;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+}
+.awimg2{
+    background-image: url(../images/awards2.jpg);
+    animation-name: slide2;
+    animation-duration: 10s;
+    animation-iteration-count: infinite; 
+}
+@keyframes slide1 {
+    from {
+        background-image: url(../images/awards1.jpg);
+    }  
+    to {
+        background-image: url(../images/awards3.jpg);
+    } 
+}
+@keyframes slide2 {
+    from {
+        background-image: url(../images/awards2.jpg);
+    }
+    to {
+        background-image: url(../images/awards4.jpg);
+    }
+} */
+.awrImg {
+    width: 0;
+    height: 200px;
+    /* border: 3px solid black; */
+    margin-right: 5px;
+    animation-name: award;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+@keyframes award {
+    from {
+        width: 0;
+       
+    }
+    
+    to {
+        width: 200px;
+    }
+}
+
 
 /* Miracle Glass Hashtag */
 .hashtag-text{
