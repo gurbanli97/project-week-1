@@ -232,6 +232,27 @@ header.sticky {
 
 }
 
+/* Awards */
+.awards-gallery{
+    background-color: #912A27;
+    color: #fff;
+}
+
+.awards-text h1{
+    font-size: 50px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.awards{
+    min-height: 600px;
+}
+
+.awards-text p{
+    font-size: 17px;
+    text-align: justify;
+}
+
 /* Miracle Glass Hashtag */
 .hashtag-text{
     text-align: center;
@@ -416,7 +437,33 @@ margin-right: 5px;
     font-weight: bold;
 }
 
+/* Contact Us */
+.container-section{
+    margin-top: 40px;
+}
 
+.contact-heading{
+    text-align: center;
+}
+
+.contact-heading h2{
+    font-size: 40px;
+    font-weight: 800;
+    color: #221817;
+}
+
+.contact-left h4{
+    font-size: 20px;
+    color: #221817;
+    font-weight: 700;
+}
+
+.contact-left form input{
+    width: 350px;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid rgb(202, 200, 200);
+}
 
 @media screen and (max-width:1060px){
     .header-inner {
