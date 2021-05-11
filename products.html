@@ -90,7 +90,7 @@
     <section id="products" >
         <div class="container">
             <div class="row filter-button-group text-center">
-                <a role="button" id="starter" data-filter=".tea" class="isActive col-md-2 col-sm"> <img src="assets/images/tea.png" style="padding-left:8px" alt=""><p>Tea</p></a>
+                <a role="button" id="starter" data-filter=".tea" class="col-md-2 col-sm"> <img src="assets/images/tea.png" style="padding-left:8px" alt=""><p>Tea</p></a>
                 <a role="button" data-filter=".coffee" class="col-md-2 col-sm"><img src="./assets/images/coffee-logo.png" alt=""><p>Coffee</p></a>
                 <a role="button" data-filter=".cocktail" class="col-md-2 col-sm"><img src="./assets/images/cocktail.png" style="padding-right:2px" alt=""><p>Cocktail</p></a>
                 <a role="button" data-filter=".milk" class="col-md-2 col-sm"><img src="./assets/images/milkshake.png" alt=""><p>Milkshake</p></a>
@@ -207,7 +207,7 @@
                         <div class="price">$7.99</div>
                     </div>
                 </div>
-            </div>   
+            </div>
 
             <div class="col-md-3 col-sm-6 coffee">
                 <div class="product-grid">
@@ -264,9 +264,62 @@
         </div>
     </div>
 </div>
+<footer>
+    <div class="footer-inner">
+        <div class="row footer-row">
+            <div class="col-lg-3 col-md-6  footer-col d-flex align-items-center">
+                <div class="footer-layer">
+                    <img src="./assets/images/logo.png">
+                    <p>We have a hankering for some really in good melt in a mouth variety. Floury is the best
+                        choice to taste food and dessert.</p>
+                    <div>
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3  col-md-6  footer-col d-flex align-items-center">
+                <div class="footer-layer d-flex flex-column">
+                    <h4 class="footer-heading">Contact</h4>
+                    <p>142184, Moscow region,Podolsky district, Bolshaya Akademicheskaya st., Building 6, building 1
+                        pom. 2</p>
+                    <a class="contact-a" href="#">Diriving Direction</a>
+                    <a class="contact-a" href="mailto:someone@yoursite.com">Email Us</a>
+                </div>
+            </div>
+            <div class="col-lg-3  col-md-6  footer-col d-flex align-items-center">
+                <div class="footer-layer">
+                    <h4 class="footer-heading">Opening hours</h4>
+                    <p>Mon. - Fri. from 9.00 to 18.00 (Temporarily)</p>
+                    <p>Sunday: closed</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6  footer-col  d-flex align-items-center">
+                <div class="footer-layer">
+                    <h4 class="footer-heading">Чудо стакан видео</h4>
+                    <div class="video">
+                        <img class="video-backgrnd" src="./assets/images/play.svg" alt="playsvg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright © 2021 Русский стакан Россия, ООО "Русский стакан", ОГРН 1197746738530</p>
+        </div>
+    </div>
+</footer>
 
 
-    <footer></footer>
+<div class="video-popup">
+    <div class="video-backdrop">
+        <div class="video-content">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/GjA2d5R6Ses"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
     <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-database.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -274,17 +327,36 @@
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
     <script>
 
-        $('.header-burger').on('click',function(){
+$('.header-burger').on('click', function () {
             $('.header-burger').toggleClass('active')
             $('.header-menu nav').toggleClass('active')
         })
 
-        $( window ).resize(function() {
-            if($(this).width() >= 1000){
-            $('.header-burger').removeClass('active')
-            $('.header-menu nav').removeClass('active')
+        $(window).resize(function () {
+            if ($(this).width() >= 1000) {
+                $('.header-burger').removeClass('active')
+                $('.header-menu nav').removeClass('active')
             }
         });
+
+        $('.video').on('click', function () {
+            $('.video-popup').show(300)
+            $('.video-popup').addClass('active')
+
+
+        })
+
+        $(document).mouseup(function (e) {
+            if ($('.video-popup').hasClass('active') && !$('.video-content').is(e.target) && $('.video-content')
+                .has(e.target).length === 0) {
+                $('.video-popup').removeClass('active');
+                $('.video-popup').hide(300)
+
+            }
+        });
+        $(document).ready(function() {
+	
+});
 
     </script>
     <script src="./assets/js/filter.js"></script>

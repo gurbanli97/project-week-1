@@ -1,5 +1,5 @@
 var $grid = $('.grid').isotope({
-    filter: ".tea" 
+    // filter: ".tea" 
 })
 
 $('.filter-button-group').on( 'click', 'a', function() {
@@ -9,9 +9,10 @@ $('.filter-button-group').on( 'click', 'a', function() {
         // stagger: 60,
     });
     
-    if($("#starter").hasClass("isActive")){
-        $("#starter").removeClass("isActive");
-    }
+    // if($("#starter").hasClass("isActive")){
+    //     $("#starter").removeClass("isActive");
+    // }
+
     if($("a").hasClass("isActive")){
         $("a").removeClass("isActive");
         $(this).addClass("isActive");
@@ -52,16 +53,31 @@ $(".shop").on("click", function(e){
         ProductName: prName,
         ProductPrice: prPrice
     }
-    if(user === null){
+
+    if(user == null){
     user = db.ref().push().key;
+    localStorage.setItem("userId", user)
+    user = localStorage.getItem("userId")
     }
 
-    localStorage.setItem("userId", user)
-
-    console.log(user)
 
     db.ref("/users/" + user).push(
         prDetails
     )
-    
+})
+var sebet = []
+db.ref("/users/" + user).on("value", (snapshot) => {
+    productD = snapshot.val()
+
+    if(user != null){
+    for(let prd of Object.values(productD)){
+        var d = prd.ProductPrice.slice(1)
+        sebet.push(parseFloat(d))    
+    }
+
+    console.log(sebet.reduce((a, b) => a + b).toFixed(2))
+    console.log(Math.floor(sebet.reduce((a, b) => a + b)).toFixed(2))
+    console.log(sebet.reduce((a, b) => a + b))
+    }
+
 })
