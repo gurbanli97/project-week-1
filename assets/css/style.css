@@ -234,8 +234,14 @@ header.sticky {
 
 /* Awards */
 .awards-gallery{
-    background-color: #912A27;
     color: #fff;
+    background-image: url(https://www.filepicker.io/api/file/cEfyzmsTA2fmrJtLFw4w);
+    background-size: cover;
+    height: 570px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    opacity: 0.9;
+    /* box-shadow: 3px 3px 5px 6px #ccc; */
 }
 
 .awards-text h1{
@@ -459,11 +465,30 @@ margin-right: 5px;
     font-weight: 700;
 }
 
+.contact-form label{
+    color: #C19A42;
+    font-weight: 600;
+}
 .contact-left form input{
     width: 350px;
     height: 50px;
-    border-radius: 10px;
+    border-radius: 20px;
     border: 1px solid rgb(202, 200, 200);
+}
+
+.opening-hours-table div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.opening-hours-table div p{
+    font-size: 15px;
+    color:#959393;
+}
+
+.closed{
+    color: #932a26 !important;
+    font-weight: 600;
 }
 
 @media screen and (max-width:1060px){
