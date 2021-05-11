@@ -1,0 +1,90 @@
+.active{
+    border-radius: 50px;
+    padding: 8px 25px;
+    background: #f4f2ed;
+    margin-left: 12px;
+    color: #372727;
+    font-weight: 600;
+}
+
+.two{
+    color: #c19942;
+    font-size: 30px ;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 900;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.hr{
+    margin-top: 0px !important;
+}
+
+
+.text h2{
+    font-size: 47px;
+    font-weight: 700;
+    line-height: normal;
+   word-spacing: 5px;   
+   
+}
+
+.paraqraf p{
+    color: #959393;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 15px;
+    line-height: 24px;
+}
+
+.text h6{
+    font-size: 17px;
+    color: #959393;
+}
+
+.img{
+    column-count: 2;
+    padding: 5px;
+}
+
+.image{
+    display: inline-block;
+    margin-bottom: 10px;
+    overflow: hidden;
+    width: 260px;
+}
+
+.image img{
+    width: 100%;
+    transition: 0.25s ease-in-out;
+    border-radius: 13px;
+
+
+}
+
+.image:hover{
+    transform: scale(1.1);
+}
+
+.left .btn .submmit-btn{
+    font-family: "Source Sans Pro",sans-serif;
+    height: 50px;
+    width: auto;
+    background-color: #c66d55;
+    color: #ffffff;
+    text-transform: uppercase;
+    border: none;
+    -webkit-border-radius: 80px;
+    -moz-border-radius: 80px;
+    -ms-border-radius: 80px;
+    -o-border-radius: 80px;
+    border-radius: 80px;
+    padding: 0 30px;
+    text-align: center;
+    min-width: 225px;
+    font-size: 16px;
+    display: inline-block;
+    line-height: 50px;
+   
+}
+
+
+
