@@ -50,14 +50,15 @@
     margin-bottom: 10px;
     overflow: hidden;
     width: 260px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    /* box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px; */
+    border-radius: 8px;
+
 }
 
 .image img{
     width: 100%;
     transition: 0.25s ease-in-out;
-    border-radius: 13px;
-
-
 }
 
 .image:hover{
