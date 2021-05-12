@@ -105,24 +105,24 @@
 
         <ul class="thumb">
             <li>
-                <img src="./assets/images/purpleEtinat.jpg" alt="" onclick="glassSlider('./assets/images/purpleEtinat.jpg')">
+                <img src="./assets/images/purpleEtinat.jpg" alt="" onclick="glassSlider('./assets/images/purpleEtinat.jpg'); changeCircleColor('#58396D')">
+            </li>
+            
+            <li>
+                <img src="./assets/images/yellowEtinat.jpg" alt="" onclick="glassSlider('./assets/images/yellowEtinat.jpg'); changeCircleColor('#C3A82F')">
             </li>
 
             <li>
-                <img src="./assets/images/yellowEtinat.jpg" alt="" onclick="glassSlider('./assets/images/purpleEtinat.jpg')">
+                <img src="./assets/images/pinkEtinat.jpg" alt="" onclick="glassSlider('./assets/images/pinkEtinat.jpg'); changeCircleColor('#B92F59')">
             </li>
 
             <li>
-                <img src="./assets/images/pinkEtinat.jpg" alt="" onclick="glassSlider('./assets/images/purpleEtinat.jpg')">
-            </li>
-
-            <li>
-                <img src="./assets/images/greyEtinat.jpg" alt="" onclick="glassSlider('./assets/images/purpleEtinat.jpg')">
+                <img src="./assets/images/greyEtinat.jpg" alt="" onclick="glassSlider('./assets/images/greyEtinat.jpg'); changeCircleColor('#898372')">
             </li>
 
 
             <li>
-                <img src="./assets/images/lilacEtinat.jpg" alt="" onclick="glassSlider('./assets/images/purpleEtinat.jpg')">
+                <img src="./assets/images/lilacEtinat.jpg" alt="" onclick="glassSlider('./assets/images/lilacEtinat.jpg'); changeCircleColor('#C3A82F')">
             </li>
         </ul>
     </section>
@@ -442,6 +442,11 @@
         // Glasses Slider - Main
         function glassSlider(value){
             document.querySelector('#etinat').src = value;
+        }
+
+        function changeCircleColor(color){
+            var circle = document.querySelector(".circle");
+            circle.style.background = color;
         }
     </script>
 
