@@ -89,6 +89,44 @@
 
     </header>
 
+    <section class="container">
+        <div class="circle"></div>
+        <div class="glass-content">
+            <div class="textBox">
+                <h2>It's more than a simple Glass.<br>It's <span>Etinat</span></h2>
+                <p>We bring dozens of values to you in just a glass</p>
+                <a href="">Learn More</a>
+            </div>
+
+            <div class="imgBox">
+                <img src="./assets/images/redEtinat.jpg" alt="" class="etinat">
+            </div>
+        </div>
+
+        <ul class="thumb">
+            <li>
+                <img src="./assets/images/purpleEtinat.jpg" alt="" onclick="glassSlider('./assets/images/purpleEtinat.jpg')">
+            </li>
+
+            <li>
+                <img src="./assets/images/yellowEtinat.jpg" alt="" onclick="glassSlider('./assets/images/purpleEtinat.jpg')">
+            </li>
+
+            <li>
+                <img src="./assets/images/pinkEtinat.jpg" alt="" onclick="glassSlider('./assets/images/purpleEtinat.jpg')">
+            </li>
+
+            <li>
+                <img src="./assets/images/greyEtinat.jpg" alt="" onclick="glassSlider('./assets/images/purpleEtinat.jpg')">
+            </li>
+
+
+            <li>
+                <img src="./assets/images/lilacEtinat.jpg" alt="" onclick="glassSlider('./assets/images/purpleEtinat.jpg')">
+            </li>
+        </ul>
+    </section>
+
     <section class="compare-section">
         <div class="container">
             <div class="row comparison">
@@ -372,7 +410,7 @@
 })
 	
 });
-
+        // Our Values - Buttons 
         $("#more-button").on('click', function(){
             $('.second-values').addClass('active');
             $("#more-button").hide();
@@ -385,7 +423,7 @@
             $("#more-button").show();
         });
         
-
+        // Awards
         var myIndex = 0;
         carousel();
 
@@ -399,6 +437,11 @@
         if (myIndex > x.length) {myIndex = 1}    
         x[myIndex-1].style.display = "block";  
         setTimeout(carousel, 2500);    
+        }
+
+        // Glasses Slider - Main
+        function glassSlider(value){
+            document.querySelector('#etinat').src = value;
         }
     </script>
 
