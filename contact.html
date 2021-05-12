@@ -119,36 +119,36 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <label for="firstName">First Name</label>
-                                <input onkeyup="stoppedTyping()" type="text" id="inputFirstName" class="form-control inputs" required>
+                                <input  type="text" id="inputFirstName" class="form-control inputs">
                             </div>
 
                             <div class="col-md-6">
                                 <label for="lastName">Last Name</label>
-                                <input onkeyup="stoppedTyping()" type="text" id="inputLastName" class="form-control inputs" required>
+                                <input  type="text" id="inputLastName" class="form-control inputs">
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-md-6">
                                 <label for="mail">Email</label>
-                                <input onkeyup="stoppedTyping()" type="email" id="inputMail" class="form-control inputs" required>
+                                <input  type="email" id="inputMail" class="form-control inputs">
                             </div>
 
                             <div class="form-group col-md-6">
                                 <label for="subject">Subject</label>
-                                <input onkeyup="stoppedTyping()" type="text" id="inputSubject" class="form-control inputs" required>
+                                <input  type="text" id="inputSubject" class="form-control inputs">
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-9 request-proposal">
                                 <label for="message">Your Request or Proposal</label>
-                                <input onkeyup="stoppedTyping()" type="text" id="inputMessage" class="form-control inputs" required>
+                                <input  type="text" id="inputMessage" class="form-control inputs">
                             </div>
                         </div>
 
                         <div class="submit-button d-flex justify-content-end">
-                            <button type="submit">Submit</button>
+                            <button type="submit" id="sub-btn">Submit</button>
                         </div>
                     </form>
                 </div>
@@ -261,6 +261,7 @@
         integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous">
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.jquery.js"></script>
+
     <script>
         window.onscroll = function () {
             myFunction()
@@ -308,19 +309,36 @@
         var inputMessage = document.querySelector("#inputMessage");
         
         //inputs of each line
-        var input = document.querySelector(".inputs");
+        // var input = $(".inputs");
 
-        console.log(input);
-        function stoppedTyping(){
-            // if((!inputFirstName.value.trim()) && (!inputLastName.value.trim()) && (!inputMail.value.trim()) && (!inputSubject.value.trim()) && (!inputMessage.value.trim())){
-            //     console.log("Alla fields aren't filled in")
-            //     input.style.border = "1px solid red";
-            // }
+        // console.log(input);
+        // function stoppedTyping(){
+        //     if((inputFirstName.val("")) && (inputLastName.val("")) && (!inputMail.val("")) && (inputSubject.val("")) && (inputMessage.val(""))){
+        //         console.log("Alla fields aren't filled in")
+        //         $(".contact-form input").style.border = "1px solid red";
+        //     }
 
-            if(!input.val()){
-                $(input).css = ("border", "1px solid red");
-            }
-        }
+           
+        //     if(input.val("")){
+        //          $(input).css = ("border", "1px solid red");
+        //     }
+        // }
+          // function stoppedTyping(){
+        //     if($(".contact-form input").val("")){
+        //         console.log(stop)
+        //     }
+        // }
+
+        $("#sub-btn").on('click',function(event){ 
+            event.preventDefault()
+            var values = $(".contact-form .inputs").val()
+            console.log(values)
+      if(values === ''){
+          console.log("alert")
+        $(".contact-form .inputs").css('border','2px solid red')
+        
+      }
+    })
     </script>
 </body>
 
