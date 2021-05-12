@@ -119,32 +119,36 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <label for="firstName">First Name</label>
-                                <input type="text" id="firstName" class="form-control">
+                                <input onkeyup="stoppedTyping()" type="text" id="inputFirstName" class="form-control inputs" required>
                             </div>
 
                             <div class="col-md-6">
                                 <label for="lastName">Last Name</label>
-                                <input type="text" id="lastName" class="form-control">
+                                <input onkeyup="stoppedTyping()" type="text" id="inputLastName" class="form-control inputs" required>
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-md-6">
                                 <label for="mail">Email</label>
-                                <input type="email" id="mail" class="form-control">
+                                <input onkeyup="stoppedTyping()" type="email" id="inputMail" class="form-control inputs" required>
                             </div>
 
                             <div class="form-group col-md-6">
                                 <label for="subject">Subject</label>
-                                <input type="text" id="subject" class="form-control">
+                                <input onkeyup="stoppedTyping()" type="text" id="inputSubject" class="form-control inputs" required>
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-9 request-proposal">
                                 <label for="message">Your Request or Proposal</label>
-                                <input type="text" id="message" class="form-control">
+                                <input onkeyup="stoppedTyping()" type="text" id="inputMessage" class="form-control inputs" required>
                             </div>
+                        </div>
+
+                        <div class="submit-button d-flex justify-content-end">
+                            <button type="submit">Submit</button>
                         </div>
                     </form>
                 </div>
@@ -285,6 +289,38 @@
                 $('.header-menu nav').removeClass('active')
             }
         });
+
+        // Form Section
+
+        //first name
+        var inputFirstName = document.querySelector("#inputFirstName");
+
+        //last name
+        var inputLastName = document.querySelector("#inputLastName");
+
+        //mail
+        var inputMail = document.querySelector("#inputMail");
+
+        //subject
+        var inputSubject = document.querySelector("#inputSubject");
+
+        //message
+        var inputMessage = document.querySelector("#inputMessage");
+        
+        //inputs of each line
+        var input = document.querySelector(".inputs");
+
+        console.log(input);
+        function stoppedTyping(){
+            // if((!inputFirstName.value.trim()) && (!inputLastName.value.trim()) && (!inputMail.value.trim()) && (!inputSubject.value.trim()) && (!inputMessage.value.trim())){
+            //     console.log("Alla fields aren't filled in")
+            //     input.style.border = "1px solid red";
+            // }
+
+            if(!input.val()){
+                $(input).css = ("border", "1px solid red");
+            }
+        }
     </script>
 </body>
 
