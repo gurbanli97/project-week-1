@@ -17,22 +17,21 @@ body{
 header{
     background-color:#c19a42;
     font-weight: 700;
+    top: 0;
+    z-index: 999;
+    width: 100%;
     color: #fff;
     border-bottom:1px solid rgba(255,255,255,0.20);
-    padding: 40px 0;
+    padding: 20px 0;
     transition: all .4s ease-in-out;
 }
 
 header.sticky {
-    position: fixed;
-    top: 0;
-    z-index: 999;
-    width: 100%;
+    position: sticky;
     background-color: #2D2118;
     opacity: .9;
     padding: 20px 0;
     transition: all .4s ease-in-out;
-
 }
 
 
@@ -165,8 +164,26 @@ header.sticky {
 }
 
 .values-text{
+    cursor: pointer;
+    border: 1px solid transparent;
+    padding: 20px;
+    border-radius: 12px;
     text-align: center;
     color: #959393;
+    transition: all .5s linear;
+}
+.values-text:hover {
+    border: 1px solid #932A26;
+    transform: translateY(-6px);
+    box-shadow: 15px 14px 50px -12px rgb(171 171 171 / 90%);
+}
+.values-text:hover img {
+    animation:  move 1s linear infinite alternate;
+}
+@keyframes move {
+    100% {
+        transform: rotate(-30deg);
+    }
 }
 
 .values-text h4{
@@ -193,6 +210,9 @@ header.sticky {
 .comparison{
     margin-bottom: 35px;
 }
+.comparison > .row{
+    margin: auto !important;
+}
 
 .comparison-quote{
     font-weight: 500;
@@ -206,6 +226,7 @@ header.sticky {
 
 #more-button,
 #less-button {
+    height: 50px;
     background: #912A27;
     border: 1px solid transparent;
     color: #fff;
@@ -227,7 +248,7 @@ header.sticky {
 
 .row.second-values.active {
     transform: scale(1);
-    height: 370px;
+    height: 450px;
     opacity: 1;
 
 }
@@ -255,7 +276,11 @@ header.sticky {
 
 .awards-text p{
     font-size: 17px;
-    text-align: justify;
+    text-align: center;
+    max-width: 350px;
+    margin: auto;
+    margin-bottom: 10px;
+
 }
 
 .awards-imgs{
@@ -302,7 +327,9 @@ header.sticky {
     background-size: cover;
 }
 
-
+.hashtags {
+    padding: 20px 0;
+}
 .hashtags-inner {
     padding: 30px 30px;
     display: flex;
@@ -318,14 +345,22 @@ header.sticky {
 }
 
 
-.hashtags-inner .next {
-    transform: rotate(180deg);
+.hashtags-inner .prev {
+    transform: rotate(-180deg)
 }
 
-.hashtags-inner .prev img,
-.hashtags-inner .next img {
-    width: 50px;
+.hashtags-inner .prev,
+.hashtags-inner .next {
+    color: #c19a42;
     cursor: pointer;
+    font-size: 40px;
+    transition: color .3s ease-in-out;
+}
+
+.hashtags-inner .prev:hover,
+.hashtags-inner .next:hover {
+    color: #932a26;
+    
 }
 
 .swiper-slide {
@@ -337,6 +372,20 @@ header.sticky {
 .swiper-container{
     margin: 0 20px;
     
+}
+.swiper-pagination {
+    position: initial;
+}
+
+.swiper-pagination-bullet {
+    background-color: #c19a42;
+}
+
+.swiper-pagination-bullet {
+    background-color: #c19a42;
+}
+.swiper-pagination-bullet-active {
+    background-color: #932a26;
 }
 
 /* footer */
@@ -512,10 +561,15 @@ margin-right: 5px;
 }
 
 
-@media screen and (max-width:1060px){
-    .header-inner {
-        padding: 40px 80px;
+@media only screen and (max-width: 1200px) {
+    .hashtag-card {
+        width: 200px;
+        height: 160px;
     }
+}
+
+@media screen and (max-width:1060px){
+    
     .header-burger span, 
     .header-burger span:after, 
     .header-burger span:before {
@@ -617,6 +671,21 @@ margin-right: 5px;
 }
 
 @media only screen and (max-width:992px) {
+    .row.second-values.active {
+        height: 620px;
+    }
+    .hashtags-inner {
+        padding: 30px 10px;
+    }
+    .hashtag-card {
+        height: 160px;
+    }
+    .awards-text {
+        padding: 30px 0;
+    }
+    .awards-gallery {
+        height: 400px;
+    }
     .footer-col:nth-child(1),
     .footer-col:nth-child(2){
         margin-bottom: 20px;
@@ -632,6 +701,16 @@ margin-right: 5px;
 }
 
 @media only screen and (max-width:800px) {
+    .row.second-values.active {
+        height: 820px;
+    }
+    .hashtags-inner .prev,
+    .hashtags-inner .next {
+     display: none;
+ }
+    .awards-gallery {
+        height: 300px;
+    }
      .header-phone,
      .header-cart {
         display: none;
@@ -656,9 +735,13 @@ margin-right: 5px;
 }
 
 @media only screen and (max-width:600px){
-    .header-inner {
-        padding: 40px 0;
+    .row.second-values.active {
+        height: 1020px;
     }
+    .awards-gallery {
+        height: 200px;
+    }
+    
 }
 
 
