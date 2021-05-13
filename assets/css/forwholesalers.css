@@ -11,25 +11,25 @@
 .Benefit-header> h1 {
     text-align: center;
 }
-.Mcol1{
+.text-1{
     background-color: rgb(250, 189, 250);
 }
-.Mcol2{
+.text-2{
     background-color: rgb(226, 226, 89);
 }
-.Mcol3{
+.text-3{
     background-color: rgb(228, 99, 99);
 }
-.Mcol4{
+.text-4{
     background-color: green;
 }
-.Mcol5{
+.text-5{
     background-color:  lightslategray  ;
 }
-.Mcol6{
+.text-6{
     background-color: rgb(150, 80, 94);
 }
-.Mcol7{
+.text-7{
     background-color: lightsteelblue;
 }
 .text { 
@@ -43,6 +43,7 @@
     align-items: center;
     justify-content:start;
     flex-direction: column;
+    border-radius: 10px;
     /* clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); */
 }
 .text:hover{
@@ -89,46 +90,6 @@
     -webkit-box-shadow: 0px 6px 11px 0px rgba(50, 50, 50, 0.75);
     -moz-box-shadow: 0px 6px 11px 0px rgba(50, 50, 50, 0.75);
     box-shadow: 0px 6px 11px 0px rgba(50, 50, 50, 0.75);
-}
-
-/* button pop-up */
-
-.keypage-backdrop{
-    width: 50px;
-    height: 50px;
-}
-.button-popup {
-    display: none;
-}
-
-.button-popup, .keypage-backdrop {
-    z-index: 2001;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-}
-.keypage-backdrop {
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(4, 2, 16, .77);
-}
-
-.button-content {
-    background: #000;
-    z-index: 10000;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 560px;
-    transform: translate(-50%, -50%);
-    transform-origin: 0 0;
-    border-radius: 15px;
-    border: 1px solid transparent;
-}
-.button-content iframe {
-    border-radius: 15px;
 }
 
 /* Scope of the "Miracle Cup"  */
@@ -198,7 +159,27 @@ font-weight: bold;
    background-image: url(../images/ГОСУЧЕРЕЖДЕНИЯ.jpg);
 }
 
+@media screen and (max-width:1107px){
 
+    .upperl > h4 {
+        font-size: 16px;
+    }
+    .biggerText {
+        font-size: 14px;
+    }
+}
+@media screen  and (max-width:991px){
+    .myImg1 {
+        height: 30vh;
+    }
+
+}
+@media screen  and (max-width:768px){
+    .myImg , .upperl {
+        height: 30vh;
+    }
+
+}
 
 
 
