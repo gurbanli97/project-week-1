@@ -119,36 +119,36 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <label for="firstName">First Name</label>
-                                <input  type="text" id="inputFirstName" class="form-control inputs">
+                                <input onkeyup="stoppedTyping()" type="text" id="inputFirstName" class="form-control inputs" required>
                             </div>
 
                             <div class="col-md-6">
                                 <label for="lastName">Last Name</label>
-                                <input  type="text" id="inputLastName" class="form-control inputs">
+                                <input onkeyup="stoppedTyping()" type="text" id="inputLastName" class="form-control inputs" required>
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-md-6">
                                 <label for="mail">Email</label>
-                                <input  type="email" id="inputMail" class="form-control inputs">
+                                <input onkeyup="stoppedTyping()" type="email" id="inputMail" class="form-control inputs" required>
                             </div>
 
                             <div class="form-group col-md-6">
                                 <label for="subject">Subject</label>
-                                <input  type="text" id="inputSubject" class="form-control inputs">
+                                <input onkeyup="stoppedTyping()" type="text" id="inputSubject" class="form-control inputs" required>
                             </div>
                         </div>
 
                         <div class="row">
-                            <div class="col-9 request-proposal">
+                            <div class="col request-proposal">
                                 <label for="message">Your Request or Proposal</label>
-                                <input  type="text" id="inputMessage" class="form-control inputs">
+                                <input onkeyup="stoppedTyping()" type="text" id="inputMessage" class="form-control inputs" required>
                             </div>
                         </div>
 
                         <div class="submit-button d-flex justify-content-end">
-                            <button type="submit" id="sub-btn">Submit</button>
+                            <button type="submit">Submit</button>
                         </div>
                     </form>
                 </div>
@@ -204,6 +204,57 @@
 
 
                 </div>
+            </div>
+           
+            <div class="details">
+                <h2>Our Details</h2>
+                <ol>
+                    <li>ГРУЗОПОЛУЧАТЕЛЬ И ЕГО АДРЕС: 
+                        <p>ООО «Русский стакан», 142100, Московская обл., г.Подольск, ул. Комсомольская, д. 1</p>
+                    </li>
+                    <li>ПОКУПАТЕЛЬ: 
+                        <p>ООО «Русский стакан»</p>
+                    </li>
+                    <li>АДРЕС:
+                        <p>Россия, 125299, г.Москва, ул.Большая Академическая, дом 6, корп.1 пом. 2</p>
+                    </li>
+                    <li>ИНН:
+                        <p>7713472961</p>
+                    </li>
+                    <li>Наименование организации (полное):
+                        <p>Общество с ограниченной ответственностью «Русский стакан»</p>
+                    </li>
+                    <li>Наименование организации (краткое):
+                        <p>ООО «Русский стакан»</p>
+                    </li>
+                    <li>Юридический адрес:
+                        <p>142184, Московская обл.,Подольский р-он, ул.Большая Академическая, дом 6, корп.1 пом. 2</p>
+                    </li>
+                    <li>Телефон / Факс / Электронная почта:
+                        <p>www.всевстакане.рф</p>
+                    </li>
+                    <li>ИНН / КПП: 
+                        <p>7713472961/ 771301001</p>
+                    </li>
+                    <li>ОГРН: 
+                        <p>1197746738530</p>
+                    </li>
+                    <li>ОКПО: 
+                        <p>42762356</p>
+                    </li>
+                    <li>ОКВЭД:
+                        <p>17.22, 18.12, 46.17, 46.34, 46.37</p>
+                    </li>
+                    <li>Банковские реквизиты:
+                        <p>ФИЛИАЛ ЦЕНТРАЛЬНЫЙ ПАО БАНКА "ФК ОТКРЫТИЕ", р/с 40702810104080000166</p>
+                    </li>
+                    <li>БИК:
+                        <p>044525297</p>
+                    </li>
+                    <li>к/с:
+                        <p>30101810945250000297</p>
+                    </li>
+                </ol>
             </div>
         </div>
 
@@ -261,7 +312,6 @@
         integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous">
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.jquery.js"></script>
-
     <script>
         window.onscroll = function () {
             myFunction()
@@ -309,36 +359,19 @@
         var inputMessage = document.querySelector("#inputMessage");
         
         //inputs of each line
-        // var input = $(".inputs");
+        var input = document.querySelector(".inputs");
 
-        // console.log(input);
-        // function stoppedTyping(){
-        //     if((inputFirstName.val("")) && (inputLastName.val("")) && (!inputMail.val("")) && (inputSubject.val("")) && (inputMessage.val(""))){
-        //         console.log("Alla fields aren't filled in")
-        //         $(".contact-form input").style.border = "1px solid red";
-        //     }
+        console.log(input);
+        function stoppedTyping(){
+            // if((!inputFirstName.value.trim()) && (!inputLastName.value.trim()) && (!inputMail.value.trim()) && (!inputSubject.value.trim()) && (!inputMessage.value.trim())){
+            //     console.log("Alla fields aren't filled in")
+            //     input.style.border = "1px solid red";
+            // }
 
-           
-        //     if(input.val("")){
-        //          $(input).css = ("border", "1px solid red");
-        //     }
-        // }
-          // function stoppedTyping(){
-        //     if($(".contact-form input").val("")){
-        //         console.log(stop)
-        //     }
-        // }
-
-        $("#sub-btn").on('click',function(event){ 
-            event.preventDefault()
-            var values = $(".contact-form .inputs").val()
-            console.log(values)
-      if(values === ''){
-          console.log("alert")
-        $(".contact-form .inputs").css('border','2px solid red')
-        
-      }
-    })
+            if(!input.val()){
+                $(input).css = ("border", "1px solid red");
+            }
+        }
     </script>
 </body>
 

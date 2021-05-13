@@ -1,7 +1,6 @@
 $(document).ready(function(){
 
-    var $grid;
-
+var $grid;
 var $content;
 var firebaseConfig = {
     apiKey: "AIzaSyCGVaa529xszf5ed8Kcto9l7lZen22XiyI",
@@ -52,10 +51,6 @@ var user = localStorage.getItem("userId")
 
     })
 })
-
-
-
-
 
 $(document).on("click", ".shop", function(e){
     e.preventDefault()
@@ -187,8 +182,6 @@ $(document).on("click", ".shop", function(e){
 
 // db.ref("/users/" + user).onDisconnect().set(false);
 
-
-
 $('.filter-button-group').on( 'click', 'a', function() {
     var filterValue = $(this).attr('data-filter');
     $grid.isotope({
@@ -207,6 +200,5 @@ $('.filter-button-group').on( 'click', 'a', function() {
         $(this).addClass("isActive");
     }
 });
-
 
 })

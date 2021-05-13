@@ -122,8 +122,13 @@
 
 
             <li>
-                <img src="./assets/images/lilacEtinat.jpg" alt="" onclick="glassSlider('./assets/images/lilacEtinat.jpg'); changeCircleColor('#C3A82F')">
+                <img src="./assets/images/redEtinat.jpg" alt="" onclick="glassSlider('./assets/images/redEtinat.jpg'); changeCircleColor('#7A2D2D')">
             </li>
+
+            <li>
+                <img src="./assets/images/lilacEtinat.jpg" alt="" onclick="glassSlider('./assets/images/lilacEtinat.jpg'); changeCircleColor('#957B95')">
+            </li>
+
         </ul>
     </section>
 
@@ -441,7 +446,7 @@
 
         // Glasses Slider - Main
         function glassSlider(value){
-            document.querySelector('.etinat').src = value;
+            document.querySelector('#etinat').src = value;
         }
 
         function changeCircleColor(color){
