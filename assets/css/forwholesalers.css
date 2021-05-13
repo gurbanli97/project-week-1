@@ -1,37 +1,72 @@
 /* benefit section */
-.Benefit-header {
-    padding: 10px 0;
+
+
+
+
+
+
+
+
+/* benefit grid */
+.Benefit-header> h1 {
     text-align: center;
-    justify-content: center;
-    justify-self: center;
 }
-.Benefit-header > h1 , .container-ul> ul >li >h2 {
-font-weight: bold;
+.text-1{
+    background-color: rgb(250, 189, 250);
 }
-.container-ul> ul >li >p {
-    font-size: 17px;
+.text-2{
+    background-color: rgb(226, 226, 89);
+}
+.text-3{
+    background-color: rgb(228, 99, 99);
+}
+.text-4{
+    background-color: green;
+}
+.text-5{
+    background-color:  lightslategray  ;
+}
+.text-6{
+    background-color: rgb(150, 80, 94);
+}
+.text-7{
+    background-color: lightsteelblue;
+}
+.text { 
+    padding: 20px;
+    height: 250px;
+    text-align: center;
+    color: black;
+    font-weight: 700;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content:start;
+    flex-direction: column;
+    border-radius: 10px;
+    /* clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); */
+}
+.text:hover{
+    box-shadow:  13px 14px 50px -12px rgb(171 171 171 / 90%);
 }
 
-/* style -a icon elave etmek istedim alinmadi */
-/* .container-ul > ul >li::before {
-    content: "\f00c";
+.text>h3{
+    /* color: #932a26;  */
+    font-weight: bold;
+    margin-bottom: 10px;
+} 
+
+/* .text{
+    height: 250px;
+    color: white;
+    
+    
+    padding: 20px;
+}
+.text > h3 {
+    font-weight: 900 !important;
+    font-size: 35px;
 } */
-.container-ul {
-    padding: 5px 30px;
-}
-
-.container-ul>ul {
-    list-style: square;
-}
-
-.benefit-container {
-    padding: 15px;
-}
-
-.second-container-benefit,
-.benefit-container {
-    border: 3px solid #B89777;
-}
 
 /* button */
 .button-wholesalers {
@@ -57,26 +92,96 @@ font-weight: bold;
     box-shadow: 0px 6px 11px 0px rgba(50, 50, 50, 0.75);
 }
 
-/* Scope of the "Miracle Cup" */
-
-.wholesalers-img1 , .wholesalers-img2, .wholesalers-img3,.wholesalers-img4 {
-    height: auto;
-    width:150px;
-    min-width:100px;
+/* Scope of the "Miracle Cup"  */
+.heading>h1{
+font-weight: bold;
 }
 
-.wholesalers-img1 {
-    transform: rotate(-35deg);
+.myImg  , .upperl {
+    width: 100%;  
+    height:300px;
+    border-radius: 25px;
 }
-.wholesalers-img2 {
-    transform: translateY(-50px)rotate(-10deg);
-    /* transform: rotate(-10deg); */
+.myImg  {
+    background-size: cover;
 }
-.wholesalers-img3 {
-    transform: translateY(-50px)rotate(10deg);
-    /* transform: rotate(10deg); */
+.myImg:hover {
+    transform: scale(0.93);
+    transition: 1s ease;
 }
-.wholesalers-img4{
-    transform: rotate(35deg);
+
+.upperl{
+    background-color: hsla(0, 26%, 23%, 0.45);
+    
+    /* background-color: hsla(19, 36%, 9%, 0.63); */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 10px 5px 25px 12px;
 }
+.upperl>h4{
+    color: white;
+    text-align: center;
+    font-weight:600;
+}
+.biggerText{
+    font-size:17px ;
+}
+
+
+.upperlBig {
+    height:100%;
+}
+.myImg1{
+    height:100%;
+    background-image: url(../images/ВЫСТАВКИ.jpg);
+}
+.myImg2{
+  
+    background-image: url(../images/ФЕСТИВАЛИ.jpg);
+    
+}
+.myImg3{
+    
+    background-image: url(../images/КЕЙТЕРИНГ.jpg);
+    
+}
+.myImg4{
+    background-image: url(../images/ФОРУМЫ.jpg);
+    
+}
+.myImg5{
+    background-image: url(../images/ОРГПИТАНИЯ.jpg);
+    
+}
+.myImg6{
+   background-image: url(../images/ГОСУЧЕРЕЖДЕНИЯ.jpg);
+}
+
+@media screen and (max-width:1107px){
+
+    .upperl > h4 {
+        font-size: 16px;
+    }
+    .biggerText {
+        font-size: 14px;
+    }
+}
+@media screen  and (max-width:991px){
+    .myImg1 {
+        height: 30vh;
+    }
+
+}
+@media screen  and (max-width:768px){
+    .myImg , .upperl {
+        height: 30vh;
+    }
+
+}
+
+
+
+
 

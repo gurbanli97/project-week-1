@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -230,4 +231,476 @@
     </script>
 </body>
 
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <script src="https://kit.fontawesome.com/b673856b82.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+    <header id='sticky-header'>
+        <div class="container">
+            <div class="header-inner">
+                <div class="header-logo">
+                    <a href="#">
+                        <img src="./assets/images/logo.png">
+                    </a>
+                </div>
+
+                <div class="header-menu">
+                    <nav>
+                        <ul class="links">
+                            <li class="nav-logo">
+                                <a href=""><img src="./assets/images/logo.png"></a>
+                            </li>
+                            <li><a href=" #">Main</a></li>
+                            <li><a href="./products.html">Products</a></li>
+                            <li><a href="./forwholesalers.html">For wholesalers</a></li>
+                            <li><a href="">About Company</a></li>
+                            <li><a href="">Contact</a></li>
+
+                            <div class=" mob-phone">
+                                <i class="fas fa-phone-alt"></i>
+                                <a href="tel:0507224461">+7 (499) 396-77-77</a>
+                            </div>
+
+                            <div class="mob-cart">
+                                <a>
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <span>0 - </span>
+                                    <span>$0.00</span>
+                                </a>
+                            </div>
+                        </ul>
+
+                    </nav>
+
+                </div>
+
+                <div class="header-phone">
+                    <i class="fas fa-phone-alt"></i>
+                    <a href="tel:0507224461">+7 (499) 396-77-77</a>
+                </div>
+
+                <div class="header-cart">
+                    <div class="cart-inner">
+                        <a>
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>0 - </span>
+                            <span>$0.00</span>
+
+                            <div class="cart-wrap">
+                                <div class="cart-empty">
+                                    <span>No products in the cart</span>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div class="header-burger">
+                    <span></span>
+                </div>
+
+            </div>
+        </div>
+
+    </header>
+
+    <!-- 
+        The allowfullscreen property to allow certain map parts to go full screen -- Set to true if the <iframe> can activate fullscreen mode by calling the requestFullscreen() method
+     -->
+    <div class="map">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2264.688753866514!2d37.6054793153755!3d55.415780625402434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414aa7db944f1fdd%3A0x2174f5d36fdc0455!2sSimferopol&#39;skoye%20Shosse%2C%2038%D0%B9%2C%20Podolsk%2C%20Moskovskaya%20oblast&#39;%2C%20Russia%2C%20142143!5e0!3m2!1sen!2s!4v1620686285772!5m2!1sen!2s"
+            width="100%" height="350" style="border:0;" allowfullscreen="" loading="eager">
+        </iframe>
+    </div>
+
+
+    <section class="container-section">
+        <div class="container">
+            <div class="contact-heading">
+                <h2>Contact Us</h2>
+                <p>We are a second-generation family business established in 1972</p>
+            </div>
+
+            <div class="row contact-left">
+                <div class="col-9">
+                    <h4>Leave us a Message</h4>
+                    <p>
+                        For questions of interest in logistics, participation in exhibitions, proposals for cooperation,
+                        you can contact directly through the form below. The answer will be received within 10-15
+                        minutes
+                    </p>
+
+                    <form method="POST" action="index.php" onsubmit="return Validate()" class="contact-form" name="vform">
+                        <div class="row form-rows">
+                            <div class="col-md-6">
+                                <label for="inputFirstName">First Name</label>
+                                <input type="text" id="inputFirstName" name="firstName" class="form-control inputs">
+                                <div id="fname_error" class="val_error"></div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="inputLastName">Last Name</label>
+                                <input type="text" id="inputLastName" class="form-control inputs" name="LastName">
+                                <div id="lname_error" class="val_error"></div>
+                            </div>
+                        </div>
+
+                        <div class="row form-rows">
+                            <div class="col-md-6">
+                                <label for="inputMail">Email</label>
+                                <input type="email" id="inputMail" name="email" class="form-control inputs">
+                                <div id="email_error" class="val_error"></div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="inputSubject">Subject</label>
+                                <input type="text" id="inputSubject" class="form-control inputs" name="subject">
+                                <div id="subject_error" class="val_error"></div>
+                            </div>
+                        </div>
+
+                        <div class="row form-rows">
+                            <div class="col request-proposal">
+                                <label for="inputMessage">Your Request or Proposal</label>
+                                <textarea type="text" id="inputMessage" class="form-control inputs" name="message"></textarea>
+                                <div id="message_error" class="val_error"></div>
+                            </div>
+                        </div>
+
+                        <div class="submit-button d-flex justify-content-end">
+                            <button type="submit" value="Register" name="register">Submit</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col-md-3 col-sm-12">
+                    <div>
+                        <h4>Our Address</h4>
+                        <p>Simferopol highway, 38th kilometer, vl4</p>
+                        <p>Pre-call the phone number indicated in the header of the site!</p>
+                        <p>support@etinat.com</p>
+                    </div>
+
+                    <div>
+                        <h4>Opening Hours</h4>
+
+                        <div class="opening-hours-table">
+                            <div>
+                                <p>Monday</p>
+                                <p>09:00-18:00</p>
+                            </div>
+
+                            <div>
+                                <p>Tuesday</p>
+                                <p>09:00-18:00</p>
+                            </div>
+
+                            <div>
+                                <p>Wednesday</p>
+                                <p>09:00-18:00</p>
+                            </div>
+
+                            <div>
+                                <p>Thursday</p>
+                                <p>09:00-18:00</p>
+                            </div>
+
+                            <div>
+                                <p>Friday</p>
+                                <p>09:00-18:00</p>
+                            </div>
+
+                            <div>
+                                <p>Saturday</p>
+                                <p class="closed">Closed</p>
+                            </div>
+
+                            <div>
+                                <p>Sunday</p>
+                                <p class="closed">Closed</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            
+            <div class="details">
+                <h2>Our Details</h2>
+                <div class="inner-details-div">
+                    <ol>
+                        <h3>ГРУЗОПОЛУЧАТЕЛЬ И ЕГО АДРЕС: </h3>   
+                        <li>ООО «Русский стакан», 142100, Московская обл., г.Подольск, ул. Комсомольская, д. 1</li>
+    
+                        <h3>ПОКУПАТЕЛЬ:</h3>
+                        <li>ООО «Русский стакан»</li>
+    
+                        <h3>АДРЕС:</h3>
+                        <li>Россия, 125299, г.Москва, ул.Большая Академическая, дом 6, корп.1 пом. 2</li>
+    
+                        <h3>ИНН:</h3>
+                        <li>7713472961</li>
+    
+                        <h3>Наименование организации (полное):</h3>
+                        <li>Общество с ограниченной ответственностью «Русский стакан»</li>
+    
+                        <h3>Наименование организации (краткое):</h3>
+                        <li>ООО «Русский стакан»</li>
+    
+                        <h3>Юридический адрес:</h3>    
+                        <li>142184, Московская обл.,Подольский р-он, ул.Большая Академическая, дом 6, корп.1 пом. 2</li>
+    
+                        <h3>Телефон / Факс / Электронная почта:</h3>
+                        <li>www.всевстакане.рф</li>
+    
+                        <h3>ИНН / КПП: </h3>
+                        <li>7713472961/ 771301001</li>
+    
+                        <h3>ОГРН: </h3>
+                        <li>1197746738530</li>
+    
+                        <h3>ОКПО: </h3>
+                        <li>42762356</li>
+    
+                        <h3>ОКВЭД:</h3>
+                        <li>17.22, 18.12, 46.17, 46.34, 46.37</li>
+    
+                        <h3>Банковские реквизиты:</h3>
+                        <li>ФИЛИАЛ ЦЕНТРАЛЬНЫЙ ПАО БАНКА "ФК ОТКРЫТИЕ", р/с 40702810104080000166</li>
+    
+                        <h3>БИК:</h3>
+                        <li>044525297</li>
+    
+                        <h3>к/с:</h3>
+                        <li>30101810945250000297</li>
+                    </ol>
+                </div>
+                
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="row footer-row">
+                <div class="col-lg-3 col-md-6  footer-col d-flex align-items-center">
+                    <div class="footer-layer">
+                        <img src="./assets/images/logo.png">
+                        <p>We have a hankering for some really in good melt in a mouth variety. Floury is the best
+                            choice to taste food and dessert.</p>
+                        <div>
+                            <i class="fab fa-facebook-f"></i>
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3  col-md-6  footer-col d-flex align-items-center">
+                    <div class="footer-layer d-flex flex-column">
+                        <h4 class="footer-heading">Contact</h4>
+                        <p>142184, Moscow region,Podolsky district, Bolshaya Akademicheskaya st., Building 6, building 1
+                            pom. 2</p>
+                        <a class="contact-a" href="#">Diriving Direction</a>
+                        <a class="contact-a" href="mailto:someone@yoursite.com">Email Us</a>
+                    </div>
+                </div>
+                <div class="col-lg-3  col-md-6  footer-col d-flex align-items-center">
+                    <div class="footer-layer">
+                        <h4 class="footer-heading">Opening hours</h4>
+                        <p>Mon. - Fri. from 9.00 to 18.00 (Temporarily)</p>
+                        <p>Sunday: closed</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6  footer-col  d-flex align-items-center">
+                    <div class="footer-layer">
+                        <h4 class="footer-heading">Чудо стакан видео</h4>
+                        <div class="video">
+
+                            <img class="video-backgrnd" src="./assets/images/play.svg" alt="playsvg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Copyright © 2021 Русский стакан Россия, ООО "Русский стакан", ОГРН 1197746738530</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.jquery.js"></script>
+    <script>
+        window.onscroll = function () {
+            myFunction()
+        };
+
+        var header = document.getElementById("sticky-header");
+        var sticky = header.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+
+
+        $('.header-burger').on('click', function () {
+            $('.header-burger').toggleClass('active')
+            $('.header-menu nav').toggleClass('active')
+        })
+
+        $(window).resize(function () {
+            if ($(this).width() >= 1000) {
+                $('.header-burger').removeClass('active')
+                $('.header-menu nav').removeClass('active')
+            }
+        });
+
+        // Form Section
+
+        //getting all input text objects
+        //first name
+        var inputFirstName = document.querySelector("#inputFirstName");
+
+        //last name
+        var inputLastName = document.querySelector("#inputLastName");
+
+        //mail
+        var inputMail = document.querySelector("#inputMail");
+
+        //subject
+        var inputSubject = document.querySelector("#inputSubject");
+
+        //message
+        var inputMessage = document.querySelector("#inputMessage");
+
+        //getting all error display objects
+        var fname_error = document.getElementById("#fname_error");
+        var lname_error = document.getElementById("#lname_error");
+        var email_error = document.getElementById("#email_error");
+        var subject_error = document.getElementById("#subject_error");
+        var message_error = document.getElementById("#message_error");
+
+        //setting all event listeners
+        inputFirstName.addEventListener("blur", fnameVerify, true);
+        inputLastName.addEventListener("blur", lnameVerify, true);
+        inputEmail.addEventListener("blur", emailVerify, true);
+        inputMessage.addEventListener("blur", messageVerify, true);
+        inputSubject.addEventListener("blur", subjectVerify, true);
+
+        //validation function
+        function Validate(){
+            //first name validation
+            if(inputFirstName.value == ""){
+                inputFirstName.style.border = "1px solid #932a26";
+                fname_error.textContent = "First Name is reqired";
+                inputFirstName.focus();
+                return false;
+            }
+
+            //last name validation
+            if(inputLastName.value == ""){
+                inputLastName.style.border = "1px solid #932a26";
+                flame_error.textContent = "Last Name is reqired";
+                inputLastName.focus();
+                return false;
+            }
+
+            //email validation
+            if(inputMail.value == ""){
+                inputMail.style.border = "1px solid #932a26";
+                email_error.textContent = "Email is reqired";
+                inputMail.focus();
+                return false;
+            }
+
+            //subject validation
+            if(inputSubject.value == ""){
+                inputSubject.style.border = "1px solid #932a26";
+                subject_error.textContent = "Subject is reqired";
+                inputSubject.focus();
+                return false;
+            }
+
+            //message validation
+            if(inputMessage.value == ""){
+                inputMessage.style.border = "1px solid #932a26";
+                message_error.textContent = "Subject is reqired";
+                inputSubject.focus();
+                return false;
+            }
+        }
+
+        //event handler function
+        function fnameVerify(){
+            if(inputFirstName.value != ""){
+                inputFirstName.style.border = "1px solid rgb(202, 200, 200);";
+                fname_error.innerHTML = "";
+                return true;
+            }
+        }
+
+        function lnameVerify(){
+            if(inputLastName.value != ""){
+                inputLastName.style.border = "1px solid rgb(202, 200, 200);";
+                lname_error.innerHTML = "";
+                return true;
+            }
+        }
+
+        function emailVerify(){
+            if(inputMail.value != ""){
+                inputMail.style.border = "1px solid rgb(202, 200, 200);";
+                mail_error.innerHTML = "";
+                return true;
+            }
+        }
+
+        function subjectVerify(){
+            if(inputSubject.value != ""){
+                inputSubject.style.border = "1px solid rgb(202, 200, 200);";
+                subject_error.innerHTML = "";
+                return true;
+            }
+        }
+
+        function messageVerify(){
+            if(inputMessage.value != ""){
+                inputMessage.style.border = "1px solid rgb(202, 200, 200);";
+                mesage_error.innerHTML = "";
+                return true;
+            }
+        }
+    </script>
+</body>
+
+>>>>>>> develop
 </html>
