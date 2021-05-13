@@ -23,10 +23,8 @@ var user = localStorage.getItem("userId")
 
     snapshot.forEach(function(item) {
     item = item.val()
-    console.log(item)
-    
     $content= `
-    <div class="col-md-3 col-sm-6 ${item.Category} " id="product-isotope">
+    <div data-key="${item.key}" class="col-md-3 col-sm-6 ${item.Category} product-isotope">
     <div class="product-grid">
         <div class="product-image">
             <a href="#" class="image">
@@ -49,8 +47,8 @@ var user = localStorage.getItem("userId")
     
         $grid.append($content)
         $grid.isotope( 'appended', $content );
-       $grid.isotope('reloadItems')
-       $grid.isotope()
+        $grid.isotope('reloadItems')
+        $grid.isotope()
 
     })
 })
@@ -61,20 +59,69 @@ var user = localStorage.getItem("userId")
 
 $(document).on("click", ".shop", function(e){
     e.preventDefault()
-    console.log("salam")
+
+    if(user == null){
+        user = db.ref().push().key;
+        localStorage.setItem("userId", user)
+        user = localStorage.getItem("userId")
+    }
+
+    var prKey = $(this).closest('.product-isotope').attr("data-key")
+
+    var item;
+
+    db.ref().once("value", (snapshot) => {
+
+        item = snapshot.child(`/products/${prKey}`).val()
+
+        if(snapshot.child(`${user}`).hasChild(prKey)){
+            console.log("yes")
+            db.ref(user + "/" + prKey + "/count").set(
+                item.count = item.count + 1
+            )
+        }else{
+            console.log("no")
+            db.ref(user + "/" + prKey ).set(
+                item
+        )
+        }
+        return
+    })
+
+    // db.ref("products/").once("value", (snapshot) => {
+
+    //     console.log(prKey)
+
+    //     item = snapshot.child(prKey).val()
+
+    //     console.log(item.ProductName, item.count)
+
+    //     if(snapshot.hasChild(prKey)){
+    //         console.log("yes")
+    //         db.ref(user + "/" + prKey ).set(
+    //             item
+    //         )
+    //     }else{
+    //         console.log("no")
+    //         db.ref(user + "/" + prKey ).set(
+    //             item
+    //     )
+    //     }
+    // })
+
 })
 //     var prName = $(this).closest('.product-grid').children('.product-content').find('.title').text()
 //     var prPrice = $(this).closest('.product-grid').children('.product-content').find('.price').text()
 //     var prImage = $(this).closest('.product-grid').children(".product-image").children(".image").find("img").attr("src")
 //     console.log(prName, prPrice, prImage)
 
-//     if(user == null){
-//     user = db.ref().push().key;
-//     localStorage.setItem("userId", user)
-//     user = localStorage.getItem("userId")
-//     }
+    // if(user == null){
+    // user = db.ref().push().key;
+    // localStorage.setItem("userId", user)
+    // user = localStorage.getItem("userId")
+    // }
 
-//     db.ref("/users/" + user).push(prDetails)
+    // db.ref("/users/" + user).push(prDetails)
 // })
 
 // var sebet = []
