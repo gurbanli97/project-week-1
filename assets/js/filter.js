@@ -72,12 +72,10 @@ $(document).on("click", ".shop", function(e){
         item = snapshot.child(`/products/${prKey}`).val()
 
         if(snapshot.child(`${user}`).hasChild(prKey)){
-            console.log("yes")
-            db.ref(user + "/" + prKey + "/count").set(
-                item.count + 1
-            )
+            console.log("if works")
+            db.ref(user + "/" + prKey + "/count").setValue(item.count += item.count + 1)
         }else{
-            console.log("no")
+            console.log("else works")
             db.ref(user + "/" + prKey ).set(
                 item
         )
@@ -87,11 +85,18 @@ $(document).on("click", ".shop", function(e){
 })
 
 // var sebet = []
-// var totalSum = 0.00
+var totalSum = 0.00
 
-db.ref(user).on("on", (snapshot) => {
+db.ref(user).on("value", (snapshot) => {
 
     $(".itemCount").text(snapshot.numChildren())
+    
+    snapshot.forEach(function(snapshot){
+    totalSum += parseFloat(snapshot.val().ProductPrice)
+    })
+
+    $(".priceSpan").text("$"+totalSum.toFixed(2))
+    totalSum = 0
 
 
     // console.log(snapshot.child(prKey +"/").val())
@@ -108,13 +113,6 @@ db.ref(user).on("on", (snapshot) => {
 
 })
 
-db.ref().on("value", (snapshot) => {
-
-    snapshot.forEach(function(snapshot){
-    snapshot = snapshot.val()
-    console.log(snapshot)
-})
-})
 
 //     var prName = $(this).closest('.product-grid').children('.product-content').find('.title').text()
 //     var prPrice = $(this).closest('.product-grid').children('.product-content').find('.price').text()
