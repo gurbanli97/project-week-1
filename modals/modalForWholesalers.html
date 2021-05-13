@@ -23,9 +23,15 @@
     <div class="container">
         <div class="main1 d-flex justify-content-center align-items-center">
             <div class="main">
+                <div class="row">
+                    <div class="col-12 closeBtnDiv d-flex justify-content-end">
+                        <form >
+                            <button type="submit" id="closeBtn"><i class="fas fa-times"></i></button>
+                        </form>
+                    </div>
+
+                </div>
                 <h3>Если Вас интересуют оптовые условия заполните все поля ниже</h3>
-
-
                 <div class="form-cntrl">
                     <div class="textclock">
                         <div class="textclock-child">
@@ -38,7 +44,7 @@
                     <form action="">
                         <div class="mb-3">
 
-                            <input type="email" class="form-control" id="name" placeholder="Ваше имя">
+                            <input type="text" class="form-control" id="name" placeholder="Ваше имя">
                         </div>
                         <div class="mb-3">
 
@@ -48,7 +54,7 @@
 
                             <input type="email" class="form-control" id="emailinp" placeholder="Введите емаил">
                         </div>
-                        <button type="submit" class="btn btn-primary  formBtn">Отправить</button>
+                        <button type="submit" class="btn btn-primary  formBtn" id="btn btn-primary" >Отправить</button>
                     </form>
                 </div>
             </div>
@@ -63,18 +69,11 @@
         integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
         crossorigin="anonymous"></script>
     <script>
-        var name = $('#name').val().trim();
-        console.log(name);
+       
 
-
-
-
-
-
-
-
-
-
+       $('#closeBtn').on('click' ,  function(){
+           document.getElementById('closeBtn').parentNode.setAttribute('action' , '../forwholesalers.html');
+       });
 
     </script>
 </body>

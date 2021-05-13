@@ -234,26 +234,12 @@
         </div>
         <div class="row">
             <div class="col-12 d-flex justify-content-center mt-3 mb-3">
-                <form action="#">
+                <form action="./modals/modalForWholesalers.html">
                     <button type="submit" class="button-wholesalers" id="submit-button" >For Wholesalers</button>
                 </form>
             </div>
         </div>
     </div>
-
-<div class="button-popup">
-    <div class="keypage-backdrop">
-        <div class="button-content">
-            <iframe width="560" height="315" src="../modals/modalForWholesalers.html"
-                title="sign in page" frameborder="0"
-                allowfullscreen></iframe>
-        </div>
-    </div>
-</div>
-
-
-    
-
 
     <!-- Сфера применения «Чудо-стаканчика» -->
 
@@ -315,22 +301,9 @@
                         </div>
                     </div>
                 </div>
-
-
-
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-
 
     <!-- START FOOTER  -->
     <footer>
@@ -427,58 +400,7 @@
 
             }
         });
-        $(document).ready(function () {
 
-            var mySwiper = new Swiper('.swiper-container', {
-
-                // Optional parameters
-                direction: 'horizontal',
-                loop: true,
-                spaceBetween: 30,
-                slidesPerView: 5,
-                visibilityFullFit: true,
-                pagination: '.swiper-pagination',
-                paginationClickable: true,
-                nextButton: '.next',
-                prevButton: '.prev',
-                autoplay: 3000,
-                speed: 600
-
-            })
-
-        });
-
-        $("#more-button").on('click', function () {
-            $('.second-values').addClass('active');
-            $("#more-button").hide();
-            $("#less-button").show()
-        })
-
-        $("#less-button").on('click', function () {
-            $("#less-button").hide();
-            $('.second-values').removeClass('active');
-            $("#more-button").show();
-        });
-
-
-
-        // button pop up
-
-        $('#submit-button').on('click', function () {
-            $('.button-popup').show(300);
-            $('.button-popup').addClass('active');
-
-
-        })
-
-        $(document).mouseup(function (e) {
-            if ($('.button-popup').hasClass('active') && !$('.button-content').is(e.target) && $('.button-content')
-                .has(e.target).length === 0) {
-                $('.button-popup').removeClass('active');
-                $('.button-popup').hide(300)
-
-            }
-        });
 
     </script>
 
