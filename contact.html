@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main</title>
+    <title>Contact</title>
     <script src="https://kit.fontawesome.com/b673856b82.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -32,7 +32,7 @@
                     <nav>
                         <ul class="links">
                             <li class="nav-logo">
-                                <a href=""><img src="./assets/images/logo.png""></a>
+                                <a href=""><img src="./assets/images/logo.png"></a>
                             </li>
                             <li><a href=" #">Main</a></li>
                             <li><a href="./products.html">Products</a></li>
@@ -92,9 +92,12 @@
     <!-- 
         The allowfullscreen property to allow certain map parts to go full screen -- Set to true if the <iframe> can activate fullscreen mode by calling the requestFullscreen() method
      -->
-    <div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2264.688753866514!2d37.6054793153755!3d55.415780625402434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414aa7db944f1fdd%3A0x2174f5d36fdc0455!2sSimferopol&#39;skoye%20Shosse%2C%2038%D0%B9%2C%20Podolsk%2C%20Moskovskaya%20oblast&#39;%2C%20Russia%2C%20142143!5e0!3m2!1sen!2s!4v1620686285772!5m2!1sen!2s" width="100%" height="600" style="border:0;" allowfullscreen="" loading="eager"></iframe>
+    <div class="map" style="width:60%">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2264.688753866514!2d37.6054793153755!3d55.415780625402434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414aa7db944f1fdd%3A0x2174f5d36fdc0455!2sSimferopol&#39;skoye%20Shosse%2C%2038%D0%B9%2C%20Podolsk%2C%20Moskovskaya%20oblast&#39;%2C%20Russia%2C%20142143!5e0!3m2!1sen!2s!4v1620686285772!5m2!1sen!2s"
+            width="100%" height="450" style="border:0;" allowfullscreen="" loading="eager"></iframe>
     </div>
+
 
     <section class="container-section">
         <div class="container">
@@ -106,38 +109,100 @@
             <div class="row contact-left">
                 <div class="col-9">
                     <h4>Leave us a Message</h4>
-                    <p>Aenean massa diam, viverra vitae luctus sed, gravida eget est. Etiam nec ipsum porttitor, consequat libero eu, dignissim eros. Nulla auctor lacinia enim id mollis.</p>
+                    <p>
+                        For questions of interest in logistics, participation in exhibitions, proposals for cooperation,
+                        you can contact directly through the form below. The answer will be received within 10-15
+                        minutes
+                    </p>
 
-                    <form>
+                    <form class="contact-form">
                         <div class="row">
                             <div class="col-md-6">
                                 <label for="firstName">First Name</label>
-                                <input type="text" id="firstName" class="form-control">
-                            </div>    
-                         
+                                <input  type="text" id="inputFirstName" class="form-control inputs">
+                            </div>
+
                             <div class="col-md-6">
                                 <label for="lastName">Last Name</label>
-                                <input type="text" id="lastName" class="form-control">
-                            </div>    
+                                <input  type="text" id="inputLastName" class="form-control inputs">
+                            </div>
                         </div>
 
                         <div class="row">
                             <div class="col-md-6">
                                 <label for="mail">Email</label>
-                                <input type="email" id="mail" class="form-control">
-                            </div>    
-                         
+                                <input  type="email" id="inputMail" class="form-control inputs">
+                            </div>
+
                             <div class="form-group col-md-6">
                                 <label for="subject">Subject</label>
-                                <input type="text" id="subject" class="form-control">
-                            </div>    
+                                <input  type="text" id="inputSubject" class="form-control inputs">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-9 request-proposal">
+                                <label for="message">Your Request or Proposal</label>
+                                <input  type="text" id="inputMessage" class="form-control inputs">
+                            </div>
+                        </div>
+
+                        <div class="submit-button d-flex justify-content-end">
+                            <button type="submit" id="sub-btn">Submit</button>
                         </div>
                     </form>
                 </div>
-                
+
                 <div class="col-3">
-                    <h4>Our Address</h4>
-                    <p>329 Queensberry Street, North Melbourne VIC 3051, Australia.</p>
+                    <div>
+                        <h4>Our Address</h4>
+                        <p>Simferopol highway, 38th kilometer, vl4</p>
+                        <p>Pre-call the phone number indicated in the header of the site!</p>
+                        <p>support@etinat.com</p>
+                    </div>
+
+                    <div>
+                        <h4>Opening Hours</h4>
+
+                        <div class="opening-hours-table">
+                            <div>
+                                <p>Monday</p>
+                                <p>09:00-18:00</p>
+                            </div>
+
+                            <div>
+                                <p>Tuesday</p>
+                                <p>09:00-18:00</p>
+                            </div>
+
+                            <div>
+                                <p>Wednesday</p>
+                                <p>09:00-18:00</p>
+                            </div>
+
+                            <div>
+                                <p>Thursday</p>
+                                <p>09:00-18:00</p>
+                            </div>
+
+                            <div>
+                                <p>Friday</p>
+                                <p>09:00-18:00</p>
+                            </div>
+
+                            <div>
+                                <p>Saturday</p>
+                                <p class="closed">Closed</p>
+                            </div>
+
+                            <div>
+                                <p>Sunday</p>
+                                <p class="closed">Closed</p>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
         </div>
@@ -196,6 +261,7 @@
         integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous">
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.jquery.js"></script>
+
     <script>
         window.onscroll = function () {
             myFunction()
@@ -225,6 +291,54 @@
             }
         });
 
+        // Form Section
+
+        //first name
+        var inputFirstName = document.querySelector("#inputFirstName");
+
+        //last name
+        var inputLastName = document.querySelector("#inputLastName");
+
+        //mail
+        var inputMail = document.querySelector("#inputMail");
+
+        //subject
+        var inputSubject = document.querySelector("#inputSubject");
+
+        //message
+        var inputMessage = document.querySelector("#inputMessage");
+        
+        //inputs of each line
+        // var input = $(".inputs");
+
+        // console.log(input);
+        // function stoppedTyping(){
+        //     if((inputFirstName.val("")) && (inputLastName.val("")) && (!inputMail.val("")) && (inputSubject.val("")) && (inputMessage.val(""))){
+        //         console.log("Alla fields aren't filled in")
+        //         $(".contact-form input").style.border = "1px solid red";
+        //     }
+
+           
+        //     if(input.val("")){
+        //          $(input).css = ("border", "1px solid red");
+        //     }
+        // }
+          // function stoppedTyping(){
+        //     if($(".contact-form input").val("")){
+        //         console.log(stop)
+        //     }
+        // }
+
+        $("#sub-btn").on('click',function(event){ 
+            event.preventDefault()
+            var values = $(".contact-form .inputs").val()
+            console.log(values)
+      if(values === ''){
+          console.log("alert")
+        $(".contact-form .inputs").css('border','2px solid red')
+        
+      }
+    })
     </script>
 </body>
 
