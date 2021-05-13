@@ -29,10 +29,10 @@
 }
 
 .paraqraf p{
-    color: hsl(0, 1%, 58%);
+    color: #959393;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 15px;
-    line-height: 25px;
+    line-height: 24px;
 }
 
 .text h6{
