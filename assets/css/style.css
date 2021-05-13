@@ -17,22 +17,21 @@ body{
 header{
     background-color:#c19a42;
     font-weight: 700;
+    top: 0;
+    z-index: 999;
+    width: 100%;
     color: #fff;
     border-bottom:1px solid rgba(255,255,255,0.20);
-    padding: 40px 0;
+    padding: 20px 0;
     transition: all .4s ease-in-out;
 }
 
 header.sticky {
-    position: fixed;
-    top: 0;
-    z-index: 999;
-    width: 100%;
+    position: sticky;
     background-color: #2D2118;
     opacity: .9;
     padding: 20px 0;
     transition: all .4s ease-in-out;
-
 }
 
 
@@ -153,6 +152,97 @@ header.sticky {
     border-right: 8px solid transparent;
 }
 
+/* Main - Glass Represetation */
+.glass-content{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.glass-content .textBox{
+    max-width: 700px;
+}
+
+.glass-content .textBox h2{
+    color: #333;
+    font-size:2em;
+    line-height: 1.4em;
+    font-weight: 500;
+}
+
+.glass-content .textBox h2 span{
+    font-weight: 900;
+    color: #932a26;
+    font-size: 45px;
+}
+
+.glass-content .textBox a{
+    display: inline-block;
+    text-decoration: none;
+    background: #932a26;
+    color: #fff;
+    border-radius: 40px;
+    margin-top: 20px;
+    padding: 8px 20px;
+    font-weight: 500;
+}
+
+.glass-content .imgBox{
+    width: 600px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 50px;
+}
+
+.glass-content .imgBox img{
+    max-width: 350px;
+}
+
+/* .thumb{
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    display: flex;
+} */
+
+.thumb{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.thumb li{
+    display: inline-block;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.thumb li img{
+    max-width: 60px;
+}
+
+.thumb li:hover{
+    transform: translateY(-15px);
+}
+
+.circle{
+    background-color: #c19a42;
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(600px at right 800px);
+}
+
+#etinat{
+    transform: rotate(345deg);
+  }
+
+
 
 /* Our values */
 .compare-section {
@@ -165,19 +255,27 @@ header.sticky {
 }
 
 .values-text{
+    cursor: pointer;
+    border: 1px solid transparent;
+    padding: 20px;
+    border-radius: 12px;
     text-align: center;
     color: #959393;
-    min-height: 150px;
-    height: 100%;
-    
-    transition: all .4s ease;
+    transition: all .5s linear;
 }
-.values-text:hover{
+.values-text:hover {
+    border: 1px solid #932A26;
     transform: translateY(-6px);
-    box-shadow: 13px 14px 50px -12px rgb(171 171 171 / 90%);
+    box-shadow: 15px 14px 50px -12px rgb(171 171 171 / 90%);
 }
-
-
+.values-text:hover img {
+    animation:  move 1s linear infinite alternate;
+}
+@keyframes move {
+    100% {
+        transform: rotate(-30deg);
+    }
+}
 
 .values-text h4{
     color:#932a26;
@@ -203,6 +301,9 @@ header.sticky {
 .comparison{
     margin-bottom: 35px;
 }
+.comparison > .row{
+    margin: auto !important;
+}
 
 .comparison-quote{
     font-weight: 500;
@@ -216,6 +317,7 @@ header.sticky {
 
 #more-button,
 #less-button {
+    height: 50px;
     background: #912A27;
     border: 1px solid transparent;
     color: #fff;
@@ -237,15 +339,20 @@ header.sticky {
 
 .row.second-values.active {
     transform: scale(1);
-    height: 370px;
+    height: 450px;
     opacity: 1;
 
 }
 
 /* Awards */
 .awards-gallery{
-    background-color: #912A27;
     color: #fff;
+    background-image: url(https://www.filepicker.io/api/file/cEfyzmsTA2fmrJtLFw4w);
+    background-size: cover;
+    height: 450px;
+    border-radius: 20px;
+    opacity: 0.9;
+    /* box-shadow: 3px 3px 5px 6px #ccc; */
 }
 
 .awards-text h1{
@@ -260,62 +367,18 @@ header.sticky {
 
 .awards-text p{
     font-size: 17px;
-    text-align: justify;
-}
-/* .awimg , .awimg2{
-    width:350px;
-    min-height:400px;
-    background-size: contain;
-    background-repeat: no-repeat;   
-}
-.awimg {
-    background-image: url(../images/awards1.jpg);
-    animation-name: slide1;
-    animation-duration: 30s;
-    animation-iteration-count: infinite;
-}
-.awimg2{
-    background-image: url(../images/awards2.jpg);
-    animation-name: slide2;
-    animation-duration: 10s;
-    animation-iteration-count: infinite; 
-}
-@keyframes slide1 {
-    from {
-        background-image: url(../images/awards1.jpg);
-    }  
-    to {
-        background-image: url(../images/awards3.jpg);
-    } 
-}
-@keyframes slide2 {
-    from {
-        background-image: url(../images/awards2.jpg);
-    }
-    to {
-        background-image: url(../images/awards4.jpg);
-    }
-} */
-.awrImg {
-    width: 0;
-    height: 200px;
-    /* border: 3px solid black; */
-    margin-right: 5px;
-    animation-name: award;
-    animation-duration: 20s;
-    animation-iteration-count: infinite;
-}
-@keyframes award {
-    from {
-        width: 0;
-       
-    }
-    
-    to {
-        width: 200px;
-    }
+    text-align: center;
+    max-width: 350px;
+    margin: auto;
+    margin-bottom: 10px;
+
 }
 
+.awards-imgs{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
 
 /* Miracle Glass Hashtag */
 .hashtag-text{
@@ -355,6 +418,9 @@ header.sticky {
     background-size: cover;
 }
 
+.hashtags {
+    padding: 20px 0;
+}
 .hashtags-inner {
     padding: 30px 30px;
     display: flex;
@@ -370,14 +436,22 @@ header.sticky {
 }
 
 
-.hashtags-inner .next {
-    transform: rotate(180deg);
+.hashtags-inner .prev {
+    transform: rotate(-180deg)
 }
 
-.hashtags-inner .prev img,
-.hashtags-inner .next img {
-    width: 50px;
+.hashtags-inner .prev,
+.hashtags-inner .next {
+    color: #c19a42;
     cursor: pointer;
+    font-size: 40px;
+    transition: color .3s ease-in-out;
+}
+
+.hashtags-inner .prev:hover,
+.hashtags-inner .next:hover {
+    color: #932a26;
+    
 }
 
 .swiper-slide {
@@ -389,6 +463,20 @@ header.sticky {
 .swiper-container{
     margin: 0 20px;
     
+}
+.swiper-pagination {
+    position: initial;
+}
+
+.swiper-pagination-bullet {
+    background-color: #c19a42;
+}
+
+.swiper-pagination-bullet {
+    background-color: #c19a42;
+}
+.swiper-pagination-bullet-active {
+    background-color: #932a26;
 }
 
 /* footer */
@@ -502,6 +590,17 @@ margin-right: 5px;
 }
 
 /* Contact Us */
+.map{
+    margin:auto;
+    margin-top:30px;
+    border:4px solid #932a26;
+    border-radius: 12px;
+}
+
+.map iframe{
+    border-radius: 12px;
+    border:4px solid transparent;
+}
 .container-section{
     margin-top: 40px;
 }
@@ -510,8 +609,8 @@ margin-right: 5px;
     text-align: center;
 }
 
-.contact-heading h2{
-    font-size: 40px;
+.contact-heading h2, .details h2{
+    font-size: 35px;
     font-weight: 800;
     color: #221817;
 }
@@ -522,17 +621,68 @@ margin-right: 5px;
     font-weight: 700;
 }
 
+.contact-form label{
+    color: #C19A42;
+    font-weight: 600;
+}
 .contact-left form input{
     width: 350px;
     height: 50px;
-    border-radius: 10px;
+    border-radius: 20px;
     border: 1px solid rgb(202, 200, 200);
 }
 
-@media screen and (max-width:1060px){
-    .header-inner {
-        padding: 40px 80px;
+.opening-hours-table div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.opening-hours-table div p{
+    font-size: 15px;
+    color:#959393;
+}
+
+.closed{
+    color: #932a26 !important;
+    font-weight: 600;
+}
+
+.request-proposal #message{
+    height: 200px;
+    width: 92%;
+}
+
+.submit-button button{
+    width: 150px;
+    background-color: #932a26;
+    font-weight: 600;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+}
+
+.submit-button{
+    margin: 50px 100px 30px 0 !important;
+}
+
+.details h2{
+    text-align: center;
+}
+
+.details{
+    border: 2px solid #932a26;
+}
+
+@media only screen and (max-width: 1200px) {
+    .hashtag-card {
+        width: 200px;
+        height: 160px;
     }
+}
+
+@media screen and (max-width:1060px){
+    
     .header-burger span, 
     .header-burger span:after, 
     .header-burger span:before {
@@ -634,6 +784,21 @@ margin-right: 5px;
 }
 
 @media only screen and (max-width:992px) {
+    .row.second-values.active {
+        height: 620px;
+    }
+    .hashtags-inner {
+        padding: 30px 10px;
+    }
+    .hashtag-card {
+        height: 160px;
+    }
+    .awards-text {
+        padding: 30px 0;
+    }
+    .awards-gallery {
+        height: 400px;
+    }
     .footer-col:nth-child(1),
     .footer-col:nth-child(2){
         margin-bottom: 20px;
@@ -649,6 +814,16 @@ margin-right: 5px;
 }
 
 @media only screen and (max-width:800px) {
+    .row.second-values.active {
+        height: 820px;
+    }
+    .hashtags-inner .prev,
+    .hashtags-inner .next {
+     display: none;
+ }
+    .awards-gallery {
+        height: 300px;
+    }
      .header-phone,
      .header-cart {
         display: none;
@@ -673,9 +848,13 @@ margin-right: 5px;
 }
 
 @media only screen and (max-width:600px){
-    .header-inner {
-        padding: 40px 0;
+    .row.second-values.active {
+        height: 1020px;
     }
+    .awards-gallery {
+        height: 200px;
+    }
+    
 }
 
 

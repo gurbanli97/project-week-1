@@ -146,10 +146,10 @@
     padding: 10px 15px 65px 25px;
 }
 
-@media screen and (max-width: 633px){
+/* @media screen and (max-width: 633px){
     .disclaimer div{
         width: 100%;
         margin: 5px 10px;
         height: auto;
     }
-}
+} */
