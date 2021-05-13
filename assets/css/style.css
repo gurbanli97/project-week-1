@@ -593,14 +593,8 @@ margin-right: 5px;
 .map{
     margin:auto;
     margin-top:30px;
-    border:4px solid #932a26;
-    border-radius: 12px;
 }
 
-.map iframe{
-    border-radius: 12px;
-    border:4px solid transparent;
-}
 .container-section{
     margin-top: 40px;
 }
@@ -625,11 +619,24 @@ margin-right: 5px;
     color: #C19A42;
     font-weight: 600;
 }
-.contact-left form input{
-    width: 350px;
+
+.contact-form .form-rows{
+    margin-top: 15px;
+}
+
+.contact-left form input, .request-proposal textarea{
     height: 50px;
-    border-radius: 20px;
+    border-radius: 30px;
     border: 1px solid rgb(202, 200, 200);
+}
+
+.request-proposal textarea{
+    height: 200px;
+    resize: none;
+}
+
+.form-rows div label{
+    margin-bottom: 10px;
 }
 
 .opening-hours-table div{
@@ -657,21 +664,52 @@ margin-right: 5px;
     background-color: #932a26;
     font-weight: 600;
     color: #fff;
-    padding: 10px 20px;
+    padding: 13px 20px;
     border-radius: 20px;
     border: none;
 }
 
-.submit-button{
-    margin: 50px 100px 30px 0 !important;
+.submit-button button:hover{
+    background-color: #C19A42;
 }
+
+.submit-button{
+    margin: 50px 0 100px 0 !important;
+}
+
 
 .details h2{
     text-align: center;
 }
 
-.details{
+.details div{
     border: 2px solid #932a26;
+    /* margin: 20px 160px 60px 160px; */
+    padding-top: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 1px rgba(0, 0, 255, .2);
+    background-color: #e9d4c0;;
+}
+
+
+.details div:hover{
+    border-color: #C19A42;
+}
+
+.details div ol li{
+    list-style:inside;
+    padding-bottom: 25px;
+}
+
+.details div ol h3{
+    font-size: 17px;
+    font-weight: 600;
+    color: #932a26;
+    padding-top: 15px;
+}
+
+.val_error{
+    color: #932a26;
 }
 
 @media only screen and (max-width: 1200px) {
