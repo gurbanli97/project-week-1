@@ -67,12 +67,14 @@ $(document).on("click", ".shop", function(e){
 
     db.ref().once("value", (snapshot) => {
 
+        console.log(snapshot.child(`/products/${prKey}`).val())
+
         item = snapshot.child(`/products/${prKey}`).val()
 
         if(snapshot.child(`${user}`).hasChild(prKey)){
             console.log("yes")
             db.ref(user + "/" + prKey + "/count").set(
-                item.count = item.count + 1
+                item.count + 1
             )
         }else{
             console.log("no")
@@ -80,31 +82,40 @@ $(document).on("click", ".shop", function(e){
                 item
         )
         }
-        return
     })
 
-    // db.ref("products/").once("value", (snapshot) => {
+})
 
-    //     console.log(prKey)
+// var sebet = []
+// var totalSum = 0.00
 
-    //     item = snapshot.child(prKey).val()
+db.ref(user).on("on", (snapshot) => {
 
-    //     console.log(item.ProductName, item.count)
+    $(".itemCount").text(snapshot.numChildren())
 
-    //     if(snapshot.hasChild(prKey)){
-    //         console.log("yes")
-    //         db.ref(user + "/" + prKey ).set(
-    //             item
-    //         )
-    //     }else{
-    //         console.log("no")
-    //         db.ref(user + "/" + prKey ).set(
-    //             item
-    //     )
-    //     }
-    // })
+
+    // console.log(snapshot.child(prKey +"/").val())
+
+    // productD = snapshot.val()
+    // sebet.push(parseFloat(productD.ProductPrice))
+    // console.log(sebet)
+    // totalSum = sebet.reduce((a, b) => a + b).toFixed(2)
+    // console.log(totalSum , sebet)
+
+    // $(".itemCount").text(snapshot.numChildren())
+    // $(".priceSpan").text("$"+totalSum)
+
 
 })
+
+db.ref().on("value", (snapshot) => {
+
+    snapshot.forEach(function(snapshot){
+    snapshot = snapshot.val()
+    console.log(snapshot)
+})
+})
+
 //     var prName = $(this).closest('.product-grid').children('.product-content').find('.title').text()
 //     var prPrice = $(this).closest('.product-grid').children('.product-content').find('.price').text()
 //     var prImage = $(this).closest('.product-grid').children(".product-image").children(".image").find("img").attr("src")
@@ -153,10 +164,6 @@ $(document).on("click", ".shop", function(e){
 
 // })
 
-// db.ref("/users/" + user).on("value", (snapshot) => {
-//     productD = snapshot.val()
-//     $(".itemCount").text(snapshot.numChildren())
-// })
 
 // db.ref("/users/" + user).on("child_removed", (snapshot) => {
 
