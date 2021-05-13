@@ -93,40 +93,40 @@
         <div class="circle"></div>
         <div class="glass-content">
             <div class="textBox">
-                <h2>It's more than a simple Glass.<br>It's <span>Etinat</span></h2>
+                <h2>It's more than a simple Glass.<br>It's <span id="brand-name">Etinat</span></h2>
                 <p>We bring dozens of values to you in just a glass</p>
-                <a href="">Learn More</a>
+                <a href="" id="learnMore-button">Learn More</a>
             </div>
 
             <div class="imgBox">
-                <img src="./assets/images/redEtinat.jpg" alt="" id="etinat">
+                <img src="./assets/images/redGlass.png" alt="" id="etinat">
             </div>
         </div>
-
+        
         <ul class="thumb">
             <li>
-                <img src="./assets/images/purpleEtinat.jpg" alt="" onclick="glassSlider('./assets/images/purpleEtinat.jpg'); changeCircleColor('#58396D')">
+                <img src="./assets/images/purpleGlass.png" alt="" onclick="glassSlider('./assets/images/purpleGlass.png'); changeCircleColor('#6b517c'); changeButtonColor('#6b517c'); changeBrandColor('#6b517c')">
             </li>
             
             <li>
-                <img src="./assets/images/yellowEtinat.jpg" alt="" onclick="glassSlider('./assets/images/yellowEtinat.jpg'); changeCircleColor('#C3A82F')">
+                <img src="./assets/images/yellowGlass.png" alt="" onclick="glassSlider('./assets/images/yellowGlass.png'); changeCircleColor('#C3A82F'); changeButtonColor('#C3A82F'); changeBrandColor('#C3A82F')">
             </li>
 
             <li>
-                <img src="./assets/images/pinkEtinat.jpg" alt="" onclick="glassSlider('./assets/images/pinkEtinat.jpg'); changeCircleColor('#B92F59')">
+                <img src="./assets/images/pinkGlass.png" alt="" onclick="glassSlider('./assets/images/pinkGlass.png'); changeCircleColor('#8f495e'); changeButtonColor('#8f495e'); changeBrandColor('#8f495e')">
             </li>
 
             <li>
-                <img src="./assets/images/greyEtinat.jpg" alt="" onclick="glassSlider('./assets/images/greyEtinat.jpg'); changeCircleColor('#898372')">
+                <img src="./assets/images/greyGlass.png" alt="" onclick="glassSlider('./assets/images/greyGlass.png'); changeCircleColor('#898372'); changeButtonColor('#898372'); changeBrandColor('#898372')">
             </li>
 
 
             <li>
-                <img src="./assets/images/redEtinat.jpg" alt="" onclick="glassSlider('./assets/images/redEtinat.jpg'); changeCircleColor('#7A2D2D')">
+                <img src="./assets/images/redGlass.png" alt="" onclick="glassSlider('./assets/images/redGlass.png'); changeCircleColor('#8b4949'); changeButtonColor('#8b4949'); changeBrandColor('#8b4949')">
             </li>
 
             <li>
-                <img src="./assets/images/lilacEtinat.jpg" alt="" onclick="glassSlider('./assets/images/lilacEtinat.jpg'); changeCircleColor('#957B95')">
+                <img src="./assets/images/lilacGlass.png" alt="" onclick="glassSlider('./assets/images/lilacGlass.png'); changeCircleColor('#6e5e6e'); changeButtonColor('#6e5e6e'); changeBrandColor('#6e5e6e')">
             </li>
 
         </ul>
@@ -452,6 +452,16 @@
         function changeCircleColor(color){
             var circle = document.querySelector(".circle");
             circle.style.background = color;
+        }
+
+        function changeButtonColor(color){
+            var button = document.querySelector("#learnMore-button");
+            button.style.background = color;
+        }
+
+        function changeBrandColor(color){
+            var brandName = document.querySelector("#brand-name");
+            brandName.style.color = color;
         }
     </script>
 
