@@ -784,8 +784,9 @@ margin-right: 5px;
     display: none;
 }
 
-.imgButtons .button.btn1:hover .button1-text{
-    display: block;
+.architecture-explanation div{
+    min-width: 700px;
+    padding-right: 200px;
 }
 
 
