@@ -137,9 +137,10 @@ header.sticky {
     position: relative;
     background: #fff;
     min-width: 380px;
-    padding: 40px 25px;
+    padding: 30px 25px;
     color: #20202f;
     border-radius: 18px;
+    overflow-y: scroll;
 }
 .cart-empty::before {
     content: '';

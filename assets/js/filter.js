@@ -23,21 +23,19 @@ var user = localStorage.getItem("userId")
     snapshot.forEach(function(item) {
     item = item.val()
     $content= `
-    <div data-key="${item.key}" class="col-md-3 col-sm-6 ${item.Category} product-isotope">
+    <div data-key="${item.key}" class="col-md-4 col-sm-12 ${item.Category} product-isotope">
     <div class="product-grid">
         <div class="product-image">
             <a href="#" class="image">
                 <img src="${item.ProductImage}">
             </a>
-            <ul class="product-links">
-                <li><a class="shop" role="button" href="#" data-tip="Add to Cart"><i class="fas fa-shopping-bag"></i></a></li>
-                <li><a role="button" href="#" data-tip="Quick View"><i class="fa fa-search"></i></a></li>
-            </ul>
-        </div>
         <div class="product-content">
             <h3 class="title"><a href="#">${item.ProductName}</a></h3>
             <div class="price">$${item.ProductPrice}</div>
         </div>
+            <button class="shop" data-tip="Add to Cart">Add to Cart</button>
+        </div>
+
     </div>
     </div>
     `
@@ -68,8 +66,6 @@ $(document).on("click", ".shop", function(e){
     db.ref().once("value", (snapshot) => {
 
         item = snapshot.child(`/products/${prKey}`).val()
-
-            console.log("if works")
             db.ref(user + "/" + prKey ).update(
                 item
         )
@@ -84,18 +80,23 @@ $(document).on("click", ".shop", function(e){
     
 })
 
-// function artir(user, prKey){
-//     db.ref(user + "/" + prKey).update({
-//         count: firebase.database.ServerValue.increment(1),
-//     })
-//     return
-// }
-
-// var sebet = []
 var totalSum = 0.00
 var totalItem = 0
 
-db.ref(user).on("value", (snapshot) => {
+db.ref(user + "/").on("value", (snapshot) => {
+
+    if($(".cart-empty").text().trim() === "No products in the cart"){
+        $(".cart-empty").text("")
+        $(".cart-empty").html(`
+        <table class="chartDiv">
+            <tr>
+                <th></th>
+                <th>Name</th>
+                <th>Count</th>
+                <th>Price</th>
+            </tr>
+        </table>`)
+    }
     
     snapshot.forEach(function(snapshot){
     if(snapshot.val().count > 1){
@@ -105,13 +106,22 @@ db.ref(user).on("value", (snapshot) => {
     }
     totalItem += snapshot.val().count
 
+    $(".chartDiv").append(`
+    <tr>
+        <td><img class="chartImg" src="${snapshot.val().ProductImage}"></td>
+        <td>${snapshot.val().ProductName}</td>
+        <td>${snapshot.val().count}</td>
+        <td>${snapshot.val().ProductPrice}</td>
+    </tr>
+    `)
     })
 
     $(".itemCount").text(totalItem)
     $(".priceSpan").text("$"+totalSum.toFixed(2))
 
-    totalSum = 0
+    totalSum = 0.00
     totalItem = 0
+    // $(".chartDiv").html("")
 
 
     // console.log(snapshot.child(prKey +"/").val())
@@ -147,11 +157,6 @@ db.ref(user).on("value", (snapshot) => {
 // var totalSum = 0.00
 
 // db.ref("/users/" + user).on("child_added", (snapshot) => {
-//     productD = snapshot.val()
-//     d = productD.ProductPrice.slice(1)
-//     sebet.push(parseFloat(d))
-//     console.log(sebet)
-//     totalSum = sebet.reduce((a, b) => a + b).toFixed(2)
 
 //     if($(".cart-empty").text().trim() === "No products in the cart"){
 //         $(".cart-empty").text("")
@@ -165,8 +170,6 @@ db.ref(user).on("value", (snapshot) => {
 //         </table>`)
 //     }
     
-//     $(".priceSpan").text("$"+totalSum)
-//     console.log(totalSum)
 //     $(".chartDiv").append(`
 //     <tr>
 //         <td><img class="chartImg" src="${productD.ProductImage}"></td>
