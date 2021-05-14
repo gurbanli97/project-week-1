@@ -132,65 +132,73 @@
         </ul>
     </section>
 
+    
     <section class=" architecture-section">
-        <div class=" container glass-architecture">
-            <div class="imgButtons">
-                <img src="./assets/images/transparentGlass.png" alt="">
-                <button class="button btn1">1</button>
-                <button class="button btn2">2</button>
-                <button class="button btn3">3</button>
-                <button class="button btn4">4</button>
-                <button class="button btn5">5</button>
-            </div>
-            
-           
-            <div class="architecture-explanation">
-                <h1><span class="miracle-glass">Miracle glass</span> is</h1>
-                <div class="button1-text">
-                    <p><strong>Disposable paper cup with a capacity of 250 ml. made of cellulose cardboard!</strong></p>
-                    <ol>
-                        <li>Does not emit harmful substances when heated, there is no unpleasant smell</li>
-                        <li>Minimal chance of getting burned</li>
-                        <li>Cool design</li>
-                    </ol>
-                </div>
-                
-                <div class="button2-text">
-                    <p><strong>Disposable spoon lid made of cellulose cardboard!</strong></p>
-                    <ol>
-                        <li>- Top protective cover is optional "SPOON LID", which after opening folds along the fold lines and is used to stirring the drink</li>
-                        <li>Pressed into a glass without the use of glue</li>
-                    </ol>
-                </div>
-
-                <div class="button3-text">
-                    <p><strong>Membrane made of cellulose cardboard!</strong></p>
-                    <ol>
-                        <li>- Retains the bulk of the brewed ingredients</li>
-                        <li>- Pressed into a glass without the use of glue</li>
-                    </ol>
-                </div>
-
-                <div class="button4-text">
-                    <p><strong>Delicious and high quality ingredients without glutamate and GMOs!</strong></p>
-                    <ol>
-                        <li>- Only leafy teas - black, green</li>
-                        <li>- Proven recipe</li>
-                        <li>- Strict portioning</li>
-                    </ol>
-                </div>
-
-                <div class="button5-text">
-                    <p><strong>Sweet blend based on "Stevia"!</strong></p>
-                    <ol>
-                        <li>- Low calorie content</li>
-                        <li>- Natural origin</li>
-                        <li>- It is attached only to tea and coffee.</li>
-                    </ol>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center mb-3 ms-5">
+                    <h1><span class="miracle-glass">Miracle glass</span> is</h1>
                 </div>
             </div>
+            <div class="glass-architecture">
+                <div class="imgButtons">
+                    <img src="./assets/images/transparentGlass.png" alt="">
+                    <button class="button btn1">1</button>
+                    <button class="button btn2">2</button>
+                    <button class="button btn3">3</button>
+                    <button class="button btn4">4</button>
+                    <button class="button btn5">5</button>
+                </div>
 
+                <div class="architecture-explanation">
+                    <div class="button1-text">
+                        <p><strong>Disposable paper cup with a capacity of 250 ml. made of cellulose cardboard!</strong>
+                        </p>
+                        <ol>
+                            <li>Does not emit harmful substances when heated, there is no unpleasant smell</li>
+                            <li>Minimal chance of getting burned</li>
+                            <li>Cool design</li>
+                        </ol>
+                    </div>
+
+                    <div class="button2-text">
+                        <p><strong>Disposable spoon lid made of cellulose cardboard!</strong></p>
+                        <ol>
+                            <li>- Top protective cover is optional "SPOON LID", which after opening folds along the fold
+                                lines and is used to stirring the drink</li>
+                            <li>Pressed into a glass without the use of glue</li>
+                        </ol>
+                    </div>
+
+                    <div class="button3-text">
+                        <p><strong>Membrane made of cellulose cardboard!</strong></p>
+                        <ol>
+                            <li>- Retains the bulk of the brewed ingredients</li>
+                            <li>- Pressed into a glass without the use of glue</li>
+                        </ol>
+                    </div>
+
+                    <div class="button4-text">
+                        <p><strong>Delicious and high quality ingredients without glutamate and GMOs!</strong></p>
+                        <ol>
+                            <li>- Only leafy teas - black, green</li>
+                            <li>- Proven recipe</li>
+                            <li>- Strict portioning</li>
+                        </ol>
+                    </div>
+
+                    <div class="button5-text">
+                        <p><strong>Sweet blend based on "Stevia"!</strong></p>
+                        <ol>
+                            <li>- Low calorie content</li>
+                            <li>- Natural origin</li>
+                            <li>- It is attached only to tea and coffee.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
         </div>
+
     </section>
 
     
@@ -525,6 +533,52 @@
             var brandName = document.querySelector("#brand-name");
             brandName.style.color = color;
         }
+        
+        // miracle glass buttons
+        //for btn1
+        $('.btn1').mouseover(function(){
+        $('.button1-text').css('display','block');
+        })
+
+        $('.btn1').mouseout(function(){
+        $('.button1-text').css('display','none');
+        })
+
+        //for btn2
+        $('.btn2').mouseover(function(){
+        $('.button2-text').css('display','block');
+        })
+
+        $('.btn2').mouseout(function(){
+        $('.button2-text').css('display','none');
+        })
+
+        //for btn3
+        $('.btn3').mouseover(function(){
+        $('.button3-text').css('display','block');
+        })
+
+        $('.btn3').mouseout(function(){
+        $('.button3-text').css('display','none');
+        })
+
+        //for btn4
+        $('.btn4').mouseover(function(){
+        $('.button4-text').css('display','block');
+        })
+
+        $('.btn4').mouseout(function(){
+        $('.button4-text').css('display','none');
+        })
+        
+        //for btn5
+        $('.btn5').mouseover(function(){
+        $('.button5-text').css('display','block');
+        })
+
+        $('.btn5').mouseout(function(){
+        $('.button5-text').css('display','none');
+        })
     </script>
 
 </body>
