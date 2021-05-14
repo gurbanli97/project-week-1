@@ -776,6 +776,18 @@ margin-right: 5px;
     right: 26vh;
 }
 
+.architecture-explanation .button1-text, 
+.architecture-explanation .button2-text, 
+.architecture-explanation .button3-text,
+ .architecture-explanation .button4-text,
+  .architecture-explanation .button5-text{
+    display: none;
+}
+
+.imgButtons .button.btn1:hover .button1-text{
+    display: block;
+}
+
 
 @media only screen and (max-width: 1200px) {
     .hashtag-card {
