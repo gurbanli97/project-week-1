@@ -1,99 +1,35 @@
 /* benefit section */
-
-
-
-
-
-
-
-
-/* benefit grid */
-.Benefit-header> h1 {
-    text-align: center;
-}
-.text-1{
-    background-color: rgb(250, 189, 250);
-}
-.text-2{
-    background-color: rgb(226, 226, 89);
-}
-.text-3{
-    background-color: rgb(228, 99, 99);
-}
-.text-4{
-    background-color: green;
-}
-.text-5{
-    background-color:  lightslategray  ;
-}
-.text-6{
-    background-color: rgb(150, 80, 94);
-}
-.text-7{
-    background-color: lightsteelblue;
-}
-.text { 
-    padding: 20px;
-    height: 250px;
-    text-align: center;
-    color: black;
-    font-weight: 700;
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    justify-content:start;
-    flex-direction: column;
-    border-radius: 10px;
-    /* clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); */
-}
-.text:hover{
-    box-shadow:  13px 14px 50px -12px rgb(171 171 171 / 90%);
-}
-
-.text>h3{
-    /* color: #932a26;  */
-    font-weight: bold;
-    margin-bottom: 10px;
-} 
-
-/* .text{
-    height: 250px;
-    color: white;
-    
-    
-    padding: 20px;
-}
-.text > h3 {
-    font-weight: 900 !important;
-    font-size: 35px;
+/* .card {
+    height:55vh;
 } */
+
 
 /* button */
 .button-wholesalers {
-    width: 400px;
+    width: 287px;
     padding: 2px 0;
     border-radius: 5px;
-    border: 3px solid #B89777;
     color: #932a26;
     font-size: 25px;
     font-weight: bold;
     background-color: transparent;
+    border: .5px solid lightgray;
    
 }
 
 .button-wholesalers:hover {
+    cursor: pointer;
     transition: ease 1s;
-    background-color: #B89777;
-    /* border-bottom: 1px solid #932a26; */
+    background-color: lightgray;
     font-weight: 800;
      /* box-shadow */
-    -webkit-box-shadow: 0px 6px 11px 0px rgba(50, 50, 50, 0.75);
+    /* -webkit-box-shadow: 0px 6px 11px 0px rgba(50, 50, 50, 0.75);
     -moz-box-shadow: 0px 6px 11px 0px rgba(50, 50, 50, 0.75);
-    box-shadow: 0px 6px 11px 0px rgba(50, 50, 50, 0.75);
+    box-shadow: 0px 6px 11px 0px rgba(50, 50, 50, 0.75); */
 }
 
 /* Scope of the "Miracle Cup"  */
-.heading>h1{
+.heading>h1 , .Benefit-header >h1{
 font-weight: bold;
 }
 
