@@ -1,4 +1,4 @@
-$(document).ready(function(){
+
 
 var $grid;
 var $content;
@@ -67,36 +67,51 @@ $(document).on("click", ".shop", function(e){
 
     db.ref().once("value", (snapshot) => {
 
-        console.log(snapshot.child(`/products/${prKey}`).val())
-
         item = snapshot.child(`/products/${prKey}`).val()
 
-        if(snapshot.child(`${user}`).hasChild(prKey)){
             console.log("if works")
-            db.ref(user + "/" + prKey + "/count").setValue(item.count += item.count + 1)
-        }else{
-            console.log("else works")
-            db.ref(user + "/" + prKey ).set(
+            db.ref(user + "/" + prKey ).update(
                 item
         )
-        }
+
     })
 
+    // console.log(db.ref(`/${user}/${prKey}/count`))
+
+    db.ref(user + "/" + prKey).update({
+        count: firebase.database.ServerValue.increment(1),
+    })
+    
 })
+
+// function artir(user, prKey){
+//     db.ref(user + "/" + prKey).update({
+//         count: firebase.database.ServerValue.increment(1),
+//     })
+//     return
+// }
 
 // var sebet = []
 var totalSum = 0.00
+var totalItem = 0
 
 db.ref(user).on("value", (snapshot) => {
-
-    $(".itemCount").text(snapshot.numChildren())
     
     snapshot.forEach(function(snapshot){
-    totalSum += parseFloat(snapshot.val().ProductPrice)
+    if(snapshot.val().count > 1){
+       totalSum += parseFloat(snapshot.val().ProductPrice) * snapshot.val().count
+    }else{
+        totalSum += parseFloat(snapshot.val().ProductPrice)
+    }
+    totalItem += snapshot.val().count
+
     })
 
+    $(".itemCount").text(totalItem)
     $(".priceSpan").text("$"+totalSum.toFixed(2))
+
     totalSum = 0
+    totalItem = 0
 
 
     // console.log(snapshot.child(prKey +"/").val())
@@ -205,5 +220,3 @@ $('.filter-button-group').on( 'click', 'a', function() {
         $(this).addClass("isActive");
     }
 });
-
-})
