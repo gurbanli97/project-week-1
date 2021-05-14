@@ -740,6 +740,41 @@ margin-right: 5px;
     font-size: 50px;
     color: #932a26;
 }
+.imgButtons {
+    position: relative;
+}
+
+.button {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: yellow;
+    font-size: 20px;
+    font-weight: bold;
+    border: 2px solid darkred;
+    position: absolute;
+}
+
+.btn1 {
+    top: 20px;
+    right: 40px;
+}
+.btn2{
+    top: 18vh;
+    right: 13vh;
+}
+.btn3{
+    top: 38vh;
+    right: 6vh;
+}
+.btn4{
+    top: 43vh;
+    right: 18vh;
+}
+.btn5{
+    top: 52vh;
+    right: 26vh;
+}
 
 
 @media only screen and (max-width: 1200px) {
