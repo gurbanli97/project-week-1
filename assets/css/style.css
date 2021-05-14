@@ -712,6 +712,36 @@ margin-right: 5px;
     color: #932a26;
 }
 
+/* Miracle Glass Architecture */
+.architecture-section{
+    margin-top: 100px;
+}
+
+.glass-architecture{
+    display: flex;
+    justify-content: space-between;
+}
+
+.architecture-explanation{
+    font-size: 18px;
+    margin-left: 70px; 
+}
+
+.architecture-explanation p{
+    font-size: 20px;
+}
+
+.architecture-explanation ol li{
+    list-style:square;
+}
+
+.miracle-glass{
+    font-weight: 900;
+    font-size: 50px;
+    color: #932a26;
+}
+
+
 @media only screen and (max-width: 1200px) {
     .hashtag-card {
         width: 200px;
