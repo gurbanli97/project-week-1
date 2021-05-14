@@ -2,26 +2,36 @@
 /* .card {
     height:55vh;
 } */
-
-
+.card-img-top {
+    height: 180px;
+}
+.card {
+    margin: auto;
+}
+.card-body {
+    height: 200px;
+}
 /* button */
 .button-wholesalers {
     width: 287px;
-    padding: 2px 0;
-    border-radius: 5px;
+    padding: 6px 0;
+    border-radius: 30px;
     color: #932a26;
     font-size: 25px;
     font-weight: bold;
     background-color: transparent;
     border: .5px solid lightgray;
+    text-align: center;
    
 }
 
 .button-wholesalers:hover {
     cursor: pointer;
     transition: ease 1s;
-    background-color: lightgray;
+    background-color: #922A26;
+    color: white;
     font-weight: 800;
+
      /* box-shadow */
     /* -webkit-box-shadow: 0px 6px 11px 0px rgba(50, 50, 50, 0.75);
     -moz-box-shadow: 0px 6px 11px 0px rgba(50, 50, 50, 0.75);
@@ -31,11 +41,13 @@
 /* Scope of the "Miracle Cup"  */
 .heading>h1 , .Benefit-header >h1{
 font-weight: bold;
+text-align: center;
 }
 
 .myImg  , .upperl {
     width: 100%;  
     height:300px;
+    margin: auto;
     border-radius: 25px;
 }
 .myImg  {
