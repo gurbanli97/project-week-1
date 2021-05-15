@@ -6,7 +6,6 @@
     color: #372727;
     font-weight: 600;
 }
-
 .two{
     color: #c19942;
     font-size: 30px ;
@@ -14,12 +13,9 @@
     font-weight: 900;
     font-family: 'Quicksand', sans-serif;
 }
-
 .hr{
     margin-top: 0px !important;
 }
-
-
 .text h2{
     font-size: 47px;
     font-weight: 700;
@@ -27,14 +23,12 @@
    word-spacing: 5px;   
    
 }
-
 .paraqraf p{
     color: #959393;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 15px;
     line-height: 24px;
 }
-
 .text h6{
     font-size: 17px;
     color: #959393;
@@ -49,7 +43,7 @@
     display: inline-block;
     margin-bottom: 10px;
     overflow: hidden;
-    width: 260px;
+    width: 275px;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     /* box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px; */
     border-radius: 8px;
@@ -57,35 +51,81 @@
 }
 
 .image img{
-    width: 100%;
-    transition: 0.25s ease-in-out;
+    width: 100%; 
 }
 
 .image:hover{
+    transition: 0.25s ease-in-out;
     transform: scale(1.1);
 }
 
-.left .btn .submmit-btn{
+/* .AboutImg1 {
+    background-image: url(../images/img1.jpg);
+}
+.AboutImg2 {
+    background-image: url(../images/img2.jpg);
+}
+.AboutImg3 {
+    background-image: url(../images/img3.jpg);
+}
+.AboutImg4 {
+    background-image: url(../images/img4.jpg);
+} */
+
+.submmit-btn{
     font-family: "Source Sans Pro",sans-serif;
     height: 50px;
     width: auto;
-    background-color: #c66d55;
+    background-color: #922A26;
     color: #ffffff;
     text-transform: uppercase;
     border: none;
-    -webkit-border-radius: 80px;
-    -moz-border-radius: 80px;
-    -ms-border-radius: 80px;
-    -o-border-radius: 80px;
     border-radius: 80px;
     padding: 0 30px;
     text-align: center;
-    min-width: 225px;
+    min-width: 200px;
     font-size: 16px;
     display: inline-block;
     line-height: 50px;
-   
+    font-weight: bold;  
 }
+#more {
+    display: none;
+}
+
+@media screen and (max-width:1150px) {
+    .image{
+        max-width: 250px;
+    }
+}
+@media screen and (max-width:1060px) {
+    .image{
+        max-width: 230px;
+    }
+}
+ @media screen and (max-width:992px) {
+ 
+.img{
+    padding: 5px;
+    width: 60%;
+    margin: auto;
+}
+    
+} 
+@media screen and (max-width:820px) {
+    .img{
+        column-count: 1;
+         
+    } 
+    
+} 
+
+@media screen and (max-width:500px) {
+    .img{
+        column-count: 1; 
+    }    
+} 
+
 
 
 
