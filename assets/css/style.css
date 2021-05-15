@@ -227,7 +227,7 @@ margin-bottom: 5px;
 .ruble {
     position: absolute;
     top:102px;
-    z-index: 6;
+    z-index: 9;
     width: 80px;
     left: -42px;
     height: fit-content;
@@ -1024,7 +1024,7 @@ footer .row {
     width: 0; 
     height: 0;
     position: absolute;
-    right: -7px;
+    right: -8px;
     border-top: 8px solid transparent;
     border-bottom: 8px solid transparent;
     border-left: 8px solid #F5D069;
@@ -1220,8 +1220,6 @@ footer .row {
         max-height: 300px;
         transform: unset;
     }
-
-    
     .glass-content .imgBox{
         width: 100%;
         justify-content: center;
@@ -1330,7 +1328,6 @@ footer .row {
 }
 
 @media only screen and (max-width:600px){
- 
     .ruble {
         top: 40px;
         left: -40px;
@@ -1339,10 +1336,10 @@ footer .row {
         max-width: 300px;
     }
     .mob-explain.one {
-        top: -90px;
+        top: -40px;
     }
     .mob-explain.two {
-        top: 0;
+        top: 40px;
     }
     #etinat {
         max-height: 230px;
@@ -1358,25 +1355,23 @@ footer .row {
 
 @media only screen and (max-width:378px){
     #head-arrow img {
-       display: none;
+        width: 140px;
+        top: 85px;
+        left: 23px;
+        z-index: 9;
+        transform: rotate(194deg);
     }
     .mob-explain.one {
         z-index: 9;
     }
 }
 
-@media only screen and (min-width:992px){
-    .glass-content .textBox {
-        padding-right: 40px;
-   
-       }
-}
-
 /* chart */
 
-.chartDiv{
-    width: 25rem;
+.chartTable{
+    width: 27rem;
 }
+
 .chartDiv tr{
     margin-right: 15px;
     border-bottom: 1px solid #e5e5e5;
@@ -1389,13 +1384,38 @@ th, td {
 tr:hover {background-color: #f5f5f5;}
 
 .chartImg{
-    width: 25px;
-    height: 35px;
-    margin: 5px 5px;
+    margin-left: 15px;
+    width: 35px;
+    height: 37px;
+}
+
+.decr{
+    margin-right: 7px;
+}
+
+.incr{
+    margin-left: 7px;
+
+}
+.decr, .incr{
+    background-color: #ffffff;
+    border: solid 1px #b3bbbd;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 16px;
+    font-stretch: condensed;
+    line-height: 1;
+    color: #000000;
+    text-align: center;
+    display: inline-block;
+}
+.decr:hover, .incr:hover{
+background-color: #b2bbbd;
+border-color: #b2bbbd;
+color: #fff;
 }
 
 /* chart end */
-
 
 
 
