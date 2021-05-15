@@ -1024,7 +1024,7 @@ footer .row {
     width: 0; 
     height: 0;
     position: absolute;
-    right: -8px;
+    right: -7px;
     border-top: 8px solid transparent;
     border-bottom: 8px solid transparent;
     border-left: 8px solid #F5D069;
@@ -1339,10 +1339,10 @@ footer .row {
         max-width: 300px;
     }
     .mob-explain.one {
-        top: -40px;
+        top: -90px;
     }
     .mob-explain.two {
-        top: 40px;
+        top: 0;
     }
     #etinat {
         max-height: 230px;
