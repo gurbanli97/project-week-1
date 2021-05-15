@@ -23,7 +23,7 @@
         <div class="container">
             <div class="header-inner">
                 <div class="header-logo">
-                    <a href="#">
+                    <a href="./index.html">
                         <img class="LogoImg" src="./assets/images/logoEtinat.png">
                     </a>
                 </div>
@@ -60,8 +60,8 @@
             </div>
 
             <div class="header-phone">
-                <i class="fas fa-phone-alt"></i>
-                <a href="tel:0507224461">+7 (499) 396-77-77</a>
+                    
+                    <a href="tel:0507224461"><i class="fas fa-phone-alt"></i> +7 (499) 396-77-77</a>
             </div>
 
             <div class="header-cart">
@@ -524,7 +524,7 @@
             <div class="row footer-row">
                 <div class="col-lg-3 col-md-6  footer-col d-flex align-items-center">
                     <div class="footer-layer">
-                        <img class="LogoImg" src="./assets/images/logoEtinat.png">
+                       <a id="footerLogo" href="./index.html"> <img class="LogoImg" src="./assets/images/logoEtinat.png"></a>
                         <p>Этинат - лучшее решение, позволяющее сэкономить ваши деньги и время и получить отличный вкус простым и полезным способом.</p>
                        
                     </div>
@@ -542,7 +542,7 @@
                         <h4 class="footer-heading">Часы работы</h4>
                         <p>Пн. - пт. с 9.00 до 18.00 (временно)</p>
                         <p>Суббота: выходной <br>
-                           Воскресенье: выходной/p>
+                           Воскресенье: выходной</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6  footer-col  d-flex align-items-center">
@@ -558,6 +558,9 @@
             <div class="footer-bottom">
                 <p>Copyright © 2021 Русский стакан Россия, ООО "Русский стакан", ОГРН 1197746738530</p>
             </div>
+            <button id="toTop" title="Go to top" class="">
+
+            </button>
         </div>
     </footer>
 
@@ -617,7 +620,23 @@
 
         })
 
+    
+
+
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > 800) {
+            $('#toTop').addClass('active');
+        } else {
+            $('#toTop').removeClass('active');
+        }
        
+    });
+    $('#toTop').on('click', function (e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: 0
+        }, '500');
+        }); 
 
         $(document).mouseup(function (e) {
             if ($('.video-popup').hasClass('active') && !$('.video-content').is(e.target) && $('.video-content')
@@ -640,6 +659,8 @@
       pagination: '.swiper-pagination',
       nextButton: '.next',
       prevButton: '.prev',
+      autoplay: 3000,
+      speed: 1000,
       breakpoints: {
         // when window width is >= 320px
         600: {
