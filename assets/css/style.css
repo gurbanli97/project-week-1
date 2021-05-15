@@ -233,7 +233,7 @@ margin-bottom: 5px;
 .ruble {
     position: absolute;
     top:102px;
-    z-index: 9;
+    z-index: 6;
     width: 80px;
     left: -42px;
     height: fit-content;
@@ -1226,6 +1226,8 @@ footer .row {
         max-height: 300px;
         transform: unset;
     }
+
+    
     .glass-content .imgBox{
         width: 100%;
         justify-content: center;
@@ -1334,6 +1336,7 @@ footer .row {
 }
 
 @media only screen and (max-width:600px){
+ 
     .ruble {
         top: 40px;
         left: -40px;
@@ -1361,15 +1364,18 @@ footer .row {
 
 @media only screen and (max-width:378px){
     #head-arrow img {
-        width: 140px;
-        top: 85px;
-        left: 23px;
-        z-index: 9;
-        transform: rotate(194deg);
+       display: none;
     }
     .mob-explain.one {
         z-index: 9;
     }
+}
+
+@media only screen and (min-width:992px){
+    .glass-content .textBox {
+        padding-right: 40px;
+   
+       }
 }
 
 
