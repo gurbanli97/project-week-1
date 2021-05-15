@@ -23,7 +23,7 @@ if(user != null){
 
 db.ref(user + "/").on("value", (snapshot) => {
 
-    if($(".cart-empty").text().trim() === "No products in the cart"){
+    if(snapshot.hasChildren()){
         $(".cart-empty").text("")
         $(".cart-empty").html(`
         <table class="chartTable">
@@ -39,6 +39,8 @@ db.ref(user + "/").on("value", (snapshot) => {
         <tbody class="chartDiv">
         </tody>
         </table>`)
+    }else{
+        $(".cart-empty").text("No products in the cart")
     }
 
     $(".chartDiv").html(" ")
