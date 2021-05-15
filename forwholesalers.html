@@ -26,7 +26,7 @@
             <div class="header-inner">
                 <div class="header-logo">
                     <a href="#">
-                        <img src="./assets/images/logo.png">
+                        <img class="LogoImg" src="./assets/images/logoEtinat.png">
                     </a>
                 </div>
 
@@ -34,7 +34,7 @@
                     <nav>
                         <ul class="links">
                             <li class="nav-logo">
-                                <a href=""><img src="./assets/images/logo.png"></a>
+                                <img src="./assets/images/logoEtinat.png">
                             </li>
                             <li><a href="./index.html">Главная</a></li>
                             <li><a href="./products.html">Продукция</a></li>
@@ -160,9 +160,7 @@
 
         <div class="row">
             <div class="col-12 d-flex justify-content-center mt-3 mb-3">
-                <form action="./modals/modalForWholesalers.html">
-                    <button type="submit" class="button-wholesalers" id="submit-button">Оптовикам</button>
-                </form>
+                    <button class="button-wholesalers" id="submit-button">Оптовикам</button>
             </div>
         </div>
 
@@ -240,7 +238,7 @@
             <div class="row footer-row">
                 <div class="col-lg-3 col-md-6 footer-col d-flex align-items-center">
                     <div class="footer-layer">
-                        <img src="./assets/images/logo.png">
+                        <img class="LogoImg" src="./assets/images/logoEtinat.png">
                         <p>We have a hankering for some really in good melt in a mouth variety. Floury is the best
                             choice to taste food and dessert.</p>
                         <div>
@@ -281,6 +279,54 @@
         </div>
     </footer>
 
+    <div class="whole-popup">
+        <div class="whole-backdrop">
+            <div class="whole-content">
+                <div class="container">
+                    <div class="main1 d-flex justify-content-center align-items-center">
+                        <div class="main">
+                            <div class="row">
+                                <div class="col-12 closeBtnDiv d-flex justify-content-end">
+                                        <button id="closeBtn"><i class="fas fa-times"></i></button>
+                                </div>
+            
+                            </div>
+                            <h3>Если Вас интересуют оптовые условия заполните все поля ниже</h3>
+                            <div class="form-cntrl">
+                                <div class="textclock">
+                                    <div class="textclock-child">
+                                        <img src="./assets/images/clock.svg">
+                                    </div>
+                                    <div class="textclock-child">
+                                        <p>Мы Вам позвоним в течении 10 минут</p>
+                                    </div>
+                                </div>
+                                <form action="">
+                                    <div class="mb-3">
+            
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Ваше имя" required>
+                                    </div>
+                                    <div class="mb-3">
+            
+                                        <input type="tel" class="form-control" id="telinp" name="tel required"
+                                            placeholder="Введите номер телефонa">
+                                    </div>
+                                    <div class="mb-3">
+            
+                                        <input type="email" class="form-control" id="emailinp" name="email required"
+                                            placeholder="Введите емаил">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary formBtn" id="btn btn-primary">Отправить</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+
 
     <div class="video-popup">
         <div class="video-backdrop">
@@ -320,6 +366,18 @@
 
 
         })
+        $('.button-wholesalers').on('click', function (e) {
+            e.preventDefault()
+            $('.whole-popup').show(300)
+            $('.whole-popup').addClass('active')
+        })
+
+        $('#closeBtn').on('click',function(e){
+            e.preventDefault()
+            $('.whole-popup').hide(300)
+
+        })
+      
 
         $(document).mouseup(function (e) {
             if ($('.video-popup').hasClass('active') && !$('.video-content').is(e.target) && $('.video-content')

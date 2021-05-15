@@ -16,8 +16,7 @@
     /* width: 190px; */
     padding: 6px 13px;
     border-radius: 30px;
-    font-size: 25px;
-    font-weight: bold;
+    font-size: 20px;
     background-color: #922A26;
     color: white;
     border: .5px solid lightgray;
@@ -104,6 +103,109 @@ text-align: center;
    background-image: url(../images/ГОСУЧЕРЕЖДЕНИЯ.jpg);
 }
 
+
+.whole-popup {
+    display: none;
+}
+
+
+.whole-popup, .whole-backdrop {
+    z-index: 2001;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.whole-backdrop {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(4, 2, 16, .9);
+}
+
+.whole-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-origin: 0 0;
+    border-radius: 15px;
+    border: 1px solid transparent;
+}
+
+.whole-content .main {
+    background-color: #fff;
+    width: 50%;
+    margin: auto;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.textclock {
+    display: flex;
+}
+
+.textclock>.textclock-child>img {
+    width: 30px;
+    height: 30px;
+}
+
+.textclock>.textclock-child>p {
+    font-size: 18px;
+}
+
+.textclock-child {
+    height: 100%;
+    align-items: center;
+    padding: 5px;
+}
+
+.form-cntrl {
+    padding: 15px 30px;
+}
+
+.textclock {
+    padding: 3px;
+}
+
+.main>h3 {
+    padding: 5px;
+    text-align: center;
+}
+
+.formBtn {
+    background-color: white;
+    width: 100%;
+    color: black;
+    font-weight: 700;
+    border: none;
+}
+
+.formBtn:hover {
+    background-color: white !important;
+    transform: translateY(-0.4px) !important;
+    box-shadow: 0px 2px 8px 0px rgba(173, 173, 173, 0.43);
+    background-color: rgb(102, 238, 108) !important;
+    color: darkgreen;
+}
+
+#closeBtn {
+    border: none;
+    background-color: transparent;
+    font-size: 25px;
+    right: 10px;
+}
+#closeBtn:hover {
+    color: #922A26;
+    background-color: pink;
+    border-radius: 5px;
+   
+}
+
+
 @media screen and (max-width:1107px){
 
     .upperl > h4 {
@@ -124,6 +226,11 @@ text-align: center;
         height: 30vh;
     }
 
+}
+@media screen and (max-width:768px){
+    .whole-popup .main {
+        width: auto;
+    }
 }
 
 
