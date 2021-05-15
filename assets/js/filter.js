@@ -125,7 +125,7 @@ db.ref(user + "/").on("value", (snapshot) => {
         <td><img class="chartImg" src="${snapshot.val().ProductImage}"></td>
         <td>${snapshot.val().ProductName}</td>
         <td>${snapshot.val().count}</td>
-        <td>$${snapshot.val().ProductPrice}</td>
+        <td>$${snapshot.val().ProductPrice * snapshot.val().count}</td>
         <td><button class="deleteBtn" data-delete="${snapshot.val().key}"><i class="far fa-trash-alt"></i></button></td>
     </tr>
     `
