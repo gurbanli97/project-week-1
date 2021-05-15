@@ -95,7 +95,7 @@
             <div class="glass-content">
                 <div class="textBox">
                     <h2>Это больше, чем просто стакан.<br>Это, <span id="brand-name">Этинат</span></h2>
-                    <p>Мы приносим вам десятки ценностей в стакане за 10 рублей.</p>
+                    <p>Мы приносим вам десятки ценностей в стакане всего за 10 рублей.</p>
                     <a href="" id="learnMore-button"> Учить больше</a>
                     <ul class="thumb">
                         <li>
@@ -127,6 +127,9 @@
                 </div>
     
                 <div class="imgBox">
+                    <div class="ruble">
+                        <span>10&#8381;</span>
+                    </div>
                   <div class="imgBox-wrapper">
                       <img src="./assets/images/redGlass.png" alt="" id="etinat">
                  </div>
@@ -494,13 +497,11 @@
       direction: 'horizontal',
 	  loop:true,
 	  spaceBetween: 30,
-      slidesPerView: 5,
+      slidesPerView: 5.1,
       visibilityFullFit: true,
       pagination: '.swiper-pagination',
-      paginationmouseoverable: true,
       nextButton: '.next',
       prevButton: '.prev',
-      
       breakpoints: {
         // when window width is >= 320px
         600: {
@@ -612,10 +613,12 @@
 
         })
 
-  $('#learnMore-button').click(function(e) {
+        $('#learnMore-button').click(function(e) {
       e.preventDefault()
+      var itemOff = $('#head-arrow').offset().top;
+      var itemMargin = 50;
   $('html, body').animate({
-    scrollTop: $("#head-arrow").offset().top
+    scrollTop: itemOff - itemMargin
   }, 300)
 })
        
