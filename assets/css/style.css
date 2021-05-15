@@ -202,31 +202,44 @@ header.sticky {
     width: 600px;
     display: flex;
     justify-content: center;
+    position: relative;
+}
+.imgBox-wrapper {
+    position: relative;
 }
 
 .ruble {
-    font-size: 20px;
-    position: relative;
-    height: fit-content;
-    background-color: rgb(139, 73, 73);
-    color: #fff;
-    min-width: 120px;
-    padding: 10px;
-    border-radius: 12px;
-}
-.ruble::after{
-    content: '';
-    display: block;
     position: absolute;
-    right: -8px;
-    top:50%;
-    transform: translateY(-50%);
-    border-top: 8px solid transparent;
-    border-bottom: 8px solid transparent;
-    border-left: 8px solid rgb(139, 73, 73);
+    top:102px;
+    z-index: 9;
+    width: 80px;
+    left: -42px;
+    height: fit-content;
+    font-size: 20px;
+    color: #fff;
 }
+.ruble-text {
+    position: absolute;
+    font-size: 30px;
+    left: 14px;
+    top: 20px;
+    transform: rotate(-44deg);
+}
+.ruble-text span {
+    font-size: 30px;
+    font-weight: 900;
+}
+.ruble img {
+    position: relative;
+    height: 80px;
+    max-width: 100px;
+    transform: rotate(360deg);
+}
+
+
 .glass-content .imgBox img{
     max-width: 350px;
+    filter: drop-shadow(2px 4px 6px black);
 }
 
 
@@ -259,7 +272,7 @@ header.sticky {
     position: absolute;
     bottom:0;
     right: 0;
-    width: 100%;
+    width: 100vw;
     min-height: 600px;
     z-index: -1;
     clip-path: circle(600px at right 800px);
@@ -456,15 +469,104 @@ header.sticky {
     align-items: center;
 }
 .hashtag-card{
+    overflow: hidden;
+    position: relative;
     width: 230px;
     height: 184px;
     border-radius: 15px;
-    background-image: url(https://cdn-image.foodandwine.com/sites/default/files/1568907144/Coffee-National-Coffee-Day-FT-Blog0919.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
+.hashtag-card.one{
+    background-image: url(https://cdn-image.foodandwine.com/sites/default/files/1568907144/Coffee-National-Coffee-Day-FT-Blog0919.jpg);
+}
 
 
+.hashtag-card.two{
+    background-image: url(https://despina.sk-web-solutions.com/wp-content/uploads/2020/08/gallery3-1.png);
+}
+.hashtag-card.three{
+    background-image: url(https://despina.sk-web-solutions.com/wp-content/uploads/2020/08/gallery4.png);
+}
+
+.hashtag-card.four{
+    background-image: url(https://despina.sk-web-solutions.com/wp-content/uploads/2020/08/gallery1-1.png);
+}
+.hashtag-card.five{
+    background-image: url(https://despina.sk-web-solutions.com/wp-content/uploads/2020/08/gallery2-1.png);
+}
+
+.hashtag-card:hover .card-overlay{
+    transform: translateY(0);
+    opacity: .9;
+}
+.hashtag-card:hover .social-wrap{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card-overlay {
+    transition: .4s ease-in-out;
+    transition-property: opacity, transform;
+    transform: translateY(20%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    opacity: 0;
+    background-image: linear-gradient(to right, #b89777, #af7e5c, #a76545, #9d4a33, #932a26);
+    position: absolute;
+    top: 0;
+}
+.card-social {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px 10px;
+}
+.social-wrap {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: .3s ease 0s;
+    transition-property: opacity, transform;
+    display: flex;
+
+}
+.social-wrap a {
+    transition: background .3s linear;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.hashtag-card:hover .social-wrap {
+    opacity: 1;
+    transform: translateY(0)
+}
+
+.hashtag-card:hover .social-wrap:nth-child(1) {
+    transition-delay: .1s
+}
+
+.hashtag-card:hover .social-wrap:nth-child(2) {
+    transition-delay: .2s
+}
+
+.hashtag-card:hover .social-wrap:nth-child(3) {
+    transition-delay: .3s
+}
+
+.hashtag-card:hover .social-wrap:nth-child(4) {
+    transition-delay: .4s
+}
 .hashtags-inner .prev {
     transform: rotate(-180deg)
 }
@@ -609,10 +711,7 @@ footer .row {
 .contact-a{
     color: #fff;
 }
-.fa-facebook-f , .fa-instagram {
-font-size: 30px;
-margin-right: 5px;
-}
+
 .footer-heading{
     color: #C8BBA5;
     font-weight: bold;
@@ -1031,7 +1130,10 @@ margin-right: 5px;
 }
 
 @media only screen and (max-width:992px) {
-
+    .ruble {
+        top: 50px;
+        left: -30px;
+    }
     #colored-glasses > .container{
         padding-right: 20px;
     }
@@ -1160,7 +1262,10 @@ margin-right: 5px;
 }
 
 @media only screen and (max-width:600px){
-    
+    .ruble {
+        top: 40px;
+        left: -40px;
+    }
     .glass-cut img {
         max-width: 300px;
     }
