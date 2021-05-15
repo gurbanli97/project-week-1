@@ -58,9 +58,15 @@ header.sticky {
 }
 
 .LogoImg {
+<<<<<<< HEAD
+    
+    width:180px;
+    height: 55px;
+=======
     transform: translateY(-5px);
     width: 150px;
     height: 60px;
+>>>>>>> ed97f62e8f316578132a3b54c48e6af319522001
 }
 
 .footer-layer .LogoImg {
