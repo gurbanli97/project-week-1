@@ -610,7 +610,11 @@
             $('.header-burger').toggleClass('active')
             $('.header-menu nav').toggleClass('active')
             if($('.header-menu nav').hasClass('active')){
+                $('body').css('overflow-y','hidden')
                 $('#sticky-header').css("opacity",'1');
+            }else {
+                $('body').css('overflow-y','auto')
+
             }
         })
 
