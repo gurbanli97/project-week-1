@@ -3,7 +3,10 @@ body{
     font-family: 'Quicksand', sans-serif;
     font-size: 16px;
     /* background: #c19a42; */
+    scroll-behavior: smooth;
 }
+
+
 
 
 .container {
@@ -55,14 +58,15 @@ header.sticky {
 }
 
 .LogoImg {
-    
-    width:200px;
-    height: 55px;
+    transform: translateY(-5px);
+    width: 150px;
+    height: 60px;
 }
-.footer-layer >.LogoImg {
-margin-bottom: 5px;
+
+.footer-layer .LogoImg {
 width:200px;
 height: 80px;
+margin-bottom: 5px;
 }
 .header-inner nav ul li {
     position: relative;
@@ -624,6 +628,43 @@ height: 80px;
 
 /* footer */
 
+
+#toTop {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    position: fixed;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    background-color: #C8BBA5;
+    color: white;
+    cursor: pointer;
+    bottom: 20px;
+    right: 20px;
+    transition: background-color .3s, opacity .5s, visibility .5s, border-radius .3s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+#toTop:hover {
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #922A26;
+}
+#toTop::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1.4rem;
+    color: #fff;
+}
+#toTop.active {
+    opacity: 1;
+    visibility: visible;
+}
 footer {
     background-color:#221817;
     color: white;
@@ -721,7 +762,9 @@ footer .row {
 }
 
 .contact-a{
-    color: #fff;
+    color: #c19942;
+    width: fit-content;
+    display: inline;
 }
 
 .footer-heading{
@@ -888,6 +931,15 @@ footer .row {
     position: relative;
     height: fit-content;
 }
+
+
+.header-phone i {
+    border-radius: 50%;
+    animation: pulse-white 2s infinite;
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 1);
+    cursor: pointer;
+}
+
 
 .button {
     width: 45px;
