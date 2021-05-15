@@ -66,13 +66,18 @@ $(document).on("click", ".shop", function(e){
     db.ref().once("value", (snapshot) => {
 
         item = snapshot.child(`/products/${prKey}`).val()
+
+        if(snapshot.child(`${user}`).child(prKey).hasChild("ProductName")){
+            console.log("salam")
+            return
+        }else{
+            console.log("sagol")
             db.ref(user + "/" + prKey ).update(
                 item
         )
+        }
 
     })
-
-    // console.log(db.ref(`/${user}/${prKey}/count`))
 
     db.ref(user + "/" + prKey).update({
         count: firebase.database.ServerValue.increment(1),
@@ -82,21 +87,28 @@ $(document).on("click", ".shop", function(e){
 
 var totalSum = 0.00
 var totalItem = 0
+var chartContent;
 
 db.ref(user + "/").on("value", (snapshot) => {
 
     if($(".cart-empty").text().trim() === "No products in the cart"){
         $(".cart-empty").text("")
         $(".cart-empty").html(`
-        <table class="chartDiv">
+        <table>
+        <thead>
             <tr>
                 <th></th>
                 <th>Name</th>
                 <th>Count</th>
                 <th>Price</th>
             </tr>
+        </tbody>
+        <tbody class="chartDiv">
+        </tody>
         </table>`)
     }
+
+    $(".chartDiv").html(" ")
     
     snapshot.forEach(function(snapshot){
     if(snapshot.val().count > 1){
@@ -106,14 +118,16 @@ db.ref(user + "/").on("value", (snapshot) => {
     }
     totalItem += snapshot.val().count
 
-    $(".chartDiv").append(`
+    chartContent = `
     <tr>
         <td><img class="chartImg" src="${snapshot.val().ProductImage}"></td>
         <td>${snapshot.val().ProductName}</td>
         <td>${snapshot.val().count}</td>
         <td>${snapshot.val().ProductPrice}</td>
     </tr>
-    `)
+    `
+    $(".chartDiv").append(chartContent)
+
     })
 
     $(".itemCount").text(totalItem)
@@ -121,6 +135,7 @@ db.ref(user + "/").on("value", (snapshot) => {
 
     totalSum = 0.00
     totalItem = 0
+
     // $(".chartDiv").html("")
 
 

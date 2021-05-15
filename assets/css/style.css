@@ -140,7 +140,7 @@ header.sticky {
     padding: 30px 25px;
     color: #20202f;
     border-radius: 18px;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 .cart-empty::before {
     content: '';
