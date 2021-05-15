@@ -26,7 +26,7 @@ db.ref(user + "/").on("value", (snapshot) => {
     if($(".cart-empty").text().trim() === "No products in the cart"){
         $(".cart-empty").text("")
         $(".cart-empty").html(`
-        <table>
+        <table class="chartTable">
         <thead>
             <tr>
                 <th></th>
@@ -51,12 +51,14 @@ db.ref(user + "/").on("value", (snapshot) => {
     }
     totalItem += snapshot.val().count
 
+    itemSelf = snapshot.val().ProductPrice * snapshot.val().count
+
     chartContent = `
     <tr>
         <td><img class="chartImg" src="${snapshot.val().ProductImage}"></td>
         <td>${snapshot.val().ProductName}</td>
-        <td>${snapshot.val().count}</td>
-        <td>$${snapshot.val().ProductPrice * snapshot.val().count}</td>
+        <td><button data-decr="${snapshot.val().key}" class="decr"> - </button>${snapshot.val().count}<button data-incr="${snapshot.val().key}" class="incr"> + </button></td>
+        <td>$${itemSelf.toFixed(2)}</td>
         <td><button class="deleteBtn" data-delete="${snapshot.val().key}"><i class="far fa-trash-alt"></i></button></td>
     </tr>
     `
@@ -73,8 +75,23 @@ db.ref(user + "/").on("value", (snapshot) => {
 
 })
 
+}
+
 $(document).on("click", ".deleteBtn", function() {
-    deleteKey = $(".deleteBtn").attr("data-delete");
+    deleteKey = $(this).attr("data-delete");
     db.ref().child(user).child(deleteKey).remove();
 })
-}
+
+$(document).on("click", ".incr", function() {
+    incBtn = $(this).attr("data-incr");
+    db.ref(user + "/" + incBtn).update({
+        count: firebase.database.ServerValue.increment(1),
+    })
+})
+
+$(document).on("click", ".decr", function() {
+    decBtn = $(this).attr("data-decr");
+    db.ref(user + "/" + decBtn).update({
+        count: firebase.database.ServerValue.increment(-1),
+    })
+})
