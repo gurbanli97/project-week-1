@@ -91,12 +91,12 @@
     <section id="products" >
         <div class="container">
             <div class="row filter-button-group text-center">
-                <a role="button" id="starter" data-filter=".tea" class="col-md-2 col-sm"> <img src="assets/images/tea.png" style="padding-left:8px" alt=""><p>Tea</p></a>
-                <a role="button" data-filter=".coffee" class="col-md-2 col-sm"><img src="./assets/images/coffee-logo.png" alt=""><p>Coffee</p></a>
-                <a role="button" data-filter=".cocktail" class="col-md-2 col-sm"><img src="./assets/images/cocktail.png" style="padding-right:2px" alt=""><p>Cocktail</p></a>
+                <a role="button" data-filter="*" class="col-md-2 col-sm"><img src="./assets/images/all.svg"><p>All</p></a>
+                <a role="button" id="starter" data-filter=".tea" class="col-md-2 col-sm" > <img src="assets/images/black-tea.png"alt=""><p style="transform: translateX(-3px);"">Tea</p></a>
+                <a role="button" data-filter=".coffee" class="col-md-2 col-sm"><img src="./assets/images/coffee.png" alt=""><p>Coffee</p></a>
+                <!-- <a role="button" data-filter=".cocktail" class="col-md-2 col-sm"><img src="./assets/images/cocktail.png" style="padding-right:2px" alt=""><p>Cocktail</p></a>
                 <a role="button" data-filter=".milk" class="col-md-2 col-sm"><img src="./assets/images/milkshake.png" alt=""><p>Milkshake</p></a>
-                <a role="button" data-filter=".soup" class="col-md-2 col-sm"> <img src="./assets/images/soup.png" alt=""><p>Soup</p></a>
-                <a role="button" data-filter=".drink-mix" class="col-md-2 col-sm"><img src="./assets/images/mix.png"><p>Mix</p></a>
+                <a role="button" data-filter=".soup" class="col-md-2 col-sm"> <img src="./assets/images/soup.png" alt=""><p>Soup</p></a> -->
             </div>
         </div>
     <div class="container">
@@ -107,7 +107,7 @@
     </section>
 
 <div class="container">
-    <div class="row justify-content-center disclaimer">
+    <div class="row disclaimer">
         <div class="col-md-4 col-sm-12">
             <img src="./assets/images/minimum-order.jpg" alt="minimum order">
             <h1>Minimum order</h1>
@@ -217,16 +217,25 @@ var header = document.getElementById("sticky-header");
 var sticky = header.offsetTop;
 
 function myFunction() {
-if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
-} else {
-    header.classList.remove("sticky");
+    if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+    } else {
+        header.classList.remove("sticky");
+    }
 }
-}
+
 
 $('.header-burger').on('click', function () {
             $('.header-burger').toggleClass('active')
             $('.header-menu nav').toggleClass('active')
+            if($('.header-menu nav').hasClass('active')){
+                $('body').css('overflow-y','hidden')
+                $('#sticky-header').css("opacity",'1');
+                $('#toTop').removeClass('active')
+            }else {
+                $('body').css('overflow-y','auto')
+
+            }
         })
 
         $(window).resize(function () {
