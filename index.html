@@ -89,69 +89,110 @@
 
     </header>
 
-    <section class="container">
-        <div class="circle"></div>
-        <div class="glass-content">
-            <div class="textBox">
-                <h2>It's more than a simple Glass.<br>It's <span id="brand-name">Etinat</span></h2>
-                <p>We bring dozens of values to you in just a glass</p>
-                <a href="" id="learnMore-button">Learn More</a>
-            </div>
-
-            <div class="imgBox">
-                <img src="./assets/images/redGlass.png" alt="" id="etinat">
+    <section id="colored-glasses">
+        <div class="container">
+            <div class="glass-content">
+                <div class="textBox">
+                    <h2>It's more than a simple Glass.<br>It's <span id="brand-name">Etinat</span></h2>
+                    <p>We bring dozens of values to you in just a glass</p>
+                    <a href="" id="learnMore-button">Learn More</a>
+                    <ul class="thumb">
+                        <li>
+                            <img src="./assets/images/purpleGlass.png" alt="" onmouseover="glassSlider('./assets/images/purpleGlass.png'); changeCircleColor('#6b517c'); changeButtonColor('#6b517c'); changeBrandColor('#6b517c')">
+                        </li>
+                        
+                        <li>
+                            <img src="./assets/images/yellowGlass.png" alt="" onmouseover="glassSlider('./assets/images/yellowGlass.png'); changeCircleColor('#C3A82F'); changeButtonColor('#C3A82F'); changeBrandColor('#C3A82F')">
+                        </li>
+            
+                        <li>
+                            <img src="./assets/images/pinkGlass.png" alt="" onmouseover="glassSlider('./assets/images/pinkGlass.png'); changeCircleColor('#8f495e'); changeButtonColor('#8f495e'); changeBrandColor('#8f495e')">
+                        </li>
+            
+                        <li>
+                            <img src="./assets/images/greyGlass.png" alt="" onmouseover="glassSlider('./assets/images/greyGlass.png'); changeCircleColor('#898372'); changeButtonColor('#898372'); changeBrandColor('#898372')">
+                        </li>
+            
+            
+                        <li>
+                            <img src="./assets/images/redGlass.png" alt="" onmouseover="glassSlider('./assets/images/redGlass.png'); changeCircleColor('#8b4949'); changeButtonColor('#8b4949'); changeBrandColor('#8b4949')">
+                        </li>
+            
+                        <li>
+                            <img src="./assets/images/lilacGlass.png" alt="" onmouseover="glassSlider('./assets/images/lilacGlass.png'); changeCircleColor('#6e5e6e'); changeButtonColor('#6e5e6e'); changeBrandColor('#6e5e6e')">
+                        </li>
+            
+                    </ul>
+                </div>
+    
+                <div class="imgBox">
+                  <div class="imgBox-wrapper">
+                      <img src="./assets/images/redGlass.png" alt="" id="etinat">
+                 </div>
+            <div class="circle"></div>
+    
+                </div>
             </div>
         </div>
         
-        <ul class="thumb">
-            <li>
-                <img src="./assets/images/purpleGlass.png" alt="" onmouseover="glassSlider('./assets/images/purpleGlass.png'); changeCircleColor('#6b517c'); changeButtonColor('#6b517c'); changeBrandColor('#6b517c')">
-            </li>
-            
-            <li>
-                <img src="./assets/images/yellowGlass.png" alt="" onmouseover="glassSlider('./assets/images/yellowGlass.png'); changeCircleColor('#C3A82F'); changeButtonColor('#C3A82F'); changeBrandColor('#C3A82F')">
-            </li>
-
-            <li>
-                <img src="./assets/images/pinkGlass.png" alt="" onmouseover="glassSlider('./assets/images/pinkGlass.png'); changeCircleColor('#8f495e'); changeButtonColor('#8f495e'); changeBrandColor('#8f495e')">
-            </li>
-
-            <li>
-                <img src="./assets/images/greyGlass.png" alt="" onmouseover="glassSlider('./assets/images/greyGlass.png'); changeCircleColor('#898372'); changeButtonColor('#898372'); changeBrandColor('#898372')">
-            </li>
-
-
-            <li>
-                <img src="./assets/images/redGlass.png" alt="" onmouseover="glassSlider('./assets/images/redGlass.png'); changeCircleColor('#8b4949'); changeButtonColor('#8b4949'); changeBrandColor('#8b4949')">
-            </li>
-
-            <li>
-                <img src="./assets/images/lilacGlass.png" alt="" onmouseover="glassSlider('./assets/images/lilacGlass.png'); changeCircleColor('#6e5e6e'); changeButtonColor('#6e5e6e'); changeBrandColor('#6e5e6e')">
-            </li>
-
-        </ul>
+        
+       
     </section>
 
     
     <section class=" architecture-section">
         <div class="container">
             <div class="row">
-                <div class="col-12 d-flex justify-content-center mb-3 ms-5">
-                    <h1><span class="miracle-glass">Miracle glass</span> is</h1>
+                <div id="head-arrow" class="col-12 d-flex justify-content-center mb-3 ">
+                    <h1>
+                        <span class="miracle-glass">Miracle glass</span> is
+                        <img src="./assets/images/arrow.png" alt="">
+                        
+                    </h1>
                 </div>
             </div>
             <div class="glass-architecture">
                 <div class="imgButtons">
-                    <img src="./assets/images/transparentGlass.png" alt="">
-                    <button class="button btn1">1</button>
-                    <button class="button btn2">2</button>
-                    <button class="button btn3">3</button>
-                    <button class="button btn4">4</button>
-                    <button class="button btn5">5</button>
+                    <div class="glass-cut">
+                       <img src="./assets/images/transparentGlass.png" alt="">
+                    <div class="btn1-wrap">
+                       <button class="button btn1">1</button>
+                       <div class="mob-explain one">
+                           <span>Disposable paper cup with a capacity of 250 ml. made of cellulose cardboard!</span>
+                       </div>
+                    </div>
+                    <div class="btn2-wrap">
+                        <button class="button btn2">2</button>
+                        <div class="mob-explain two">
+                        <span>Disposable spoon lid made of cellulose cardboard!</span>
+                            
+                        </div>
+                     </div>
+                     <div class="btn3-wrap">
+                        <button class="button btn3">3</button>
+                        <div class="mob-explain three">
+                            <span>Membrane made of cellulose cardboard!</span>
+                        </div>
+                     </div>
+                     <div class="btn4-wrap">
+                        <button class="button btn4">4</button>
+                        <div class="mob-explain four">
+                            <span>Delicious and high quality ingredients without glutamate and GMOs!</span>
+                        </div>
+                     </div>
+                     <div class="btn5-wrap">
+                        <button class="button btn5">5</button>
+                        <div class="mob-explain five">
+                            <span>Sweet blend based on "Stevia"!</span>
+                        </div>
+                     </div>
+                    </div>
+                    
                 </div>
 
                 <div class="architecture-explanation">
-                    <div class="button1-text">
+                    <div class="button1-text active">
+                        <img src="./assets/images/arrow.png" alt="">
                         <p><strong>Disposable paper cup with a capacity of 250 ml. made of cellulose cardboard!</strong>
                         </p>
                         <ol>
@@ -535,50 +576,53 @@
         }
         
         // miracle glass buttons
-        //for btn1
-        $('.btn1').mouseover(function(){
-        $('.button1-text').css('display','block');
+     
+
+        $('.btn1').on('mouseout',function(){
+            if($('.button1-text').hasClass('active')){
+                $('.button1-text').removeClass('active')
+                $('.mob-explain.one').removeClass('active')
+            }
+        })
+        $('.btn1').on('mouseover',function(){
+                $('.button1-text').addClass('active')
+                $('.mob-explain.one').addClass('active')
         })
 
-        $('.btn1').mouseout(function(){
-        $('.button1-text').css('display','none');
+        $('.btn2').bind('mouseover mouseout',function(){
+            $('.button2-text').toggleClass('active')
+            $('.button1-text').removeClass('active')
+            $('.mob-explain.two').toggleClass('active')
+
+        })
+        $('.btn3').bind('mouseover mouseout',function(){
+            $('.button3-text').toggleClass('active')
+            $('.button1-text').removeClass('active')
+            $('.mob-explain.three').toggleClass('active')
+
+
+        })
+        $('.btn4').bind('mouseover mouseout',function(){
+            $('.button4-text').toggleClass('active')
+            $('.button1-text').removeClass('active')
+            $('.mob-explain.four').toggleClass('active')
+
+
+        })
+        $('.btn5').bind('mouseover mouseout',function(){
+            $('.button5-text').toggleClass('active')
+            $('.button1-text').removeClass('active')
+            $('.mob-explain.five').toggleClass('active')
+
         })
 
-        //for btn2
-        $('.btn2').mouseover(function(){
-        $('.button2-text').css('display','block');
-        })
-
-        $('.btn2').mouseout(function(){
-        $('.button2-text').css('display','none');
-        })
-
-        //for btn3
-        $('.btn3').mouseover(function(){
-        $('.button3-text').css('display','block');
-        })
-
-        $('.btn3').mouseout(function(){
-        $('.button3-text').css('display','none');
-        })
-
-        //for btn4
-        $('.btn4').mouseover(function(){
-        $('.button4-text').css('display','block');
-        })
-
-        $('.btn4').mouseout(function(){
-        $('.button4-text').css('display','none');
-        })
-        
-        //for btn5
-        $('.btn5').mouseover(function(){
-        $('.button5-text').css('display','block');
-        })
-
-        $('.btn5').mouseout(function(){
-        $('.button5-text').css('display','none');
-        })
+  $('#learnMore-button').click(function(e) {
+      e.preventDefault()
+  $('html, body').animate({
+    scrollTop: $("#head-arrow").offset().top
+  }, 300)
+})
+       
     </script>
 
 </body>

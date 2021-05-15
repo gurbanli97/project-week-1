@@ -15,7 +15,7 @@ body{
 }
 
 header{
-    background-color:#c19a42;
+    background-color:#1F1B0F;
     font-weight: 700;
     top: 0;
     z-index: 999;
@@ -28,8 +28,7 @@ header{
 
 header.sticky {
     position: sticky;
-    background-color: #2D2118;
-    opacity: .9;
+    opacity: .8;
     padding: 20px 0;
     transition: all .4s ease-in-out;
 }
@@ -153,16 +152,24 @@ header.sticky {
 }
 
 /* Main - Glass Represetation */
+#colored-glasses {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+#colored-glasses > .container{
+    padding-right: 0;
+    max-width: 100%;
+}
 .glass-content{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     position: relative;
 }
 
 .glass-content .textBox{
-    max-width: 700px;
+    width: fit-content;
+    margin: auto;
 }
 
 .glass-content .textBox h2{
@@ -176,6 +183,7 @@ header.sticky {
     font-weight: 900;
     color: #932a26;
     font-size: 45px;
+    transition: color .2s linear;
 }
 
 .glass-content .textBox a{
@@ -187,38 +195,35 @@ header.sticky {
     margin-top: 20px;
     padding: 8px 20px;
     font-weight: 500;
+    transition: background .2s linear;
 }
 
 .glass-content .imgBox{
     width: 600px;
     display: flex;
-    justify-content: flex-end;
-    margin-top: 50px;
+    justify-content: center;
 }
 
 .glass-content .imgBox img{
     max-width: 350px;
 }
 
-/* .thumb{
-    position: absolute;
-    left: 50%;
-    bottom: 10px;
-    transform: translateX(-50%);
-    display: flex;
-} */
 
 .thumb{
+    margin-top: 30px;
     display: flex;
     justify-content: start;
-    margin-top: 100px;
+    padding: 0;
+    width: fit-content;
 }
 
 .thumb li{
     display: inline-block;
-    margin: 0 5px;
     cursor: pointer;
     transition: 0.5s;
+}
+.thumb li:not(:last-child){
+    margin-right: 5px;
 }
 .thumb li img{
     max-width: 60px;
@@ -229,13 +234,15 @@ header.sticky {
 }
 
 .circle{
-    background-color: #c19a42;
+    background-color: rgb(139, 73, 73);
     position: absolute;
-    top:0;
-    left: 0;
+    bottom:0;
+    right: 0;
     width: 100%;
-    height: 100%;
+    min-height: 600px;
+    z-index: -1;
     clip-path: circle(600px at right 800px);
+    transition: background .2s linear;
 }
 
 #etinat{
@@ -713,8 +720,9 @@ margin-right: 5px;
 }
 
 /* Miracle Glass Architecture */
+
 .architecture-section{
-    margin-top: 100px;
+    margin-top: 80px;
 }
 
 .glass-architecture{
@@ -742,6 +750,7 @@ margin-right: 5px;
 }
 .imgButtons {
     position: relative;
+    height: fit-content;
 }
 
 .button {
@@ -753,41 +762,140 @@ margin-right: 5px;
     font-weight: bold;
     border: 2px solid darkred;
     position: absolute;
+    animation: pulse-white 2s infinite;
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 1);
+
 }
 
+
+@keyframes pulse-white {
+    0% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+    }
+    
+    70% {
+      transform: scale(1);
+      box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+    }
+    
+    100% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+  }
 .btn1 {
     top: 20px;
     right: 40px;
 }
-.btn2{
-    top: 18vh;
-    right: 13vh;
+.mob-explain.one {
+    top: -10px;
+    right: 95px;
 }
-.btn3{
-    top: 38vh;
-    right: 6vh;
+.btn2 {
+    top: 106px;
+    right: 98px;
 }
-.btn4{
-    top: 43vh;
-    right: 18vh;
+.mob-explain.two{
+    top: 95px;
+    right: 150px;
 }
-.btn5{
-    top: 52vh;
-    right: 26vh;
+.btn3 {
+    right: 35px;
+    bottom: 150px;
+}
+.mob-explain.three{
+    right: 90px;
+    bottom: 150px;
+}
+.btn4 {
+    bottom: 100px;
+    right: 100px;
+}
+.mob-explain.four{
+    bottom: 100px;
+    right: 155px;
+}
+.btn5 {
+    bottom: 10px;
+    right: 180px;
+}
+.mob-explain.five{
+    bottom: 10px;
+    right: 235px;
+}
+.mob-explain {
+    background-color: #F5D069;
+    padding: 5px 10px;
+    font-weight: 700;
+    border-radius: 12px;
+    box-shadow:  15px 14px 50px -12px rgb(171 171 171 / 90%);
+}
+.mob-explain::after {
+    content: '';
+    width: 0; 
+    height: 0;
+    position: absolute;
+    right: -8px;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid #F5D069;
 }
 
+.mob-explain.one,
+.mob-explain.two,
+.mob-explain.three,
+.mob-explain.four,
+.mob-explain.five{
+    display: none;
+    visibility: hidden;
+      opacity: 0;
+      transition: all .3s linear;
+}
 .architecture-explanation .button1-text, 
 .architecture-explanation .button2-text, 
 .architecture-explanation .button3-text,
  .architecture-explanation .button4-text,
   .architecture-explanation .button5-text{
-    display: none;
+      position: relative;
+      display: block;
+      visibility: hidden;
+      height: 0;
+      opacity: 0;
+      transition: all .3s linear;
+}
+.architecture-explanation .button1-text.active, 
+.architecture-explanation .button2-text.active, 
+.architecture-explanation .button3-text.active,
+ .architecture-explanation .button4-text.active,
+  .architecture-explanation .button5-text.active{
+      visibility: visible;
+      height: auto;
+      opacity: 1;
 }
 
 .architecture-explanation div{
-    min-width: 700px;
-    padding-right: 200px;
+    max-width: 700px;
 }
+
+.button1-text img{
+  width: 100px;
+  position: absolute;
+  left:-100px;
+  top:40px;
+}
+
+#head-arrow h1 {
+    position: relative;
+}
+#head-arrow img {
+    position: absolute;
+    width: 100px;
+    right: -100px;
+    top: 40px;
+    transform: rotate(200deg);
+}
+
 
 
 @media only screen and (max-width: 1200px) {
@@ -900,6 +1008,32 @@ margin-right: 5px;
 }
 
 @media only screen and (max-width:992px) {
+
+  
+    .circle{
+        display: none;
+    }
+    .glass-content {
+        flex-direction: column;
+    }
+    .thumb {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: auto;
+        margin-top: 30px;
+        transform: unset;
+    }
+    #etinat {
+        max-height: 300px;
+        transform: unset;
+    }
+    .glass-content .imgBox{
+        width: 100%;
+        justify-content: center;
+    }
+    .glass-content .textBox {
+        text-align: center;
+    }
     .row.second-values.active {
         height: 620px;
     }
@@ -930,6 +1064,43 @@ margin-right: 5px;
 }
 
 @media only screen and (max-width:800px) {
+    
+.mob-explain.one,
+.mob-explain.two,
+.mob-explain.three,
+.mob-explain.four,
+.mob-explain.five{
+    display: block;
+    visibility: hidden;
+      opacity: 0;
+      transition: all .3s linear;
+}
+.mob-explain.one.active,
+.mob-explain.two.active,
+.mob-explain.three.active,
+.mob-explain.four.active,
+.mob-explain.five.active{
+    visibility: visible;
+      opacity: 1;
+      transition: all .3s linear;
+}
+    .architecture-explanation {
+        display: none;
+    }
+    #head-arrow img {
+        width: 81px;
+        top: 60px;
+        right: -35px;
+        z-index: 9;
+        transform: rotate(280deg);
+        
+    }
+    .glass-architecture {
+        justify-content: center;
+    }
+    .mob-explain {
+        position: absolute;
+    }
     .row.second-values.active {
         height: 820px;
     }
@@ -964,6 +1135,19 @@ margin-right: 5px;
 }
 
 @media only screen and (max-width:600px){
+    
+    .glass-cut img {
+        max-width: 300px;
+    }
+    .mob-explain.one {
+        top: -40px;
+    }
+    .mob-explain.two {
+        top: 40px;
+    }
+    #etinat {
+        max-height: 230px;
+    }
     .row.second-values.active {
         height: 1020px;
     }
@@ -971,6 +1155,16 @@ margin-right: 5px;
         height: 200px;
     }
     
+}
+
+@media only screen and (max-width:378px){
+    #head-arrow img {
+        width: 140px;
+        top: 85px;
+        left: 23px;
+        z-index: 9;
+        transform: rotate(194deg);
+    }
 }
 
 
