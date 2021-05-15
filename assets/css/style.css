@@ -325,13 +325,14 @@ header.sticky {
 #more-button,
 #less-button {
     height: 50px;
-    background: #912A27;
+    background: #922A26;
     border: 1px solid transparent;
     color: #fff;
     padding: 12px 20px;
-    border-radius: 12px;
+    border-radius: 30px;
     margin-top: 15px;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
+    font-weight: bold;
 }
 
 #less-button {
@@ -369,7 +370,7 @@ header.sticky {
 }
 
 .awards{
-    min-height: 600px;
+    min-height: 550px;
 }
 
 .awards-text p{
@@ -449,7 +450,7 @@ header.sticky {
 
 .hashtags-inner .prev,
 .hashtags-inner .next {
-    color: #c19a42;
+    color: #C8BBA5;
     cursor: pointer;
     font-size: 40px;
     transition: color .3s ease-in-out;
@@ -592,7 +593,7 @@ font-size: 30px;
 margin-right: 5px;
 }
 .footer-heading{
-    color: #B89777;
+    color: #C8BBA5;
     font-weight: bold;
 }
 
@@ -667,17 +668,18 @@ margin-right: 5px;
 }
 
 .submit-button button{
-    width: 150px;
+    width: 120px;
     background-color: #932a26;
-    font-weight: 600;
+    font-weight: bold;
     color: #fff;
     padding: 13px 20px;
-    border-radius: 20px;
+    border-radius: 35px;
     border: none;
 }
 
 .submit-button button:hover{
-    background-color: #C19A42;
+    background-color: #C8BBA5;
+    color: #000;
 }
 
 .submit-button{
