@@ -377,32 +377,42 @@
             e.preventDefault();
             if(!($("#inputFirstName").val().trim())){
                 $("#inputFirstName").css("border", "1px solid red");
+                $("#fname_error").text("First Name is required")
             }else{
                 $("#inputFirstName").css("border", "1px solid rgb(202, 200, 200)");
+                $("#fname_error").text("");
             }
 
             if(!($("#inputLastName").val().trim())){
                 $("#inputLastName").css("border", "1px solid red");
+                $("#lname_error").text("Last Name is required")
             }else{
                 $("#inputLastName").css("border", "1px solid rgb(202, 200, 200)");
+                $("#lname_error").text("")
             }
 
             if(!($("#inputMail").val().trim())){
                 $("#inputMail").css("border", "1px solid red");
+                $("#email_error").text("Mail is required")
             }else{
                 $("#inputMail").css("border", "1px solid rgb(202, 200, 200)");
+                $("#email_error").text("")
             }
 
             if(!($("#inputSubject").val().trim())){
                 $("#inputSubject").css("border", "1px solid red");
+                $("#subject_error").text("Subject is required")
             }else{
                 $("#inputSubject").css("border", "1px solid rgb(202, 200, 200)");
+                $("#subject_error").text("")
             }
 
             if(!($("#inputMessage").val().trim())){
                 $("#inputMessage").css("border", "1px solid red");
+                $("#message_error").text("Message is required")
             }else{
                 $("#inputMessage").css("border", "1px solid rgb(202, 200, 200)");
+                $("#message_error").text("")
             }
         })
     </script>

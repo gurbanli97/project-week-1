@@ -739,7 +739,9 @@ margin-right: 5px;
 }
 
 .val_error{
-    color: #932a26;
+    color: red;
+    font-weight: 500;
+    font-size: 14px;
 }
 
 /* Miracle Glass Architecture */
