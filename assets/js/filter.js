@@ -68,7 +68,6 @@ $(document).on("click", ".shop", function(e){
         item = snapshot.child(`/products/${prKey}`).val()
 
         if(snapshot.child(`${user}`).child(prKey).hasChild("ProductName")){
-            console.log("salam")
             return
         }else{
             console.log("sagol")
@@ -93,7 +92,7 @@ var itemSelf;
 
 db.ref(user + "/").on("value", (snapshot) => {
 
-    if($(".cart-empty").text().trim() === "No products in the cart"){
+    if(snapshot.hasChildren()){
         $(".cart-empty").text("")
         $(".cart-empty").html(`
         <table class="chartTable">
@@ -109,6 +108,8 @@ db.ref(user + "/").on("value", (snapshot) => {
         <tbody class="chartDiv">
         </tody>
         </table>`)
+    }else{
+        $(".cart-empty").text("No products in the cart")
     }
 
     $(".chartDiv").html(" ")
