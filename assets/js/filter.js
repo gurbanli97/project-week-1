@@ -88,6 +88,7 @@ $(document).on("click", ".shop", function(e){
 var totalSum = 0.00
 var totalItem = 0
 var chartContent;
+var deleteKey;
 
 db.ref(user + "/").on("value", (snapshot) => {
 
@@ -101,6 +102,7 @@ db.ref(user + "/").on("value", (snapshot) => {
                 <th>Name</th>
                 <th>Count</th>
                 <th>Price</th>
+                <th></th>
             </tr>
         </tbody>
         <tbody class="chartDiv">
@@ -123,7 +125,8 @@ db.ref(user + "/").on("value", (snapshot) => {
         <td><img class="chartImg" src="${snapshot.val().ProductImage}"></td>
         <td>${snapshot.val().ProductName}</td>
         <td>${snapshot.val().count}</td>
-        <td>${snapshot.val().ProductPrice}</td>
+        <td>$${snapshot.val().ProductPrice}</td>
+        <td><button class="deleteBtn" data-delete="${snapshot.val().key}"><i class="far fa-trash-alt"></i></button></td>
     </tr>
     `
     $(".chartDiv").append(chartContent)
@@ -136,100 +139,19 @@ db.ref(user + "/").on("value", (snapshot) => {
     totalSum = 0.00
     totalItem = 0
 
-    // $(".chartDiv").html("")
-
-
-    // console.log(snapshot.child(prKey +"/").val())
-
-    // productD = snapshot.val()
-    // sebet.push(parseFloat(productD.ProductPrice))
-    // console.log(sebet)
-    // totalSum = sebet.reduce((a, b) => a + b).toFixed(2)
-    // console.log(totalSum , sebet)
-
-    // $(".itemCount").text(snapshot.numChildren())
-    // $(".priceSpan").text("$"+totalSum)
-
-
 })
 
-
-//     var prName = $(this).closest('.product-grid').children('.product-content').find('.title').text()
-//     var prPrice = $(this).closest('.product-grid').children('.product-content').find('.price').text()
-//     var prImage = $(this).closest('.product-grid').children(".product-image").children(".image").find("img").attr("src")
-//     console.log(prName, prPrice, prImage)
-
-    // if(user == null){
-    // user = db.ref().push().key;
-    // localStorage.setItem("userId", user)
-    // user = localStorage.getItem("userId")
-    // }
-
-    // db.ref("/users/" + user).push(prDetails)
-// })
-
-// var sebet = []
-// var totalSum = 0.00
-
-// db.ref("/users/" + user).on("child_added", (snapshot) => {
-
-//     if($(".cart-empty").text().trim() === "No products in the cart"){
-//         $(".cart-empty").text("")
-//         $(".cart-empty").html(`
-//         <table class="chartDiv">
-//             <tr>
-//                 <th></th>
-//                 <th>Name</th>
-//                 <th>Price</th>
-//             </tr>
-//         </table>`)
-//     }
-    
-//     $(".chartDiv").append(`
-//     <tr>
-//         <td><img class="chartImg" src="${productD.ProductImage}"></td>
-//         <td>${productD.ProductName}</td>
-//         <td>${productD.ProductPrice}</td>
-//     </tr>`)
-
-
-// })
-
-
-// db.ref("/users/" + user).on("child_removed", (snapshot) => {
-
-//     totalSum = totalSum - parseFloat(snapshot.val().ProductPrice.slice(1))
-//     $(".priceSpan").text("$"+totalSum)
-
-//     if(snapshot.numChildren() == 0){
-//         console.log("yes")
-//         totalSum = 0.00
-//         $(".priceSpan").text("$"+ totalSum + ".00")
-
-//     }
-// })
-
-// $("#deletef").on("click", function(){
-//     sebet = []
-//     db.ref("/users/" + user).set(false);
-//     $(".cart-empty").html("<span>No products in the cart</span>")
-//     totalSum = 0.00
-//     $(".priceSpan").text("$"+ totalSum + ".00")
-
-// })
-
-// db.ref("/users/" + user).onDisconnect().set(false);
+$(document).on("click", ".deleteBtn", function() {
+    deleteKey = $(".deleteBtn").attr("data-delete");
+    db.ref().child(user).child(deleteKey).remove();
+})
 
 $('.filter-button-group').on( 'click', 'a', function() {
     var filterValue = $(this).attr('data-filter');
     $grid.isotope({
         filter: filterValue,
-        // stagger: 60,
     });
     
-    // if($("#starter").hasClass("isActive")){
-    //     $("#starter").removeClass("isActive");
-    // }
 
     if($("a").hasClass("isActive")){
         $("a").removeClass("isActive");
