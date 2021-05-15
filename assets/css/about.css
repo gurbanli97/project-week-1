@@ -28,6 +28,7 @@
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 15px;
     line-height: 24px;
+    text-align: justify;
 }
 .text h6{
     font-size: 17px;
@@ -35,19 +36,21 @@
 }
 
 .img{
+    width: 100%;
     column-count: 2;
     padding: 5px;
+    margin: auto;
+    text-align: right;
 }
 
 .image{
     display: inline-block;
     margin-bottom: 10px;
     overflow: hidden;
-    width: 275px;
+    width: 285px;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     /* box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px; */
     border-radius: 8px;
-
 }
 
 .image img{
@@ -95,35 +98,44 @@
 
 @media screen and (max-width:1150px) {
     .image{
-        max-width: 250px;
+        max-width: 275px;
     }
 }
 @media screen and (max-width:1060px) {
     .image{
-        width: 230px;
+        width: 260px;
     }
 }
  @media screen and (max-width:992px) {
  
 .img{
     padding: 5px;
-    width: 60%;
+    width: 70%;
     margin: auto;
+    text-align: center;
 }
 .image {
-    width: 100%;
+    width: 285px;
+}
+.paraqraf {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
     
 } 
-@media screen and (max-width:820px) {
+@media screen and (max-width:825px) {
     .img{
-        width: 80%;
+        width: 90%;
         margin: auto; 
         text-align: center;
     } 
+    .image {
+        width: 270px;
+    }
 } 
 
-@media screen and (max-width:500px) {
+@media screen and (max-width:653px) {
     .img{
         column-count: 1; 
     }    
