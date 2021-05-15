@@ -53,6 +53,17 @@ header.sticky {
 .header-logo {
     z-index: 99999;
 }
+
+.LogoImg {
+    
+    width:200px;
+    height: 55px;
+}
+.footer-layer >.LogoImg {
+margin-bottom: 5px;
+width:200px;
+height: 80px;
+}
 .header-inner nav ul li {
     position: relative;
 }
