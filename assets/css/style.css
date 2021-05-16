@@ -155,6 +155,7 @@ margin-bottom: 5px;
     color: #20202f;
     border-radius: 18px;
     overflow-y: auto;
+    box-shadow: 15px 14px 50px -12px rgb(171 171 171 / 90%);
 }
 .cart-empty::before {
     content: '';
@@ -698,10 +699,10 @@ footer .row {
     cursor: pointer;
     height: 110px;
     width: 212px;
-    background-image: url(../images/cudologo.png);
+    background-image: url(../images/logoEtinat.png);
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top center;
     display: flex;
     justify-content: center;
     align-items: center;

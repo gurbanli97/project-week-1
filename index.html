@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main</title>
+    <title>Главная</title>
     <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon">   
     <script src="https://kit.fontawesome.com/b673856b82.js" crossorigin="anonymous" defer></script>
     <link rel="stylesheet" href="assets/css/reset.css">
@@ -95,9 +95,9 @@
         <div class="container">
             <div class="glass-content">
                 <div class="textBox">
-                    <h2>Это больше, чем просто стакан.<br>Это, <span id="brand-name">Этинат</span></h2>
+                    <h2>Это больше, чем просто стакан.<br>Это, <span id="brand-name">Etinat</span></h2>
                     <p>Мы приносим вам десятки ценностей в стакане всего за 10 рублей.</p>
-                    <a href="" id="learnMore-button"> Учить больше</a>
+                    <a href="" id="learnMore-button"> Узнать больше</a>
                     <ul class="thumb">
                         <li>
                             <img src="./assets/images/purpleGlass.png" alt="" onmouseover="glassSlider('./assets/images/purpleGlass.png'); changeCircleColor('#6b517c'); changeButtonColor('#6b517c'); changeBrandColor('#6b517c')">
@@ -157,7 +157,7 @@
             <div class="row">
                 <div id="head-arrow" class="col-12 d-flex justify-content-center mb-3 ">
                     <h1>
-                        <span class="miracle-glass">Чудо-стакан</span> это
+                        <span class="miracle-glass">Etinat</span> это
                         <img src="./assets/images/arrow.png" alt="">
                         
                     </h1>
@@ -258,7 +258,7 @@
         <div class="container">
             <div class="row comparison">
                 <div class="col">
-                    <p class="text-center comparison-head">Наши ценности</p>
+                    <p class="text-center comparison-head">В чем наше отличие?</p>
                     <p class="text-center comparison-quote">"Качество это результат тщательно созданной культурной среды"</p>
                 </div>
             </div>
@@ -288,7 +288,7 @@
                 
                 <div class="row m-auto">
                     <div class="col d-flex justify-content-center">
-                        <button type="button" id="more-button">Показать больше</button>
+                        <button type="button" id="more-button">Показать еще</button>
                     </div>
                 </div>
             </div>
@@ -313,7 +313,7 @@
 
                 <div class="row">
                     <div class="col d-flex justify-content-center">
-                        <button type="button" id="less-button">показывай меньше</button>
+                        <button type="button" id="less-button">Скрыть</button>
                     </div>
                 </div>
             </div>
@@ -346,8 +346,8 @@
 
     <section class="hashtags">
         <div class="hashtag-text">
-            <h3>#miracleGlass</h3>
-            <p>Вы пробовали наши чудо-очки? Поделитесь с нами своими моментами. Следуйте за нами в Instagram и не забудьте поставить наш хэштег</p>
+            <h3>#etinatGlass</h3>
+            <p>Вы пробовали наши удивительные стаканы? Поделитесь с нами своими моментами. Следите за нами в социальных сетях и не забудьте поставить наш хэштег</p>
         </div>
         <div class="hashtags-inner">
             <div class="prev">
@@ -534,7 +534,7 @@
                     <div class="footer-layer d-flex flex-column">
                         <h4 class="footer-heading">Контакты</h4>
                         <p>142184, Московская область, Подольский район, улица Большая Академическая, дом 6, корпус 1 пом. 2</p>
-                        <a class="contact-a" href="./contact.html">Направление погружения</a>
+                        <a class="contact-a" href="./contact.html">Схема проезда</a>
                         <a class="contact-a" href="mailto:someone@yoursite.com">Свяжитесь с нами по электронной почте</a>
                     </div>
                 </div>
@@ -548,7 +548,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6  footer-col  d-flex align-items-center">
                     <div class="footer-layer">
-                        <h4 class="footer-heading">Чудо стакан видео</h4>
+                        <h4 class="footer-heading">Etinat видео</h4>
                         <div class="video">
 
                             <img class="video-backgrnd" src="./assets/images/play.svg" alt="playsvg">
@@ -669,7 +669,7 @@
       direction: 'horizontal',
 	  loop:true,
 	  spaceBetween: 30,
-      slidesPerView: 5.3,
+      slidesPerView: 5,
       visibilityFullFit: true,
       pagination: '.swiper-pagination',
       nextButton: '.next',
@@ -791,7 +791,7 @@
         $('#learnMore-button').click(function(e) {
       e.preventDefault()
       var itemOff = $('#head-arrow').offset().top;
-      var itemMargin = 50;
+      var itemMargin = 100;
   $('html, body').animate({
     scrollTop: itemOff - itemMargin
   }, 300)
