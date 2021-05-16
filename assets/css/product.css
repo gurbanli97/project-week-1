@@ -81,26 +81,19 @@
 } */
 
 .shop{
-    background-color: #922A26;
-    color: #FFFFFF;
     box-sizing: border-box;
     height: 44px;
     width: 216px;
-    border: 3px solid #922A26;
+    border: 1px solid #922A26;
     border-radius: 21.5px;
-    transition: all 0.5s ease 0s;
-    font-weight: 500;
-
 }
+
 .shop:hover{
-    background: transparent;
-    border-color: #20202f;
-    color: #20202f;
-    transition: all 0.5s ease 0s;
-}
+    height: 43px;
+    width: 215px;
+    background-color: #922A26;
+    color: #FFFFFF;
 
-.shop:active{
-    transform: scale(1.01);
 }
 
 .product-grid .product-content{ padding: 12px; }
@@ -121,12 +114,15 @@
     font-weight: 500;
 }
 
+
+
+
  .disclaimer {
     display: flex;
     justify-content: space-between;
 } 
 .disclaimer div{
-    max-width: 30vw;
+    max-width: 25vw;
     height: auto;
     border-radius: 7px;
     box-shadow: 1px 1px 20px #ccc;
@@ -136,6 +132,8 @@
     margin: 20px 0;
     padding: 0;
 }
+
+
 
 .disclaimer div img{
     width: 100%;
@@ -193,6 +191,7 @@ tr:hover {background-color: #f5f5f5;}
     border-radius: 50%;
     text-decoration: none;
     font-size: 16px;
+    font-stretch: condensed;
     line-height: 1;
     color: #000000;
     text-align: center;
@@ -202,62 +201,6 @@ tr:hover {background-color: #f5f5f5;}
 background-color: #b2bbbd;
 border-color: #b2bbbd;
 color: #fff;
-}
-
-.button-default {
-    display: inline-block;
-    width: 30px;
-    padding: 0px 35px;
-    min-width: 170px;
-    height: 42px;
-    border: 2px solid #c7a17a;
-    border-radius: 50px;
-    text-align: center;
-    box-shadow: none;
-    background: transparent;
-    color: #e4b95b;
-    font-size: 16px;
-    font-weight: 600;
-    outline: none;
-    transition: all 0.5s ease 0s;
-}
-
-.button-default:hover {
-    background: transparent;
-    border-color: #20202f;
-    color: #20202f !important;
-}
-
-.view {
-    margin: 15px 15px 0 37px;
-    border-color: #372727;
-    background: #372727;
-    text-align: center;
-}
-
-.checkout {
-    margin: 15px 0 0 0;
-    border-color: #e4b95b;
-    background: #e4b95b;
-    color: #FFFFFF;
-}
-
-
-@media screen and (min-width:1200px) {
-    .disclaimer div{
-        max-width: 25vw;
-        
-    }
-}
-@media screen and (max-width: 990px){
-    .disclaimer {
-        justify-content: space-around;
-    }
-    .disclaimer div{
-        max-width: 40vw !important;
-       
-    }
-    .product-grid{ margin: 0 0 30px; }
 }
 
 
@@ -277,3 +220,13 @@ color: #fff;
     }
 }
 
+@media screen and (max-width: 990px){
+    .disclaimer {
+        justify-content: center;
+    }
+    .disclaimer div{
+        max-width: 50vw !important;
+       
+    }
+    .product-grid{ margin: 0 0 30px; }
+}

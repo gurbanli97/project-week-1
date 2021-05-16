@@ -79,6 +79,7 @@ db.ref(user + "/").on("value", (snapshot) => {
 
 }
 
+
 $(document).on("click", ".deleteBtn", function() {
     deleteKey = $(this).attr("data-delete");
     db.ref().child(user).child(deleteKey).remove();
@@ -96,4 +97,246 @@ $(document).on("click", ".decr", function() {
     db.ref(user + "/" + decBtn).update({
         count: firebase.database.ServerValue.increment(-1),
     })
+})
+
+
+
+$(document).ready(function(){
+    //Mobile cart activation
+    $('.mob-cart').on('mouseover', function () {
+        $('.mob-shop .cart-wrap').css('display', 'block')
+    })
+
+   
+
+     //For Sticky Header   
+    window.onscroll = function() {myFunction()};
+
+    var header = document.getElementById("sticky-header");
+    var sticky = header.offsetTop;
+
+    function myFunction() {
+    if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+    } else {
+        header.classList.remove("sticky");
+    }
+}
+    if( $('.header-menu nav').hasClass('active')) {
+        $('#sticky-header').removeClass("sticky");
+    }
+
+    if( $('.header-menu nav').hasClass('active')){
+        $('body').css('overflow','unset')
+
+    }
+
+   
+
+
+//Mobile Nav Activation
+    $('.header-burger').on('click', function () {
+        $('.header-burger').toggleClass('active')
+        $('.header-menu nav').toggleClass('active')
+        if($('.header-menu nav').hasClass('active')){
+            $('body').css('overflow-y','hidden')
+            $('#sticky-header').css("opacity",'1');
+            $('#toTop').removeClass('active')
+        }else {
+            $('body').css('overflow-y','unset')
+
+        }
+    })
+
+    $(window).resize(function () {
+        if ($(this).width() >= 1000) {
+            $('.header-burger').removeClass('active')
+            $('.header-menu nav').removeClass('active')
+        }
+    });
+
+
+  //Video Popup  
+    $('.video').on('click', function () {
+        $('.video-popup').show(300)
+        $('.video-popup').addClass('active')
+
+    })
+
+    $(document).mouseup(function (e) {
+        if ($('.video-popup').hasClass('active') && !$('.video-content').is(e.target) && $('.video-content')
+            .has(e.target).length === 0) {
+            $('.video-popup').removeClass('active');
+            $('.video-popup').hide(300)
+
+        }
+    });
+
+
+//Button To Top
+$(window).scroll(function () {
+    if ($(window).scrollTop() > 800) {
+        $('#toTop').addClass('active');
+    } else {
+        $('#toTop').removeClass('active');
+    }
+   
+});
+$('#toTop').on('click', function (e) {
+    e.preventDefault();
+    $('html, body').animate({
+        scrollTop: 0
+    }, '500');
+    }); 
+
+
+  
+//Swiper Initialize
+var mySwiper = new Swiper ('.swiper-container', {
+  
+  // Optional parameters
+  direction: 'horizontal',
+  loop:true,
+  spaceBetween: 30,
+  slidesPerView: 5,
+  visibilityFullFit: true,
+  pagination: '.swiper-pagination',
+  nextButton: '.next',
+  prevButton: '.prev',
+  autoplay: 3000,
+  speed: 1000,
+  breakpoints: {
+    // when window width is >= 320px
+    600: {
+    slidesPerView: 2,
+    spaceBetween: 10
+    },
+    // when window width is >= 480px
+    768: {
+    slidesPerView: 3,
+    spaceBetween: 30
+    },
+    // when window width is >= 640px
+    992: {
+    slidesPerView: 4,
+    spaceBetween: 30
+    }
+}
+  
+})
+
+
+
+    // Our Values - Buttons 
+    $("#more-button").on('click', function(){
+        $('.second-values').addClass('active');
+        $("#more-button").hide();
+        $("#less-button").show()
+    })
+    
+    $("#less-button").on('click', function(){
+        $("#less-button").hide();
+        $('.second-values').removeClass('active');
+        $("#more-button").show();
+    });
+    
+    // Awards
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+    var i;
+    var x = document.getElementsByClassName("slides");
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2500);    
+    }
+
+    // Glasses Slider - Main
+    function glassSlider(value){
+        document.querySelector('#etinat').src = value;
+    }
+
+    function changeCircleColor(color){
+        var circle = document.querySelector(".circle");
+        circle.style.background = color;
+    }
+
+    function changeButtonColor(color){
+        var button = document.querySelector("#learnMore-button");
+        button.style.background = color;
+    }
+
+    function changeBrandColor(color){
+        var brandName = document.querySelector("#brand-name");
+        brandName.style.color = color;
+    }
+    
+    
+    // Miracle glass buttons
+ 
+
+    $('.btn1').on('mouseout',function(){
+        if($('.button1-text').hasClass('active')){
+            $('.button1-text').removeClass('active')
+            $('.mob-explain.one').removeClass('active')
+        }
+    })
+    $('.btn1').on('mouseover',function(){
+            $('.button1-text').addClass('active')
+            $('.mob-explain.one').addClass('active')
+    })
+
+    $('.btn2').bind('mouseover mouseout',function(){
+        $('.button2-text').toggleClass('active')
+        $('.button1-text').removeClass('active')
+        $('.mob-explain.two').toggleClass('active')
+
+    })
+    $('.btn3').bind('mouseover mouseout',function(){
+        $('.button3-text').toggleClass('active')
+        $('.button1-text').removeClass('active')
+        $('.mob-explain.three').toggleClass('active')
+
+
+    })
+    $('.btn4').bind('mouseover mouseout',function(){
+        $('.button4-text').toggleClass('active')
+        $('.button1-text').removeClass('active')
+        $('.mob-explain.four').toggleClass('active')
+
+
+    })
+    $('.btn5').bind('mouseover mouseout',function(){
+        $('.button5-text').toggleClass('active')
+        $('.button1-text').removeClass('active')
+        $('.mob-explain.five').toggleClass('active')
+
+    })
+
+
+    //Main Page Learn More Scroll to Glass Architec..
+    $('#learnMore-button').click(function(e) {
+  e.preventDefault()
+  var itemOff = $('#head-arrow').offset().top;
+  var itemMargin = 100;
+$('html, body').animate({
+scrollTop: itemOff - itemMargin
+}, 300)
+})
+
+   
+})
+
+$(document).ready(function(){
+    $(window).resize(function () {
+        if ($(this).width() >= 800) {
+            $('.mob-shop .cart-wrap').css('display', 'none')
+        }
+
+    });
 })
