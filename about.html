@@ -25,7 +25,7 @@
         <div class="container">
             <div class="header-inner">
                 <div class="header-logo">
-                    <a href="#">
+                    <a href="./index.html">
                         <img class="LogoImg" src="./assets/images/logoEtinat.png">
                     </a>
                 </div>
@@ -36,11 +36,11 @@
                             <li class="nav-logo">
                                 <a href=""><img src="./assets/images/logo.png"></a>
                             </li>
-                            <li><a href="./index.html">Главная</a></li>
+                            <li><a href="#">Главная</a></li>
                             <li><a href="./products.html">Продукция</a></li>
                             <li><a href="./forwholesalers.html">Оптовикам</a>
                             </li>
-                            <li><a href="#">О компании</a></li>
+                            <li><a href="./about.html">О компании</a></li>
                             <li><a href="./contact.html">Контакты</a></li>
 
                             <div class=" mob-phone">
@@ -51,42 +51,43 @@
                             <div class="mob-cart">
                                 <a>
                                     <i class="fas fa-shopping-cart"></i>
-                                    <span>0 - </span>
+                                    <span>0</span>
                                     <span>$0.00</span>
                                 </a>
                             </div>
                         </ul>
-                    </nav>
 
-                </div>
-
-                <div class="header-phone">
-                    <i class="fas fa-phone-alt"></i>
-                    <a href="tel:0507224461">+7 (499) 396-77-77</a>
-                </div>
-
-                <div class="header-cart">
-                    <div class="cart-inner">
-                        <a>
-                            <i class="fas fa-shopping-cart"></i>
-                            <span class="itemCount">0</span>
-                            <span class="priceSpan">$0.00</span>
-
-                            <div class="cart-wrap">
-                                <div class="cart-empty">
-                                    <span>No products in the cart</span>
-                                </div>
-                            </div>
-                        </a>
-
-                    </div>
-                </div>
-
-                <div class="header-burger">
-                    <span></span>
-                </div>
+                </nav>
 
             </div>
+
+            <div class="header-phone">
+                    
+                    <a href="tel:0507224461"><i class="fas fa-phone-alt"></i> +7 (499) 396-77-77</a>
+            </div>
+
+            <div class="header-cart">
+                <div class="cart-inner">
+                    <a>
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="itemCount">0</span>
+                        <span class="priceSpan">$0.00</span>
+
+                        <div class="cart-wrap">
+                            <div class="cart-empty">
+                                <span>No products in the cart</span>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="header-burger">
+                <span></span>
+            </div>
+
+        </div>
         </div>
 
     </header>
@@ -167,7 +168,7 @@
             <div class="row footer-row">
                 <div class="col-lg-3 col-md-6  footer-col d-flex align-items-center">
                     <div class="footer-layer">
-                        <img class="LogoImg" src="./assets/images/logoEtinat.png">
+                       <a id="footerLogo" href="./index.html"> <img class="LogoImg" src="./assets/images/logoEtinat.png"></a>
                         <p>Этинат - лучшее решение, позволяющее сэкономить ваши деньги и время и получить отличный вкус простым и полезным способом.</p>
                        
                     </div>
@@ -176,7 +177,7 @@
                     <div class="footer-layer d-flex flex-column">
                         <h4 class="footer-heading">Контакты</h4>
                         <p>142184, Московская область, Подольский район, улица Большая Академическая, дом 6, корпус 1 пом. 2</p>
-                        <a class="contact-a" href="./contact.html">Направление погружения</a>
+                        <a class="contact-a" href="./contact.html">Схема проезда</a>
                         <a class="contact-a" href="mailto:someone@yoursite.com">Свяжитесь с нами по электронной почте</a>
                     </div>
                 </div>
@@ -185,12 +186,12 @@
                         <h4 class="footer-heading">Часы работы</h4>
                         <p>Пн. - пт. с 9.00 до 18.00 (временно)</p>
                         <p>Суббота: выходной <br>
-                           Воскресенье: выходной/p>
+                           Воскресенье: выходной</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6  footer-col  d-flex align-items-center">
                     <div class="footer-layer">
-                        <h4 class="footer-heading">Чудо стакан видео</h4>
+                        <h4 class="footer-heading">Etinat видео</h4>
                         <div class="video">
 
                             <img class="video-backgrnd" src="./assets/images/play.svg" alt="playsvg">
@@ -201,6 +202,9 @@
             <div class="footer-bottom">
                 <p>Copyright © 2021 Русский стакан Россия, ООО "Русский стакан", ОГРН 1197746738530</p>
             </div>
+            <button id="toTop" title="Go to top" class="">
+
+            </button>
         </div>
     </footer>
 
@@ -289,7 +293,7 @@
                 moreText.style.display = "none";
             } else {
                 dots.style.display = "none";
-                btnText.innerHTML = "Меньше"; 
+                btnText.innerHTML = "Скрыть"; 
                 moreText.style.display = "inline";
             }
         }
