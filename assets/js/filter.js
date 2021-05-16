@@ -33,7 +33,7 @@ var user = localStorage.getItem("userId")
             <h3 class="title"><a href="#">${item.ProductName}</a></h3>
             <div class="price">$${item.ProductPrice}</div>
         </div>
-            <button class="shop" data-tip="Add to Cart">Add to Cart</button>
+            <button class="shop" data-tip="Add to Cart">Добавить в корзину</button>
         </div>
 
     </div>
