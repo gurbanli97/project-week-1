@@ -26,7 +26,7 @@ var user = localStorage.getItem("userId")
     <div data-key="${item.key}" class="col-md-4 col-sm-12 ${item.Category} product-isotope">
     <div class="product-grid">
         <div class="product-image">
-            <a href="#" class="image">
+            <a href="${item.About}" target="_blank" class="image">
                 <img src="${item.ProductImage}">
             </a>
         <div class="product-content">
