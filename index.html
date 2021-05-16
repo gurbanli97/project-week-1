@@ -6,7 +6,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная</title>
-    <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon">   
+    <meta name="description" content="">
+  <meta name="keywords" content="">
+  <!-- Facebook (Open Graph) -->
+  <meta property="og:url" content="index.html">
+  <meta property="og:image" content="">
+  <meta property="og:description" content="">
+  <meta property="og:title" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:see_also" content="index.html">
+  <!-- Google -->
+  <meta itemprop="name" content="">
+  <meta itemprop="description" content="">
+  <meta itemprop="image" content="">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="index.html">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="">
+  <!-- Some SEO Tags -->
+  <link rel="index" href="index.html"/>
+  <link rel="canonical" href="index.html"/>
+  <meta name="description" content=""/>
+  <meta property="og:description" content=""/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content=" "/>
+  <meta property="og:url" content="index.html"/>
+  <!-- Installation credentials for the Website -->
+  <meta name="theme-color" content="#fff"/>
+  <meta name="mobile-web-app-capable" content="yes"/>
+  <meta name="application-name" content=""/>
+    <link rel="icon" href="./assets/images/purpleGlass.png" type="image/png" sizes="64x64">  
     <script src="https://kit.fontawesome.com/b673856b82.js" crossorigin="anonymous" defer></script>
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -597,7 +628,27 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.jquery.js"></script>
     <script src="./assets/js/script.js"></script>
     
+    <script>
+         // Glasses Slider - Main
+         function glassSlider(value){
+            document.querySelector('#etinat').src = value;
+        }
 
+        function changeCircleColor(color){
+            var circle = document.querySelector(".circle");
+            circle.style.background = color;
+        }
+
+        function changeButtonColor(color){
+            var button = document.querySelector("#learnMore-button");
+            button.style.background = color;
+        }
+
+        function changeBrandColor(color){
+            var brandName = document.querySelector("#brand-name");
+            brandName.style.color = color;
+        }
+    </script>
 </body>
 
 </html>
