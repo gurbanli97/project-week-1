@@ -107,7 +107,9 @@ db.ref(user + "/").on("value", (snapshot) => {
         </tbody>
         <tbody class="chartDiv">
         </tody>
-        </table>`)
+        </table>
+        <button href="#" class="button-default view">VIEW CART</button>
+        <button href="#" class="button-default checkout">CHECK OUT</button>`)
     }else{
         $(".cart-empty").text("No products in the cart")
     }
