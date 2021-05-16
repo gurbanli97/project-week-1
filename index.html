@@ -24,7 +24,7 @@
         <div class="container">
             <div class="header-inner">
                 <div class="header-logo">
-                    <a href="./index.html">
+                    <a href="#">
                         <img class="LogoImg" src="./assets/images/logoEtinat.png">
                     </a>
                 </div>
@@ -33,9 +33,9 @@
                     <nav>
                         <ul class="links">
                             <li class="nav-logo">
-                                <a href=""><img src="./assets/images/logo.png"></a>
+                                <img src="./assets/images/logoEtinat.png">
                             </li>
-                            <li><a href="#">Главная</a></li>
+                            <li><a href="./index.html">Главная</a></li>
                             <li><a href="./products.html">Продукция</a></li>
                             <li><a href="./forwholesalers.html">Оптовикам</a>
                             </li>
@@ -50,45 +50,55 @@
                             <div class="mob-cart">
                                 <a>
                                     <i class="fas fa-shopping-cart"></i>
-                                    <span>0</span>
-                                    <span>$0.00</span>
+                                    <span class="itemCount">0</span>
+                                    <span class="priceSpan">$0.00</span>
+
+
                                 </a>
                             </div>
-                        </ul>
+                            <div class="mob-shop">
+                                <div class="cart-inner">
+                                    <div class="cart-wrap">
+                                        <div class="cart-empty">
+                                            <span>No products in the cart</span>
+                                        </div>
+                                    </div>
 
-                </nav>
-
-            </div>
-
-            <div class="header-phone">
-                    
-                    <a href="tel:0507224461"><i class="fas fa-phone-alt"></i> +7 (499) 396-77-77</a>
-            </div>
-
-            <div class="header-cart">
-                <div class="cart-inner">
-                    <a>
-                        <i class="fas fa-shopping-cart"></i>
-                        <span class="itemCount">0</span>
-                        <span class="priceSpan">$0.00</span>
-
-                        <div class="cart-wrap">
-                            <div class="cart-empty">
-                                <span>No products in the cart</span>
+                                </div>
                             </div>
-                        </div>
-                    </a>
+                        </ul>
+                    </nav>
 
                 </div>
+
+                <div class="header-phone">
+                    <i class="fas fa-phone-alt"></i>
+                    <a href="tel:0507224461">+7 (499) 396-77-77</a>
+                </div>
+
+                <div class="header-cart">
+                    <div class="cart-inner">
+                        <a>
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="itemCount">0</span>
+                            <span class="priceSpan">$0.00</span>
+
+                            <div class="cart-wrap">
+                                <div class="cart-empty">
+                                    <span>No products in the cart</span>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div class="header-burger">
+                    <span></span>
+                </div>
+
             </div>
-
-            <div class="header-burger">
-                <span></span>
-            </div>
-
         </div>
-        </div>
-
     </header>
 
     <section id="colored-glasses">
@@ -586,218 +596,7 @@
     <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-database.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.jquery.js"></script>
     <script src="./assets/js/script.js"></script>
-    <script>
-        
-        
-        window.onscroll = function() {myFunction()};
-
-        var header = document.getElementById("sticky-header");
-        var sticky = header.offsetTop;
-
-        function myFunction() {
-        if (window.pageYOffset > sticky) {
-            header.classList.add("sticky");
-        } else {
-            header.classList.remove("sticky");
-        }
-}
-        if( $('.header-menu nav').hasClass('active')) {
-            $('#sticky-header').removeClass("sticky");
-        }
-
-       
-
-
-
-        $('.header-burger').on('click', function () {
-            $('.header-burger').toggleClass('active')
-            $('.header-menu nav').toggleClass('active')
-            if($('.header-menu nav').hasClass('active')){
-                $('body').css('overflow-y','hidden')
-                $('#sticky-header').css("opacity",'1');
-                $('#toTop').removeClass('active')
-            }else {
-                $('body').css('overflow-y','auto')
-
-            }
-        })
-
-        $(window).resize(function () {
-            if ($(this).width() >= 1000) {
-                $('.header-burger').removeClass('active')
-                $('.header-menu nav').removeClass('active')
-            }
-        });
-
-        $('.video').on('click', function () {
-            $('.video-popup').show(300)
-            $('.video-popup').addClass('active')
-
-        })
-
     
-
-
-    $(window).scroll(function () {
-        if ($(window).scrollTop() > 800) {
-            $('#toTop').addClass('active');
-        } else {
-            $('#toTop').removeClass('active');
-        }
-       
-    });
-    $('#toTop').on('click', function (e) {
-        e.preventDefault();
-        $('html, body').animate({
-            scrollTop: 0
-        }, '500');
-        }); 
-
-        $(document).mouseup(function (e) {
-            if ($('.video-popup').hasClass('active') && !$('.video-content').is(e.target) && $('.video-content')
-                .has(e.target).length === 0) {
-                $('.video-popup').removeClass('active');
-                $('.video-popup').hide(300)
-
-            }
-        });
-        $(document).ready(function() {
-	
-    var mySwiper = new Swiper ('.swiper-container', {
-      
-      // Optional parameters
-      direction: 'horizontal',
-	  loop:true,
-	  spaceBetween: 30,
-      slidesPerView: 5,
-      visibilityFullFit: true,
-      pagination: '.swiper-pagination',
-      nextButton: '.next',
-      prevButton: '.prev',
-      autoplay: 3000,
-      speed: 1000,
-      breakpoints: {
-        // when window width is >= 320px
-        600: {
-        slidesPerView: 2,
-        spaceBetween: 10
-        },
-        // when window width is >= 480px
-        768: {
-        slidesPerView: 3,
-        spaceBetween: 30
-        },
-        // when window width is >= 640px
-        992: {
-        slidesPerView: 4,
-        spaceBetween: 30
-        }
-    }
-      
-})
-	
-});
-        // Our Values - Buttons 
-        $("#more-button").on('click', function(){
-            $('.second-values').addClass('active');
-            $("#more-button").hide();
-            $("#less-button").show()
-        })
-        
-        $("#less-button").on('click', function(){
-            $("#less-button").hide();
-            $('.second-values').removeClass('active');
-            $("#more-button").show();
-        });
-        
-        // Awards
-        var myIndex = 0;
-        carousel();
-
-        function carousel() {
-        var i;
-        var x = document.getElementsByClassName("slides");
-        for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";  
-        }
-        myIndex++;
-        if (myIndex > x.length) {myIndex = 1}    
-        x[myIndex-1].style.display = "block";  
-        setTimeout(carousel, 2500);    
-        }
-
-        // Glasses Slider - Main
-        function glassSlider(value){
-            document.querySelector('#etinat').src = value;
-        }
-
-        function changeCircleColor(color){
-            var circle = document.querySelector(".circle");
-            circle.style.background = color;
-        }
-
-        function changeButtonColor(color){
-            var button = document.querySelector("#learnMore-button");
-            button.style.background = color;
-        }
-
-        function changeBrandColor(color){
-            var brandName = document.querySelector("#brand-name");
-            brandName.style.color = color;
-        }
-        
-        
-        // miracle glass buttons
-     
-
-        $('.btn1').on('mouseout',function(){
-            if($('.button1-text').hasClass('active')){
-                $('.button1-text').removeClass('active')
-                $('.mob-explain.one').removeClass('active')
-            }
-        })
-        $('.btn1').on('mouseover',function(){
-                $('.button1-text').addClass('active')
-                $('.mob-explain.one').addClass('active')
-        })
-
-        $('.btn2').bind('mouseover mouseout',function(){
-            $('.button2-text').toggleClass('active')
-            $('.button1-text').removeClass('active')
-            $('.mob-explain.two').toggleClass('active')
-
-        })
-        $('.btn3').bind('mouseover mouseout',function(){
-            $('.button3-text').toggleClass('active')
-            $('.button1-text').removeClass('active')
-            $('.mob-explain.three').toggleClass('active')
-
-
-        })
-        $('.btn4').bind('mouseover mouseout',function(){
-            $('.button4-text').toggleClass('active')
-            $('.button1-text').removeClass('active')
-            $('.mob-explain.four').toggleClass('active')
-
-
-        })
-        $('.btn5').bind('mouseover mouseout',function(){
-            $('.button5-text').toggleClass('active')
-            $('.button1-text').removeClass('active')
-            $('.mob-explain.five').toggleClass('active')
-
-        })
-
-        $('#learnMore-button').click(function(e) {
-      e.preventDefault()
-      var itemOff = $('#head-arrow').offset().top;
-      var itemMargin = 100;
-  $('html, body').animate({
-    scrollTop: itemOff - itemMargin
-  }, 300)
-})
-       
-    </script>
 
 </body>
 
