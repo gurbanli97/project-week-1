@@ -171,10 +171,15 @@ $('.filter-button-group').on( 'click', 'a', function() {
     });
     
 
+    if($("#starter").hasClass("isActive")){
+        $("#starter").removeClass("isActive");
+    }
+
     if($("a").hasClass("isActive")){
         $("a").removeClass("isActive");
         $(this).addClass("isActive");
     }else{
         $(this).addClass("isActive");
     }
+
 });
