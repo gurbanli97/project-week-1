@@ -153,9 +153,10 @@ $(document).ready(function(){
         if($('.header-menu nav').hasClass('active')){
             $('body').css('overflow-y','hidden')
             $('#sticky-header').css("opacity",'1');
-            $('#toTop').removeClass('active')
+            $('#toTop').css('visibility','hidden')
         }else {
             $('body').css('overflow-y','unset')
+            $('#toTop').css('visibility','visible')
 
         }
     })
