@@ -669,7 +669,9 @@ header.sticky {
 }
 
 #toTop {
-    display: inline-block;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     width: 40px;
     height: 40px;
     text-align: center;
@@ -680,8 +682,8 @@ header.sticky {
     background-color: #c8bba5;
     color: #fff;
     cursor: pointer;
-    bottom: 30px;
-    right: 30px;
+    bottom: 20px;
+    right: 20px;
     transition: background-color .3s, opacity .5s, visibility .5s, border-radius .3s;
     opacity: 0;
     visibility: hidden;
