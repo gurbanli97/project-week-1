@@ -48,14 +48,13 @@ var user = localStorage.getItem("userId")
     })
 })
 
+if(user === null){
+    user = db.ref().push().key;
+    localStorage.setItem("userId", user)
+}
+
 $(document).on("click", ".shop", function(e){
     e.preventDefault()
-
-    if(user === null){
-        user = db.ref().push().key;
-        localStorage.setItem("userId", user)
-        user = localStorage.getItem("userId")
-    }
 
     var prKey = $(this).closest('.product-isotope').attr("data-key")
 
